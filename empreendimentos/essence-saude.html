@@ -165,35 +165,64 @@ font-size:18px;
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "ApartmentComplex",
-  "name": "Essence Saúde",
-  "description": "Studios e apartamentos da Tibério no bairro Saúde, em São Paulo.",
-  "url": "https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html",
-  "image": "https://www.tiberio.com.br/wp-content/uploads/2026/02/studio-2713m--final-15-e-16-14dec636d50a4f73bdef2445016f5529c9793f5a.webp",
-  "brand": {
-    "@type": "Organization",
-    "name": "Tibério"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "São Paulo",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "290000",
-    "priceCurrency": "BRL",
-    "availability": "https://schema.org/InStock"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Sandro Santos"
-  }
+  "@context":"https://schema.org",
+  "@graph":[
+
+    {
+      "@type":"Organization",
+      "@id":"https://sandrosantosimoveis.com.br/#organization",
+      "name":"Sandro Imóveis Inteligentes",
+      "url":"https://sandrosantosimoveis.com.br",
+      "logo":"https://sandrosantosimoveis.com.br/favicon.ico"
+    },
+
+    {
+      "@type":"WebSite",
+      "@id":"https://sandrosantosimoveis.com.br/#website",
+      "url":"https://sandrosantosimoveis.com.br",
+      "name":"Sandro Imóveis Inteligentes",
+      "publisher":{
+        "@id":"https://sandrosantosimoveis.com.br/#organization"
+      }
+    },
+
+    {
+      "@type":"WebPage",
+      "@id":"https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html",
+      "url":"https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html",
+      "name":"Essence Saúde",
+      "isPartOf":{
+        "@id":"https://sandrosantosimoveis.com.br/#website"
+      },
+      "description":"Studios e apartamentos à venda no Essence Saúde, próximo ao metrô Saúde em São Paulo."
+    },
+
+    {
+      "@type":"ApartmentComplex",
+      "@id":"https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html#empreendimento",
+      "name":"Essence Saúde",
+      "description":"Studios e apartamentos da Tibério na Saúde.",
+      "image":"https://www.tiberio.com.br/wp-content/uploads/2026/02/studio-2713m--final-15-e-16-14dec636d50a4f73bdef2445016f5529c9793f5a.webp",
+      "url":"https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html",
+
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"São Paulo",
+        "addressRegion":"SP",
+        "addressCountry":"BR"
+      },
+
+      "offers":{
+        "@type":"Offer",
+        "price":"290000",
+        "priceCurrency":"BRL",
+        "availability":"https://schema.org/InStock"
+      }
+    }
+
+  ]
 }
 </script>
-
 </head>
 
 <body>
