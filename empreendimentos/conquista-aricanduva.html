@@ -270,7 +270,100 @@
                 text-align: center;
             }
         }
+        /* TERCEIRA PARTE */
 
+        .experiencia {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 620px;
+            background: #111;
+            color: #fff;
+        }
+
+        .experiencia-imagem {
+            min-height: 620px;
+        }
+
+        .experiencia-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .experiencia-conteudo {
+            padding: 70px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .experiencia-label {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+        }
+
+        .experiencia-conteudo h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.08;
+            margin-bottom: 28px;
+            font-weight: 800;
+        }
+
+        .experiencia-conteudo p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 560px;
+            margin-bottom: 18px;
+            color: #e8e8e8;
+        }
+
+        .botao-experiencia {
+            display: inline-block;
+            width: fit-content;
+            margin-top: 15px;
+            padding: 16px 28px;
+            background: #fff;
+            color: #111;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .botao-experiencia:hover {
+            opacity: 0.85;
+        }
+
+        @media (max-width: 700px) {
+
+            .experiencia {
+                grid-template-columns: 1fr;
+            }
+
+            .experiencia-imagem {
+                min-height: 350px;
+            }
+
+            .experiencia-conteudo {
+                padding: 55px 8%;
+            }
+
+            .experiencia-conteudo h2 {
+                font-size: 34px;
+            }
+
+            .experiencia-conteudo p {
+                font-size: 17px;
+            }
+
+            .botao-experiencia {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
     
 </head>
@@ -351,5 +444,47 @@
     </div>
 
 </section>
+
+    <section class="experiencia">
+
+    <div class="experiencia-conteudo">
+
+        <div class="experiencia-label">
+            VIVA UMA NOVA FASE
+        </div>
+
+        <h2>
+            SEU APARTAMENTO.<br>
+            SUA CONQUISTA.<br>
+            SUA NOVA VIDA.
+        </h2>
+
+        <p>
+            Mais do que conquistar um endereço,
+            é começar uma nova etapa da sua vida.
+        </p>
+
+        <p>
+            No Conquista Aricanduva, você pode dar
+            o primeiro passo para deixar o aluguel para trás
+            e construir o seu próprio caminho.
+        </p>
+
+        <a
+            class="botao-experiencia"
+            href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Quero%20saber%20mais%20sobre%20o%20Conquista%20Aricanduva."
+            target="_blank">
+            QUERO SABER MAIS
+        </a>
+
+    </div>
+
+    <div class="experiencia-imagem">
+        <img src="https://raw.githubusercontent.com/Sandro-2027/sandro-imoveis/refs/heads/main/empreendimentos/FITNESS_EXTERNO.jpg"
+             alt="Conquista Aricanduva - fitness externo">
+    </div>
+
+</section>
+    
 </body>
 </html>
