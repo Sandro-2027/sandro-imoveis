@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conquista Aricanduva | Sair do Aluguel. Você Pode.</title>
+
+    <meta name="description" content="Conquista Aricanduva: saia do aluguel e conquiste seu próprio apartamento na Zona Leste de São Paulo.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-image: url("FACHADA(2).jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.78) 0%,
+                rgba(0, 0, 0, 0.48) 45%,
+                rgba(0, 0, 0, 0.15) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1100px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .empreendimento {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 0.95;
+            font-weight: 800;
+            text-transform: uppercase;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(28px, 4vw, 48px);
+            line-height: 1.05;
+            font-weight: 700;
+            max-width: 700px;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.5;
+            max-width: 620px;
+            margin-bottom: 30px;
+        }
+
+        .localizacao {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 17px 32px;
+            background: #ffffff;
+            color: #111111;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-2px);
+            background: #eeeeee;
+        }
+
+        @media (max-width: 700px) {
+
+            .hero {
+                min-height: 90vh;
+                background-position: center;
+            }
+
+            .hero-content {
+                width: 88%;
+            }
+
+            .empreendimento {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .hero h2 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .botao {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="empreendimento">
+            Conquista Aricanduva
+        </div>
+
+        <h1>
+            Sair do aluguel.
+        </h1>
+
+        <h2>
+            Você pode.
+        </h2>
+
+        <p>
+            Seu próximo passo pode ser conquistar o seu próprio apartamento.
+        </p>
+
+        <div class="localizacao">
+            Minha Casa, Minha Vida • Aricanduva – Zona Leste de São Paulo
+        </div>
+
+        <a
+            class="botao"
+            href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Quero%20saber%20como%20posso%20sair%20do%20aluguel%20e%20conhecer%20o%20Conquista%20Aricanduva."
+            target="_blank">
+            QUERO SABER COMO
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
