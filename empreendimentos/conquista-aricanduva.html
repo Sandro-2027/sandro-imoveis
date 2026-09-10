@@ -440,6 +440,100 @@
                 width: 100%;
             }
         }
+
+        /* QUINTA PARTE */
+
+        .qualificacao {
+            padding: 90px 8%;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .qualificacao-label {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .qualificacao h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.08;
+            font-weight: 800;
+            max-width: 900px;
+            margin: 0 auto 25px;
+        }
+
+        .qualificacao-intro {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            font-size: 19px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .qualificacao-cards {
+            max-width: 950px;
+            margin: 0 auto 45px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .qualificacao-card {
+            padding: 30px 22px;
+            background: #f5f5f5;
+            border-radius: 6px;
+        }
+
+        .qualificacao-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .qualificacao-card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .botao-qualificacao {
+            display: inline-block;
+            padding: 18px 34px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .botao-qualificacao:hover {
+            opacity: 0.85;
+        }
+
+        @media (max-width: 700px) {
+
+            .qualificacao {
+                padding: 65px 8%;
+            }
+
+            .qualificacao h2 {
+                font-size: 36px;
+            }
+
+            .qualificacao-intro {
+                font-size: 17px;
+            }
+
+            .qualificacao-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .botao-qualificacao {
+                width: 100%;
+            }
+        }
         
     </style>
     
@@ -599,6 +693,62 @@
     </a>
 
 </section>    
+<section class="qualificacao">
+
+    <div class="qualificacao-label">
+        CONQUISTA ARICANDUVA
+    </div>
+
+    <h2>
+        TALVEZ O SEU APARTAMENTO
+        ESTEJA MAIS PERTO DO
+        QUE VOCÊ PENSA.
+    </h2>
+
+    <p class="qualificacao-intro">
+        Se você paga aluguel, está procurando seu primeiro imóvel
+        ou quer entender se consegue comprar pelo Minha Casa,
+        Minha Vida, vale a pena descobrir as possibilidades
+        para o seu perfil.
+    </p>
+
+    <div class="qualificacao-cards">
+
+        <div class="qualificacao-card">
+            <h3>🏠 Paga aluguel?</h3>
+            <p>
+                Descubra se está na hora de começar a investir
+                no seu próprio imóvel.
+            </p>
+        </div>
+
+        <div class="qualificacao-card">
+            <h3>💰 Tem renda?</h3>
+            <p>
+                Vamos analisar as possibilidades de compra
+                de acordo com o seu perfil.
+            </p>
+        </div>
+
+        <div class="qualificacao-card">
+            <h3>🔑 Primeiro imóvel?</h3>
+            <p>
+                Faça uma simulação e entenda quais caminhos
+                podem levar você ao apartamento próprio.
+            </p>
+        </div>
+
+    </div>
+
+    <a
+        class="botao-qualificacao"
+        href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Quero%20descobrir%20se%20posso%20comprar%20o%20Conquista%20Aricanduva."
+        target="_blank">
+        QUERO DESCOBRIR
+    </a>
+
+</section>
+    
     
 </body>
 </html>
