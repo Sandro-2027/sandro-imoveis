@@ -534,6 +534,73 @@
                 width: 100%;
             }
         }
+
+        /* SEXTA PARTE */
+
+        .localizacao-secao {
+            padding: 80px 8%;
+            background: #f5f5f5;
+        }
+
+        .localizacao-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .localizacao-texto h2 {
+            font-size: clamp(34px, 5vw, 54px);
+            line-height: 1.08;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .localizacao-texto p {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 18px;
+        }
+
+        .endereco {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+
+        .mapa {
+            width: 100%;
+            min-height: 380px;
+            border: 0;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 700px) {
+
+            .localizacao-secao {
+                padding: 60px 8%;
+            }
+
+            .localizacao-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .localizacao-texto h2 {
+                font-size: 36px;
+            }
+
+            .localizacao-texto p {
+                font-size: 17px;
+            }
+
+            .mapa {
+                min-height: 320px;
+            }
+        }
         
     </style>
     
@@ -749,6 +816,42 @@
 
 </section>
     
-    
+  <section class="localizacao-secao">
+
+    <div class="localizacao-container">
+
+        <div class="localizacao-texto">
+
+            <h2>
+                UMA LOCALIZAÇÃO
+                PARA FACILITAR
+                SUA ROTINA.
+            </h2>
+
+            <p>
+                O Conquista Aricanduva está localizado em uma
+                região tradicional da Zona Leste de São Paulo.
+            </p>
+
+            <div class="endereco">
+                Rua Rego Barros, 788<br>
+                Aricanduva – São Paulo/SP
+            </div>
+
+        </div>
+
+        <div>
+            <iframe
+                class="mapa"
+                src="https://www.google.com/maps?q=Rua+Rego+Barros,+788,+Aricanduva,+São+Paulo,+SP&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+</section>  
 </body>
+
 </html>
