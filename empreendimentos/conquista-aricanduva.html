@@ -851,7 +851,71 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* GALERIA VISUAL */
 
+        .galeria-conquista {
+            padding: 70px 8%;
+            background: #ffffff;
+        }
+
+        .galeria-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .galeria-titulo {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .galeria-titulo h2 {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.1;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .galeria-titulo p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .galeria-item {
+            overflow: hidden;
+            border-radius: 8px;
+            background: #f3f3f3;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 300px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .galeria-legenda {
+            padding: 15px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-item img {
+                height: 300px;
+            }
+        }
     </style>
     
 </head>
@@ -1127,6 +1191,65 @@
             <div class="lazer-item">Sala de reunião</div>
             <div class="lazer-item">Pet Place</div>
             <div class="lazer-item">Pet Spa</div>
+
+        </div>
+
+    </div>
+
+</section>
+    <section class="galeria-conquista">
+
+    <div class="galeria-container">
+
+        <div class="galeria-titulo">
+
+            <h2>
+                UM LUGAR PARA CONQUISTAR.
+            </h2>
+
+            <p>
+                Um projeto pensado para viver, conviver e aproveitar cada momento.
+            </p>
+
+        </div>
+
+        <div class="galeria-grid">
+
+            <div class="galeria-item">
+
+                <img
+                    src="https://raw.githubusercontent.com/Sandro-2027/sandro-imoveis/refs/heads/main/empreendimentos/FACHADA.jpg"
+                    alt="Fachada do Conquista Aricanduva">
+
+                <div class="galeria-legenda">
+                    Fachada do empreendimento
+                </div>
+
+            </div>
+
+            <div class="galeria-item">
+
+                <img
+                    src="https://raw.githubusercontent.com/Sandro-2027/sandro-imoveis/refs/heads/main/empreendimentos/quadra-gramada-criancas.jpg"
+                    alt="Quadra recreativa do Conquista Aricanduva">
+
+                <div class="galeria-legenda">
+                    Quadra recreativa
+                </div>
+
+            </div>
+
+            <div class="galeria-item">
+
+                <img
+                    src="https://raw.githubusercontent.com/Sandro-2027/sandro-imoveis/refs/heads/main/empreendimentos/familia-sala-estar.jpg"
+                    alt="Família em sala de estar">
+
+                <div class="galeria-legenda">
+                    Seu novo lar
+                </div>
+
+            </div>
 
         </div>
 
