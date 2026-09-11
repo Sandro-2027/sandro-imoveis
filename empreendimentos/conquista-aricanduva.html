@@ -915,7 +915,44 @@
             .galeria-item img {
                 height: 300px;
             }
-        }
+.chamada-aluguel {
+    max-width: 720px;
+    margin-top: 25px;
+}
+
+.chamada-aluguel h2 {
+    font-size: clamp(25px, 4vw, 42px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.chamada-aluguel p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.chamada-aluguel .botao {
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+
+    .chamada-aluguel h2 {
+        font-size: 27px;
+    }
+
+    .chamada-aluguel p {
+        font-size: 17px;
+    }
+
+    .chamada-aluguel .botao {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+            
     </style>
     
 </head>
@@ -934,24 +971,25 @@
             Sair do aluguel.
         </h1>
 
-        <h2>
-            Você pode.
-        </h2>
+        <div class="chamada-aluguel">
 
-        <p>
-            Seu próximo passo pode ser conquistar o seu próprio apartamento.
-        </p>
+    <h2>
+        SE VOCÊ PAGA ALUGUEL,<br>
+        TALVEZ JÁ ESTEJA NA HORA DE TER O SEU.
+    </h2>
 
-        <div class="localizacao">
-            Minha Casa, Minha Vida • Aricanduva – Zona Leste de São Paulo
-        </div>
+    <p>
+        Conheça o Conquista Aricanduva, na Zona Leste de São Paulo,
+        e descubra uma oportunidade para conquistar seu apartamento.
+        São opções de 1 e 2 dormitórios, com diferentes plantas e
+        condições dentro do Minha Casa, Minha Vida.
+    </p>
 
-        <a
-            class="botao"
-            href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Quero%20saber%20como%20posso%20sair%20do%20aluguel%20e%20conhecer%20o%20Conquista%20Aricanduva."
-            target="_blank">
-            QUERO SABER COMO
-        </a>
+    <a
+        href="https://wa.me/5511947842342?text=Olá!%20Quero%20saber%20se%20posso%20comprar%20um%20apartamento%20no%20Conquista%20Aricanduva."
+        class="botao">
+        QUERO SABER SE POSSO COMPRAR
+    </a>
 
     </div>
 
