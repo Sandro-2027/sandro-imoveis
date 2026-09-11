@@ -687,6 +687,171 @@
             line-height: 1.6;
             color: #444;
         }    
+        /* NOVA SEÇÃO - INFORMAÇÕES DO EMPREENDIMENTO */
+
+        .info-empreendimento {
+            padding: 90px 8%;
+            background: #ffffff;
+        }
+
+        .info-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .info-titulo {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .info-label {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .info-titulo h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.08;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .info-titulo p {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 19px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .tipos-imoveis {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 60px;
+        }
+
+        .tipo-card {
+            padding: 32px 25px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .tipo-card h3 {
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
+
+        .tipo-card .metragem {
+            font-size: 29px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .tipo-card p {
+            font-size: 16px;
+            line-height: 1.55;
+            color: #444;
+        }
+
+        .ficha {
+            padding: 40px;
+            background: #111;
+            color: #fff;
+            border-radius: 8px;
+            margin-bottom: 55px;
+        }
+
+        .ficha h3 {
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+
+        .ficha-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .ficha-item span {
+            display: block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #bbb;
+            margin-bottom: 8px;
+        }
+
+        .ficha-item strong {
+            font-size: 19px;
+        }
+
+        .lazer-titulo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .lazer-titulo h3 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .lazer-titulo p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .lazer-lista {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .lazer-item {
+            padding: 18px;
+            background: #f5f5f5;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 800px) {
+
+            .info-empreendimento {
+                padding: 65px 8%;
+            }
+
+            .tipos-imoveis {
+                grid-template-columns: 1fr;
+            }
+
+            .ficha {
+                padding: 30px 22px;
+            }
+
+            .ficha-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lazer-lista {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .info-titulo h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .lazer-lista {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
     
 </head>
@@ -821,6 +986,154 @@
 
 </section>
 
+<section class="info-empreendimento">
+
+    <div class="info-container">
+
+        <div class="info-titulo">
+
+            <div class="info-label">
+                CONQUISTA ARICANDUVA
+            </div>
+
+            <h2>
+                UM PROJETO PENSADO<br>
+                PARA A SUA NOVA FASE.
+            </h2>
+
+            <p>
+                Escolha entre diferentes opções de apartamentos e descubra
+                um empreendimento com lazer completo para você e sua família.
+            </p>
+
+        </div>
+
+        <div class="tipos-imoveis">
+
+            <div class="tipo-card">
+
+                <h3>2 dormitórios</h3>
+
+                <div class="metragem">
+                    32,16 a 32,61 m²
+                </div>
+
+                <p>
+                    Apartamentos de 2 dormitórios,
+                    conforme disponibilidade.
+                </p>
+
+            </div>
+
+            <div class="tipo-card">
+
+                <h3>2 dormitórios + terraço</h3>
+
+                <div class="metragem">
+                    34,65 a 37,40 m²
+                </div>
+
+                <p>
+                    Plantas com terraço e opções
+                    com vaga de carro.
+                </p>
+
+            </div>
+
+            <div class="tipo-card">
+
+                <h3>1 dormitório</h3>
+
+                <div class="metragem">
+                    32,92 m²
+                </div>
+
+                <p>
+                    Apartamento de 1 dormitório,
+                    conforme disponibilidade.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="ficha">
+
+            <h3>Ficha técnica</h3>
+
+            <div class="ficha-grid">
+
+                <div class="ficha-item">
+                    <span>Terreno</span>
+                    <strong>4.948,06 m²</strong>
+                </div>
+
+                <div class="ficha-item">
+                    <span>Edificação</span>
+                    <strong>Térreo + 22 tipos</strong>
+                </div>
+
+                <div class="ficha-item">
+                    <span>Unidades por andar</span>
+                    <strong>15</strong>
+                </div>
+
+                <div class="ficha-item">
+                    <span>Endereço</span>
+                    <strong>Rua Rego Barros, 778</strong>
+                </div>
+
+                <div class="ficha-item">
+                    <span>Tipos</span>
+                    <strong>1 e 2 dormitórios</strong>
+                </div>
+
+                <div class="ficha-item">
+                    <span>Opções</span>
+                    <strong>Terraço e vagas</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lazer-titulo">
+
+            <h3>
+                Lazer completo que vai conquistar você e sua família
+            </h3>
+
+            <p>
+                Ambientes planejados para diferentes momentos do dia.
+            </p>
+
+        </div>
+
+        <div class="lazer-lista">
+
+            <div class="lazer-item">Fitness interno</div>
+            <div class="lazer-item">Fitness externo</div>
+            <div class="lazer-item">Piscina adulto</div>
+            <div class="lazer-item">Piscina infantil</div>
+            <div class="lazer-item">Quadra recreativa</div>
+            <div class="lazer-item">Playground</div>
+            <div class="lazer-item">Espaço Kids</div>
+            <div class="lazer-item">Jogos Teen</div>
+            <div class="lazer-item">Jogos Pub</div>
+            <div class="lazer-item">Ping Pong</div>
+            <div class="lazer-item">Churrasqueiras</div>
+            <div class="lazer-item">Festas Gourmet</div>
+            <div class="lazer-item">Coworking</div>
+            <div class="lazer-item">Sala de reunião</div>
+            <div class="lazer-item">Pet Place</div>
+            <div class="lazer-item">Pet Spa</div>
+
+        </div>
+
+    </div>
+
+</section>
+    
 <section class="mcmv">
 
     <div class="mcmv-label">
