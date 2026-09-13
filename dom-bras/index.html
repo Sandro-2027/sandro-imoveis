@@ -1,1 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dom Brás | Apartamento a 600m do Metrô Pedro II</title>
+
+<meta name="description" content="Conheça o Dom Brás, a apenas 600 metros da Estação Pedro II. Apartamentos com apenas R$ 8 mil de ato e financiamento pelo Minha Casa Minha Vida.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    background:#fff;
+    line-height:1.6;
+}
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+
+    color:#fff;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.tag{
+    display:inline-block;
+    background:#c99a3b;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#e1b85a;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#c99a3b;
+    color:#fff;
+    padding:16px 32px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:.2s;
+}
+
+.btn:hover{
+    background:#ad812e;
+    transform:translateY(-2px);
+}
+
+section{
+    padding:70px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#666;
+}
+
+.destaques{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.card .icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.oferta{
+    background:#f6f3ed;
+}
+
+.oferta-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.oferta-box h2{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.oferta-box strong{
+    color:#b88727;
+}
+
+.oferta-box p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.agendamento{
+    background:#171717;
+    color:#fff;
+}
+
+.formulario{
+    max-width:650px;
+    margin:auto;
+    background:#fff;
+    color:#222;
+    padding:35px;
+    border-radius:15px;
+}
+
+.formulario h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.campo{
+    margin-bottom:18px;
+}
+
+.campo label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.campo input,
+.campo select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:16px;
+}
+
+.consentimento{
+    font-size:13px;
+    color:#555;
+    margin:20px 0;
+}
+
+.consentimento label{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+}
+
+.consentimento input{
+    margin-top:5px;
+}
+
+.consentimento a{
+    color:#9b701e;
+}
+
+.formulario button{
+    width:100%;
+    border:none;
+    cursor:pointer;
+}
+
+.privacidade{
+    background:#f7f7f7;
+}
+
+.privacidade-texto{
+    max-width:850px;
+    margin:auto;
+    color:#555;
+    font-size:14px;
+}
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+    font-size:13px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25d366;
+    color:#fff;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+    z-index:99;
+}
+
+@media(max-width:800px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:19px;
+    }
+
+    .destaques{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .destaques{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .formulario{
+        padding:25px 18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="tag">
+MINHA CASA MINHA VIDA
+</div>
+
+<h1>
+Seu apartamento no Brás
+<br>
+<span>a 600 metros do Metrô Pedro II</span>
+</h1>
+
+<p>
+More perto de tudo com apenas
+<strong>R$ 8 mil de ato</strong>
+e financiamento pelo Minha Casa Minha Vida.
+</p>
+
+<a href="#agendamento" class="btn">
+Agendar minha visita
+</a>
+
+</div>
+
+</section>
+
+
+<!-- DESTAQUES -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Uma oportunidade no coração de São Paulo
+</h2>
+
+<p>
+Conheça o Dom Brás e descubra uma nova possibilidade
+para sair do aluguel.
+</p>
+
+</div>
+
+
+<div class="destaques">
+
+
+<div class="card">
+
+<div class="icon">🚇</div>
+
+<h3>
+600 metros do Metrô
+</h3>
+
+<p>
+A poucos minutos da Estação Pedro II.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>
+Apenas R$ 8 mil de ato
+</h3>
+
+<p>
+Condição especial para facilitar sua entrada no imóvel.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🏠</div>
+
+<h3>
+Minha Casa Minha Vida
+</h3>
+
+<p>
+Possibilidade de financiamento pelo programa.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📍</div>
+
+<h3>
+Localização estratégica
+</h3>
+
+<p>
+Brás, com fácil acesso ao centro e a diversas regiões.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFERTA -->
+
+<section class="oferta">
+
+<div class="container">
+
+<div class="oferta-box">
+
+<h2>
+Está pagando aluguel?
+</h2>
+
+<p>
+Talvez esteja mais perto do que imagina de conquistar
+o seu próprio apartamento.
+</p>
+
+<p>
+O <strong>Dom Brás</strong> está a apenas
+<strong>600 metros da Estação Pedro II</strong>,
+com condição de entrada a partir de
+<strong>R$ 8 mil</strong> e financiamento pelo
+<strong>Minha Casa Minha Vida</strong>.
+</p>
+
+<a href="#agendamento" class="btn">
+Quero conhecer o Dom Brás
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AGENDAMENTO -->
+
+<section id="agendamento" class="agendamento">
+
+<div class="container">
+
+<div class="formulario">
+
+<h2>
+Agende sua visita
+</h2>
+
+<p class="subtitulo">
+Preencha seus dados e entraremos em contato para confirmar
+o melhor horário.
+</p>
+
+
+<form id="formAgendamento">
+
+
+<div class="campo">
+
+<label for="nome">
+Nome completo
+</label>
+
+<input
+type="text"
+id="nome"
+name="nome"
+placeholder="Digite seu nome"
+required
+>
+
+</div>
+
+
+<div class="campo">
+
+<label for="whatsapp">
+WhatsApp
+</label>
+
+<input
+type="tel"
+id="whatsapp"
+name="whatsapp"
+placeholder="(11) 99999-9999"
+required
+>
+
+</div>
+
+
+<div class="campo">
+
+<label for="email">
+E-mail
+</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="seuemail@email.com"
+required
+>
+
+</div>
+
+
+<div class="campo">
+
+<label for="dia">
+Melhor dia para a visita
+</label>
+
+<input
+type="date"
+id="dia"
+name="dia"
+required
+>
+
+</div>
+
+
+<div class="campo">
+
+<label for="horario">
+Melhor período
+</label>
+
+<select
+id="horario"
+name="horario"
+required
+>
+
+<option value="">
+Selecione
+</option>
+
+<option>
+Manhã
+</option>
+
+<option>
+Tarde
+</option>
+
+<option>
+Noite
+</option>
+
+</select>
+
+</div>
+
+
+<div class="consentimento">
+
+<label>
+
+<input
+type="checkbox"
+name="consentimento"
+required
+>
+
+<span>
+
+Li e concordo com o tratamento dos meus dados pessoais
+para que a equipe responsável pelo atendimento entre em
+contato comigo para informações sobre o Dom Brás e para
+tratar do agendamento da visita.
+
+<br><br>
+
+Estou ciente de que posso solicitar informações sobre o
+tratamento dos meus dados e exercer meus direitos como
+titular, inclusive a revogação do consentimento, quando
+aplicável.
+
+<br><br>
+
+<a href="#privacidade">
+Ver informações sobre privacidade
+</a>
+
+</span>
+
+</label>
+
+</div>
+
+
+<button
+type="submit"
+class="btn"
+>
+
+Confirmar interesse e agendar
+
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRIVACIDADE -->
+
+<section id="privacidade" class="privacidade">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Privacidade e proteção de dados
+</h2>
+
+</div>
+
+
+<div class="privacidade-texto">
+
+<p>
+Os dados fornecidos neste formulário serão utilizados
+para atendimento relacionado ao empreendimento Dom Brás,
+retorno de contato e organização do agendamento de visita.
+</p>
+
+<br>
+
+<p>
+O tratamento dos dados será realizado de acordo com a
+Lei nº 13.709/2018 – Lei Geral de Proteção de Dados Pessoais
+(LGPD), respeitando os direitos do titular dos dados.
+</p>
+
+<br>
+
+<p>
+O titular poderá solicitar informações sobre o tratamento
+de seus dados, correção de informações, eliminação quando
+cabível e revogação do consentimento, entre outros direitos
+previstos na legislação aplicável.
+</p>
+
+<br>
+
+<p>
+<strong>Controlador dos dados:</strong>
+PREENCHER
+</p>
+
+<br>
+
+<p>
+<strong>Contato para assuntos de privacidade:</strong>
+PREENCHER
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+© 2026 Dom Brás | Atendimento imobiliário em São Paulo
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/5511947842342"
+target="_blank"
+aria-label="Falar pelo WhatsApp"
+>
+
+☎
+
+</a>
+
+
+<!-- ENVIO PARA WHATSAPP -->
+
+<script>
+
+document.getElementById("formAgendamento").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+
+const nome =
+document.getElementById("nome").value;
+
+const whatsapp =
+document.getElementById("whatsapp").value;
+
+const email =
+document.getElementById("email").value;
+
+const dia =
+document.getElementById("dia").value;
+
+const horario =
+document.getElementById("horario").value;
+
+
+const mensagem =
+
+"Olá! Tenho interesse no Dom Brás e gostaria de agendar uma visita.%0A%0A" +
+
+"*Dados do interessado:*%0A" +
+
+"Nome: " +
+encodeURIComponent(nome) +
+"%0A" +
+
+"WhatsApp: " +
+encodeURIComponent(whatsapp) +
+"%0A" +
+
+"E-mail: " +
+encodeURIComponent(email) +
+"%0A" +
+
+"Melhor dia: " +
+encodeURIComponent(dia) +
+"%0A" +
+
+"Melhor período: " +
+encodeURIComponent(horario);
+
+
+const numero =
+"5511947842342";
+
+
+const url =
+"https://wa.me/" +
+numero +
+"?text=" +
+mensagem;
+
+
+window.open(url, "_blank");
+
+});
+
+</script>
+
+
+</body>
+
+</html>
