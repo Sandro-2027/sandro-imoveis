@@ -281,14 +281,27 @@ footer{
 
 }
 
-@media(max-width:500px){
-
-    .destaques{
+ .destaques{
         grid-template-columns:1fr;
     }
 
     .hero{
-        min-height:600px;
+        min-height:680px;
+        background-position:center center;
+        background-size:cover;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:19px;
+        line-height:1.5;
+    }
+
+    .hero-content{
+        padding:20px 10px;
     }
 
     .formulario{
