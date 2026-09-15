@@ -1122,9 +1122,7 @@ function fotoAnterior() {
     abrirFoto();
 }
 
-zoomFechar.addEventListener('click', function() {
-    zoomImagem.style.display = 'none';
-    document.getElementById('zoomAnterior').addEventListener('click', function(e) {
+document.getElementById('zoomAnterior').addEventListener('click', function(e) {
     e.stopPropagation();
     fotoAnterior();
 });
@@ -1132,7 +1130,10 @@ zoomFechar.addEventListener('click', function() {
 document.getElementById('zoomProxima').addEventListener('click', function(e) {
     e.stopPropagation();
     proximaFoto();
-});
+});    
+    
+zoomFechar.addEventListener('click', function() {
+    zoomImagem.style.display = 'none';
 });
 
 zoomImagem.addEventListener('click', function(e) {
