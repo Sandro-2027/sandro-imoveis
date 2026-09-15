@@ -1044,13 +1044,30 @@ const zoomImagem = document.getElementById('zoomImagem');
 const zoomFoto = document.getElementById('zoomFoto');
 const zoomFechar = document.getElementById('zoomFechar');
 
-fotosGaleria.forEach(function(foto) {
+let fotoAtual = 0;
+
+fotosGaleria.forEach(function(foto, index) {
     foto.addEventListener('click', function() {
-        zoomFoto.src = this.src;
-        zoomFoto.alt = this.alt;
-        zoomImagem.style.display = 'flex';
+        fotoAtual = index;
+        abrirFoto();
     });
 });
+
+function abrirFoto() {
+    zoomFoto.src = fotosGaleria[fotoAtual].src;
+    zoomFoto.alt = fotosGaleria[fotoAtual].alt;
+    zoomImagem.style.display = 'flex';
+}
+
+function proximaFoto() {
+    fotoAtual = (fotoAtual + 1) % fotosGaleria.length;
+    abrirFoto();
+}
+
+function fotoAnterior() {
+    fotoAtual = (fotoAtual - 1 + fotosGaleria.length) % fotosGaleria.length;
+    abrirFoto();
+}
 
 zoomFechar.addEventListener('click', function() {
     zoomImagem.style.display = 'none';
@@ -1061,7 +1078,26 @@ zoomImagem.addEventListener('click', function(e) {
         zoomImagem.style.display = 'none';
     }
 });
-</script>
+
+/* DESLIZE NO CELULAR */
+let toqueInicialX = 0;
+let toqueFinalX = 0;
+
+zoomImagem.addEventListener('touchstart', function(e) {
+    toqueInicialX = e.changedTouches[0].screenX;
+});
+
+zoomImagem.addEventListener('touchend', function(e) {
+    toqueFinalX = e.changedTouches[0].screenX;
+
+    if (toqueFinalX < toqueInicialX - 50) {
+        proximaFoto();
+    }
+
+    if (toqueFinalX > toqueInicialX + 50) {
+        fotoAnterior();
+    }
+});</script>
     
 </body>
 
