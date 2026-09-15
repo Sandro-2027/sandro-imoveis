@@ -468,6 +468,57 @@ footer{
     cursor:pointer;
     line-height:1;
 }
+
+.zoom-anterior,
+.zoom-proxima{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    border:none;
+    width:42px;
+    height:60px;
+    font-size:38px;
+    line-height:1;
+    cursor:pointer;
+    border-radius:6px;
+    opacity:.7;
+    transition:.2s;
+}
+
+.zoom-anterior:hover,
+.zoom-proxima:hover{
+    background:rgba(255,255,255,.3);
+    opacity:1;
+}
+
+.zoom-anterior{
+    left:18px;
+}
+
+.zoom-proxima{
+    right:18px;
+}
+
+@media(max-width:500px){
+    .zoom-anterior,
+    .zoom-proxima{
+        width:34px;
+        height:50px;
+        font-size:30px;
+        opacity:.5;
+    }
+
+    .zoom-anterior{
+        left:8px;
+    }
+
+    .zoom-proxima{
+        right:8px;
+    }
+}
+    
 </style>
 
 </head>
@@ -1073,6 +1124,15 @@ function fotoAnterior() {
 
 zoomFechar.addEventListener('click', function() {
     zoomImagem.style.display = 'none';
+    document.getElementById('zoomAnterior').addEventListener('click', function(e) {
+    e.stopPropagation();
+    fotoAnterior();
+});
+
+document.getElementById('zoomProxima').addEventListener('click', function(e) {
+    e.stopPropagation();
+    proximaFoto();
+});
 });
 
 zoomImagem.addEventListener('click', function(e) {
