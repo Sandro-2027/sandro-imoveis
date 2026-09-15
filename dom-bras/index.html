@@ -429,6 +429,45 @@ footer{
     }
 
 }
+
+/* ZOOM DAS FOTOS */
+.galeria-scroll img{
+    cursor:pointer;
+    transition:transform .25s ease;
+}
+
+.galeria-scroll img:hover{
+    transform:scale(1.03);
+}
+
+.zoom-imagem{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    background:rgba(0,0,0,.88);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.zoom-imagem img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+.zoom-fechar{
+    position:absolute;
+    top:15px;
+    right:25px;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+    line-height:1;
+}
 </style>
 
 </head>
@@ -993,7 +1032,37 @@ window.open(url, "_blank");
 
 </script>
 
+<!-- ZOOM DAS IMAGENS -->
+<div class="zoom-imagem" id="zoomImagem">
+    <span class="zoom-fechar" id="zoomFechar">&times;</span>
+    <img id="zoomFoto" src="" alt="Imagem ampliada">
+</div>
 
+<script>
+const fotosGaleria = document.querySelectorAll('.galeria-scroll img');
+const zoomImagem = document.getElementById('zoomImagem');
+const zoomFoto = document.getElementById('zoomFoto');
+const zoomFechar = document.getElementById('zoomFechar');
+
+fotosGaleria.forEach(function(foto) {
+    foto.addEventListener('click', function() {
+        zoomFoto.src = this.src;
+        zoomFoto.alt = this.alt;
+        zoomImagem.style.display = 'flex';
+    });
+});
+
+zoomFechar.addEventListener('click', function() {
+    zoomImagem.style.display = 'none';
+});
+
+zoomImagem.addEventListener('click', function(e) {
+    if (e.target === zoomImagem) {
+        zoomImagem.style.display = 'none';
+    }
+});
+</script>
+    
 </body>
 
 </html>
