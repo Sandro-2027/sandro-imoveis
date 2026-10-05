@@ -1,1 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Sublime Pompéia | 3 Dormitórios e 2 Vagas | Sandro Imóveis Inteligentes</title>
+
+<meta name="description" content="Sublime Pompéia: apartamentos de 3 dormitórios, 2 vagas determinadas e churrasqueira na varanda. Conheça o projeto e fale com Sandro Imóveis Inteligentes.">
+
+<meta name="robots" content="index, follow">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    background:#fff;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* TOPO */
+
+header{
+    background:#111;
+    color:#fff;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+.header-button{
+    background:#e66b22;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    min-height:600px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80")
+    center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.tag{
+    display:inline-block;
+    background:#e66b22;
+    padding:8px 15px;
+    border-radius:5px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:23px;
+    margin-bottom:28px;
+}
+
+.cta{
+    display:inline-block;
+    background:#e66b22;
+    color:#fff;
+    padding:15px 28px;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* DESTAQUES */
+
+.highlights{
+    background:#f6f6f6;
+    padding:65px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:8px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.card-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#666;
+}
+
+/* PLANTA */
+
+.plant{
+    padding:70px 0;
+}
+
+.plant-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.plant-image{
+    background:#f2f2f2;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.plant-text h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.plant-text p{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.plant-list{
+    list-style:none;
+}
+
+.plant-list li{
+    margin-bottom:12px;
+    font-weight:bold;
+}
+
+/* LAZER */
+
+.leisure{
+    background:#f6f6f6;
+    padding:70px 0;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.gallery-item{
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.gallery-item img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.gallery-caption{
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* LOCALIZAÇÃO */
+
+.location{
+    padding:70px 0;
+    text-align:center;
+}
+
+.location h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.location p{
+    max-width:750px;
+    margin:0 auto 25px;
+    color:#555;
+}
+
+/* FORMULÁRIO */
+
+.contact{
+    background:#111;
+    color:#fff;
+    padding:70px 20px;
+}
+
+.contact-box{
+    max-width:650px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.contact p{
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+.form{
+    display:grid;
+    gap:14px;
+}
+
+.form input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.form button{
+    border:none;
+    cursor:pointer;
+    background:#e66b22;
+    color:#fff;
+    padding:15px;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#080808;
+    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+    font-size:14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    font-weight:bold;
+    z-index:2000;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:570px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .plant-content{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item img{
+        height:260px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .header-button{
+        font-size:13px;
+        padding:9px 12px;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .plant-text h2{
+        font-size:30px;
+    }
+
+    .contact h2{
+        font-size:29px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container header-content">
+
+<div class="logo">
+SANDRO IMÓVEIS INTELIGENTES
+</div>
+
+<a href="#contato" class="header-button">
+Quero conhecer
+</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="tag">
+SUBLIME POMPÉIA
+</div>
+
+<h1>
+Seu novo apartamento na Pompéia
+</h1>
+
+<p>
+3 dormitórios • 2 vagas determinadas • churrasqueira na varanda
+</p>
+
+<a href="#contato" class="cta">
+Quero conhecer o Sublime
+</a>
+
+</div>
+
+</section>
+
+
+<section class="highlights">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Destaques do Sublime Pompéia
+</h2>
+
+<p>
+Um projeto pensado para quem busca conforto e praticidade.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🏠</div>
+
+<h3>
+3 dormitórios
+</h3>
+
+<p>
+Mais espaço para sua família e para os momentos do dia a dia.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🚗</div>
+
+<h3>
+2 vagas determinadas
+</h3>
+
+<p>
+Mais comodidade para você e sua família.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🔥</div>
+
+<h3>
+Churrasqueira na varanda
+</h3>
+
+<p>
+Um espaço especial para receber amigos e aproveitar bons momentos.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="plant">
+
+<div class="container plant-content">
+
+<div class="plant-image">
+
+<img
+src="https://drive.google.com/uc?export=view&id=16Ccvll2X2Bu_U98-r2A5LAgVBThsJ0X3"
+alt="Planta do apartamento de 3 dormitórios do Sublime Pompéia"
+>
+
+</div>
+
+
+<div class="plant-text">
+
+<h2>
+Uma planta pensada para sua família
+</h2>
+
+<p>
+Conheça a planta de 3 dormitórios do Sublime Pompéia e veja a distribuição dos ambientes.
+</p>
+
+<ul class="plant-list">
+
+<li>✓ 3 dormitórios</li>
+
+<li>✓ Suíte</li>
+
+<li>✓ 2 vagas determinadas</li>
+
+<li>✓ Churrasqueira na varanda</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="leisure">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Estrutura para viver melhor
+</h2>
+
+<p>
+Espaços pensados para diferentes momentos da sua rotina.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item">
+
+<img
+src="https://drive.google.com/uc?export=view&id=1e0CEVD9_kK0dFqo0FEAW-FSg6rbkm0PX"
+alt="Pet Spa do Sublime Pompéia"
+>
+
+<div class="gallery-caption">
+Pet Spa
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://drive.google.com/uc?export=view&id=1XyLyYtLdpWppzJ6aGSAr_Hkuwct4QMKJ"
+alt="Fitness do Sublime Pompéia"
+>
+
+<div class="gallery-caption">
+Fitness
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="location">
+
+<div class="container">
+
+<h2>
+Sublime Pompéia
+</h2>
+
+<p>
+Um empreendimento para quem deseja viver na região da Pompéia, em São Paulo.
+</p>
+
+<a href="#contato" class="cta">
+Quero receber informações
+</a>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contato">
+
+<div class="contact-box">
+
+<h2>
+Quer conhecer o Sublime Pompéia?
+</h2>
+
+<p>
+Preencha seus dados e fale diretamente comigo pelo WhatsApp.
+</p>
+
+<form
+class="form"
+onsubmit="enviarWhatsApp(event)"
+>
+
+<input
+type="text"
+id="nome"
+placeholder="Seu nome"
+required
+>
+
+<input
+type="tel"
+id="telefone"
+placeholder="Seu WhatsApp"
+required
+>
+
+<button type="submit">
+Quero informações
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+Sandro Imóveis Inteligentes
+</p>
+
+<p>
+CRECI: 86489
+</p>
+
+</footer>
+
+
+<a
+href="https://wa.me/5511947842342"
+class="whatsapp"
+target="_blank"
+aria-label="Falar pelo WhatsApp"
+>
+☏
+</a>
+
+
+<script>
+
+function enviarWhatsApp(event){
+
+event.preventDefault();
+
+var nome =
+document.getElementById("nome").value;
+
+var telefone =
+document.getElementById("telefone").value;
+
+var mensagem =
+"Olá Sandro! Meu nome é " +
+nome +
+". Meu WhatsApp é " +
+telefone +
+". Tenho interesse no Sublime Pompéia, 3 dormitórios, 2 vagas determinadas e churrasqueira na varanda.";
+
+var url =
+"https://wa.me/5511947842342?text=" +
+encodeURIComponent(mensagem);
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
+
+</body>
+</html>
