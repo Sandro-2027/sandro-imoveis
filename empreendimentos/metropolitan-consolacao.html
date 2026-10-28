@@ -1,658 +1,904 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Metropolitan Consolação Tibério | Studios e Apartamentos em São Paulo</title>
-
-<meta name="description" content="Metropolitan Consolação Tibério em São Paulo: studios e apartamentos na Rua da Consolação, com opções de 2 dormitórios e vaga. Conheça o empreendimento, veja fotos, plantas e condições.">
-
-<meta name="keywords" content="Metropolitan Consolação, Studio Consolação, Apartamento Consolação, Tibério Consolação, Lançamento Consolação, Studio Centro SP">
-
+<meta name="description" content="Conheça o Metropolitan Consolação da Tibério: studios, apartamentos e salas comerciais na região central de São Paulo. Veja fotos e consulte plantas, valores e disponibilidade pelo WhatsApp.">
+<meta name="keywords" content="Metropolitan Consolação, Metropolitan Tibério, studio Consolação, apartamento Consolação, imóvel perto do Mackenzie, studio Centro São Paulo">
 <meta name="author" content="Sandro Imóveis Inteligentes">
-
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://sandrosantosimoveis.com.br/empreendimentos/metropolitan-consolacao.html">
 
-<meta property="og:title" content="Metropolitan Consolação | Studios e Apartamentos">
-
-<meta property="og:description" content="Conheça o Metropolitan Consolação. Studios e apartamentos em excelente localização.">
-
+<meta property="og:title" content="Metropolitan Consolação | Tibério">
+<meta property="og:description" content="Studios, apartamentos e salas comerciais na região da Consolação, em São Paulo. Consulte plantas e condições.">
 <meta property="og:type" content="website">
-
-<meta property="og:image" content="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp">
-
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp">
 
 <link rel="stylesheet" href="../style.css">
 
 <style>
-
-body{
-
-background:#f5f7fa;
-
+:root {
+  --verde: #183c32;
+  --verde-escuro: #102a23;
+  --dourado: #c9a66b;
+  --texto: #28342f;
+  --cinza: #69736e;
+  --fundo: #f5f6f3;
+  --branco: #fff;
 }
 
-.hero-empreendimento{
-
-height:420px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-color:white;
-
-padding:30px;
-
-background-image:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp');
-
-background-size:cover;
-
-background-position:center;
-
+* {
+  box-sizing: border-box;
 }
 
-.hero-empreendimento h1{
-
-font-size:52px;
-
-margin-bottom:15px;
-
+html {
+  scroll-behavior: smooth;
 }
 
-.hero-empreendimento p{
-
-font-size:22px;
-
-max-width:900px;
-
-margin:auto;
-
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
 }
 
-.container{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:60px 20px;
-
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.galeria{
-
-display:grid;
-
-grid-template-columns:2fr 1fr;
-
-gap:20px;
-
-margin-top:40px;
-
+a {
+  color: inherit;
 }
 
-.galeria img{
-
-width:100%;
-
-border-radius:10px;
-
-cursor:pointer;
-
-transition:.3s;
-
+.topo {
+  background: var(--branco);
+  border-bottom: 1px solid #e7e9e5;
 }
 
-.galeria img:hover{
-
-transform:scale(1.02);
-
+.topo-interno {
+  max-width: 1180px;
+  margin: auto;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.galeria-lateral{
-
-display:grid;
-
-gap:20px;
-
+.logo {
+  color: var(--verde);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .4px;
 }
 
-@media(max-width:900px){
-
-.galeria{
-
-grid-template-columns:1fr;
-
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.hero-empreendimento{
-
-height:300px;
-
+.menu a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-.hero-empreendimento h1{
-
-font-size:34px;
-
+.menu a:hover {
+  color: #997743;
 }
 
-.hero-empreendimento p{
-
-font-size:18px;
-
+.botao {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 7px;
+  background: #187747;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  transition: background .2s, transform .2s;
 }
 
+.botao:hover {
+  background: #125c36;
+  transform: translateY(-2px);
 }
 
+.botao-dourado {
+  background: var(--dourado);
+  color: #1e2a24;
+}
+
+.botao-dourado:hover {
+  background: #b7955e;
+}
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(9,25,21,.88), rgba(9,25,21,.35)),
+    url("https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp");
+  background-size: cover;
+  background-position: center 42%;
+}
+
+.hero-conteudo {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 70px 22px;
+}
+
+.selo {
+  display: inline-block;
+  padding: 7px 13px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin: 20px 0 16px;
+  font-size: clamp(35px, 5vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -.8px;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 0 0 27px;
+  color: #f0f2ef;
+  font-size: 18px;
+}
+
+.hero-nota {
+  margin-top: 16px;
+  color: #e4eae5;
+  font-size: 13px;
+}
+
+.faixa {
+  background: var(--verde);
+  color: white;
+}
+
+.faixa-interno {
+  max-width: 1180px;
+  margin: auto;
+  padding: 20px 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.faixa-item {
+  text-align: center;
+}
+
+.faixa-item strong {
+  display: block;
+  color: #e3c38f;
+  font-size: 17px;
+}
+
+.faixa-item span {
+  color: #e6ece7;
+  font-size: 13px;
+}
+
+.secao {
+  max-width: 1180px;
+  margin: auto;
+  padding: 66px 22px;
+}
+
+.secao-branca {
+  background: #fff;
+}
+
+.titulo-secao {
+  max-width: 760px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.etiqueta {
+  color: #947344;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 9px 0 15px;
+  color: var(--verde);
+  font-size: clamp(27px, 3.5vw, 38px);
+  line-height: 1.2;
+}
+
+.titulo-secao p,
+.texto-suave {
+  color: var(--cinza);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.intro p {
+  color: var(--cinza);
+}
+
+.intro-foto img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 26px;
+}
+
+.lista li {
+  padding: 7px 0;
+}
+
+.lista li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #187747;
+  font-weight: 800;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 16px;
+}
+
+.foto-card {
+  overflow: hidden;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(20,40,30,.08);
+}
+
+.foto-card:first-child {
+  grid-row: span 2;
+}
+
+.foto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform .25s;
+}
+
+.foto-card:first-child img {
+  height: 100%;
+  min-height: 450px;
+}
+
+.foto-card:hover img {
+  transform: scale(1.035);
+}
+
+.legenda {
+  padding: 13px 15px;
+  color: var(--verde);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #e7eae5;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(20,40,30,.05);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-conteudo {
+  padding: 21px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--verde);
+  font-size: 21px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--cinza);
+}
+
+.diferenciais {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.diferencial {
+  padding: 23px 20px;
+  background: #fff;
+  border: 1px solid #e7eae5;
+  border-radius: 10px;
+}
+
+.icone {
+  font-size: 27px;
+}
+
+.diferencial h3 {
+  margin: 9px 0 5px;
+  color: var(--verde);
+  font-size: 17px;
+}
+
+.diferencial p {
+  margin: 0;
+  color: var(--cinza);
+  font-size: 14px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabela td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #e8ebe7;
+}
+
+.tabela tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela td:first-child {
+  width: 34%;
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.mapa {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.faq {
+  max-width: 850px;
+  margin: auto;
+}
+
+.faq details {
+  margin-bottom: 10px;
+  padding: 17px 20px;
+  background: #fff;
+  border: 1px solid #e7eae5;
+  border-radius: 8px;
+}
+
+.faq summary {
+  color: var(--verde);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq details p {
+  margin-bottom: 0;
+  color: var(--cinza);
+}
+
+.cta-final {
+  padding: 60px 22px;
+  background: linear-gradient(130deg, #183c32, #285849);
+  color: white;
+  text-align: center;
+}
+
+.cta-final h2 {
+  color: white;
+}
+
+.cta-final p {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  color: #e3ebe5;
+}
+
+.cta-final .botao {
+  margin: 5px;
+}
+
+.rodape {
+  padding: 35px 22px;
+  background: var(--verde-escuro);
+  color: #fff;
+}
+
+.rodape-interno {
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rodape p {
+  margin: 5px 0;
+  color: #dbe4dd;
+  font-size: 13px;
+}
+
+.rodape a {
+  color: #fff;
+}
+
+.whatsapp-flutuante {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+  padding: 14px 18px;
+  border-radius: 40px;
+  background: #187747;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 5px 18px rgba(0,0,0,.22);
+}
+
+@media (max-width: 760px) {
+  .topo-interno {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu {
+    gap: 13px;
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 480px;
+    background-position: center;
+  }
+
+  .hero-conteudo {
+    padding: 55px 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .faixa-interno {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .faixa-item {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+  }
+
+  .faixa-item:last-child {
+    border-bottom: none;
+  }
+
+  .secao {
+    padding: 47px 18px;
+  }
+
+  .intro,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-foto img {
+    height: 280px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foto-card:first-child {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+
+  .foto-card:first-child img,
+  .foto-card img {
+    height: 220px;
+    min-height: 0;
+  }
+
+  .diferenciais {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .diferencial {
+    padding: 17px 14px;
+  }
+
+  .card img {
+    height: 240px;
+  }
+
+  .tabela td {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .whatsapp-flutuante {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .galeria,
+  .diferenciais {
+    grid-template-columns: 1fr;
+  }
+
+  .foto-card:first-child {
+    grid-column: auto;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<div class="nav-container">
-
-<a href="../index.html" class="logo">
-
-SANDRO IMÓVEIS INTELIGENTES
-
-</a>
-
-<nav class="nav-links">
-
-<a href="../index.html">Início</a>
-
-<a href="../index.html">Empreendimentos</a>
-
-<a href="https://wa.me/5511966379769" target="_blank">
-
-WhatsApp
-
-</a>
-
-</nav>
-
-</div>
-
+<header class="topo">
+  <div class="topo-interno">
+    <a class="logo" href="../index.html">SANDRO IMÓVEIS INTELIGENTES</a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="../index.html">Início</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#tipologias">Tipologias</a>
+      <a href="#localizacao">Localização</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero-empreendimento">
+<main>
 
-<div>
-
-<h1>METROPOLITAN CONSOLAÇÃO</h1>
-
-<p>
-
-Studios, apartamentos e salas comerciais em uma localização privilegiada, próxima à Avenida Paulista, universidades, hospitais e estações de metrô.
-
-</p>
-
-</div>
-
+<section class="hero">
+  <div class="hero-conteudo">
+    <span class="selo">Tibério · Consolação · São Paulo</span>
+    <h1>Metropolitan Consolação: viva São Paulo por inteiro</h1>
+    <p>Studios, apartamentos e salas comerciais em uma região conectada à Avenida Paulista, universidades, hospitais, comércio e transporte público.</p>
+    <a class="botao botao-dourado" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Quero%20informações%20sobre%20o%20Metropolitan%20Consolação." target="_blank" rel="noopener">Consultar valores e disponibilidade</a>
+    <div class="hero-nota">Atendimento direto pelo WhatsApp · Consulte unidades e condições atuais</div>
+  </div>
 </section>
 
-<section class="container">
-
-<h2>Galeria de Fotos</h2>
-
-<div class="galeria">
-
-<div>
-
-<img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp">
-
-</div>
-
-<div class="galeria-lateral">
-
-<img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-studio-3143-aea7b0e495a07b150ebfa17046b6d26f54c7ffb2.webp">
-
-<img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-laundry-station-2c9f302e4fe313f4950beb6b3e5b5430671c1d42-1.jpg">
-
-<img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-sky-pool-6d5e96eebd7623b1f1db5b8f8108fcfde8ff4d75-2.jpg">
-
-</div>
-
-</div>
-
-<!-- ==========================================================
-INFORMAÇÕES DO EMPREENDIMENTO
-========================================================== -->
-
-<div class="info-imovel">
-
-<h2>Conheça o Metropolitan Consolação</h2>
-
-<p>
-
-O <strong>Metropolitan Consolação</strong> é um empreendimento da <strong>Tibério</strong> localizado em uma das regiões mais valorizadas do Centro de São Paulo. O projeto reúne studios, apartamentos residenciais e salas comerciais, oferecendo excelente opção para quem deseja morar, trabalhar ou investir próximo à Avenida Paulista, Universidade Presbiteriana Mackenzie e ao metrô.
-
-</p>
-
-<p>
-
-Sua localização estratégica coloca o morador a poucos minutos da Avenida Paulista, Rua da Consolação, Shopping Frei Caneca, Hospital Sírio-Libanês, Santa Casa de Misericórdia, PUC-SP, FAAP e diversas instituições de ensino, hospitais, centros culturais e opções de lazer. A região também possui ampla oferta de restaurantes, supermercados, farmácias, bancos e serviços.
-
-</p>
-
-<p>
-
-A mobilidade é um dos maiores diferenciais do Metropolitan Consolação. O empreendimento está próximo das estações Higienópolis-Mackenzie, República e Consolação do metrô, além de importantes corredores de ônibus que facilitam o deslocamento para todas as regiões da cidade.
-
-</p>
-
-<p>
-
-Os studios foram desenvolvidos para atender estudantes, jovens profissionais e investidores que procuram imóveis compactos com alto potencial de valorização e excelente procura para locação. Já os apartamentos oferecem plantas inteligentes, ambientes modernos e ótimo aproveitamento dos espaços para quem busca qualidade de vida no coração da capital.
-
-</p>
-
-<p>
-
-Além da localização privilegiada, o Metropolitan Consolação oferece infraestrutura completa de lazer, incluindo Sky Pool, academia equipada, lavanderia compartilhada, Pet Place e diversos espaços de convivência, proporcionando conforto, praticidade e bem-estar aos moradores.
-
-</p>
-
-<p>
-
-Investir no Metropolitan Consolação significa adquirir um imóvel em uma das regiões com maior demanda imobiliária de São Paulo. A proximidade com universidades, hospitais, centros empresariais e a Avenida Paulista torna o empreendimento uma excelente alternativa tanto para moradia quanto para geração de renda através de locação.
-
-</p>
-
-<p>
-
-Nesta página você encontra fotos, plantas, ficha técnica, localização, diferenciais e atendimento direto para consultar disponibilidade, condições comerciais e valores atualizados do Metropolitan Consolação.
-
-</p>
-
-</div>
-```
-```html
-<!-- ==========================================================
-POR QUE MORAR NA CONSOLAÇÃO
-========================================================== -->
-
-<section class="container">
-
-<h2>Por que morar na Consolação?</h2>
-
-<p>
-
-A Consolação é um dos bairros mais completos e valorizados de São Paulo. Localizada ao lado da Avenida Paulista, a região reúne excelente infraestrutura, ampla oferta de serviços, mobilidade urbana e grande potencial de valorização imobiliária, sendo uma excelente opção tanto para morar quanto para investir.
-
-</p>
-
-<p>
-
-Quem vive na Consolação encontra supermercados, padarias, farmácias, hospitais, clínicas médicas, restaurantes, cafeterias, teatros, cinemas, centros culturais e uma intensa vida urbana. A proximidade com bairros como Higienópolis, Bela Vista, Cerqueira César e Jardins amplia ainda mais as opções de lazer, gastronomia e comércio.
-
-</p>
-
-<p>
-
-Outro grande diferencial é a mobilidade. O bairro possui fácil acesso às estações Higienópolis-Mackenzie, Consolação, Paulista e República do metrô, além de diversas linhas de ônibus que conectam rapidamente todas as regiões da cidade. Também está próximo de importantes vias, como Avenida Paulista, Rua da Consolação, Avenida Rebouças e Elevado Presidente João Goulart.
-
-</p>
-
-<p>
-
-A Consolação também é referência em educação e saúde. A região abriga instituições como a Universidade Presbiteriana Mackenzie, PUC-SP, FAAP e está próxima de hospitais reconhecidos, como o Hospital Sírio-Libanês, Hospital Nove de Julho e Santa Casa de Misericórdia de São Paulo.
-
-</p>
-
-<p>
-
-Para investidores, o bairro apresenta alta demanda por locação de studios e apartamentos compactos devido à presença de universidades, centros empresariais, hospitais e atrações culturais. Essa característica contribui para uma ocupação elevada e um excelente potencial de valorização dos imóveis ao longo do tempo.
-
-</p>
-
-<p>
-
-O Metropolitan Consolação aproveita todos esses diferenciais ao oferecer studios, apartamentos e salas comerciais em uma localização estratégica, permitindo que seus moradores tenham acesso rápido ao que São Paulo oferece de melhor em mobilidade, educação, saúde, cultura e lazer.
-
-</p>
-
-</section>
-```
-
-<!-- ==========================================================
-FICHA TÉCNICA
-========================================================== -->
-
-<section class="container">
-
-<h2>Ficha Técnica</h2>
-
-<table class="tabela-ficha">
-
-<tr>
-<td><strong>Empreendimento</strong></td>
-<td>Metropolitan Consolação</td>
-</tr>
-
-<tr>
-<td><strong>Construtora</strong></td>
-<td>Tibério</td>
-</tr>
-
-<tr>
-<td><strong>Bairro</strong></td>
-<td>Consolação</td>
-</tr>
-
-<tr>
-<td><strong>Cidade</strong></td>
-<td>São Paulo</td>
-</tr>
-
-<tr>
-<td><strong>Tipologias</strong></td>
-<td>Studios, Apartamentos e Salas Comerciais</td>
-</tr>
-
-<tr>
-<td><strong>Metragens</strong></td>
-<td>31 m² até 70 m²</td>
-</tr>
-
-<tr>
-<td><strong>Status</strong></td>
-<td>Em comercialização</td>
-</tr>
-
-</table>
-
+<section class="faixa">
+  <div class="faixa-interno">
+    <div class="faixa-item">
+      <strong>Studios e apartamentos</strong>
+      <span>Consulte as tipologias disponíveis</span>
+    </div>
+    <div class="faixa-item">
+      <strong>Região central</strong>
+      <span>Consolação, São Paulo</span>
+    </div>
+    <div class="faixa-item">
+      <strong>Mobilidade urbana</strong>
+      <span>Acesso a metrô e corredores de ônibus</span>
+    </div>
+  </div>
 </section>
 
-<!-- ==========================================================
-PLANTAS
-========================================================== -->
-
-<section class="container">
-
-<h2>Opções de Plantas</h2>
-
-<div class="grid-cards">
-
-<div class="card">
-
-<img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-studio-3143-aea7b0e495a07b150ebfa17046b6d26f54c7ffb2.webp">
-
-<div class="card-body">
-
-<h3>Studios</h3>
-
-<p>
-
-Plantas compactas e inteligentes para morar ou investir.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp">
-
-<div class="card-body">
-
-<h3>Apartamentos</h3>
-
-<p>
-
-Apartamentos modernos próximos à Avenida Paulista.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<section class="secao">
+  <div class="intro">
+    <div>
+      <span class="etiqueta">Conheça o empreendimento</span>
+      <h2>Um endereço conectado à vida urbana</h2>
+      <p>O Metropolitan Consolação é um empreendimento da Tibério na região central de São Paulo, com studios, apartamentos residenciais e salas comerciais.</p>
+      <p>A região reúne instituições de ensino, hospitais, restaurantes, comércio, espaços culturais e acesso a importantes vias da cidade. É uma localização que pode atender tanto quem procura moradia quanto quem avalia uma opção para investimento.</p>
+      <ul class="lista">
+        <li>Studios e opções residenciais</li>
+        <li>Região próxima à Avenida Paulista</li>
+        <li>Comércio, serviços e instituições de ensino nas proximidades</li>
+        <li>Consulte plantas, valores e unidades disponíveis</li>
+      </ul>
+      <a class="botao" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Quero%20conhecer%20o%20Metropolitan%20Consolação." target="_blank" rel="noopener">Quero mais informações</a>
+    </div>
+    <div class="intro-foto">
+      <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-studio-3143-aea7b0e495a07b150ebfa17046b6d26f54c7ffb2.webp" alt="Ambiente de studio do Metropolitan Consolação" loading="lazy">
+    </div>
+  </div>
 </section>
 
-<!-- ==========================================================
-DIFERENCIAIS
-========================================================== -->
+<section class="secao-branca" id="galeria">
+  <div class="secao">
+    <div class="titulo-secao">
+      <span class="etiqueta">Galeria de imagens</span>
+      <h2>Conheça o Metropolitan Consolação</h2>
+      <p>Veja imagens da fachada, dos ambientes e das áreas de lazer do empreendimento.</p>
+    </div>
 
-<section class="container">
-
-<h2>Diferenciais</h2>
-
-<div class="vantagens-grid">
-
-<div class="vantagem">
-
-<h3>🏊 Sky Pool</h3>
-
-<p>
-
-Piscina elevada com vista privilegiada.
-
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>💪 Fitness</h3>
-
-<p>
-
-Academia equipada.
-
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>🧺 Laundry</h3>
-
-<p>
-
-Lavanderia compartilhada.
-
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>🐶 Pet Place</h3>
-
-<p>
-
-Espaço dedicado aos animais.
-
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>📍 Localização</h3>
-
-<p>
-
-Próximo ao Mackenzie, Paulista e Metrô.
-
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>🚇 Mobilidade</h3>
-
-<p>
-
-Diversas linhas de metrô e corredores de ônibus.
-
-</p>
-
-</div>
-
-</div>
-
+    <div class="galeria">
+      <div class="foto-card">
+        <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp" alt="Fachada do empreendimento Metropolitan Consolação" loading="lazy">
+        <div class="legenda">Fachada do empreendimento</div>
+      </div>
+      <div class="foto-card">
+        <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-studio-3143-aea7b0e495a07b150ebfa17046b6d26f54c7ffb2.webp" alt="Ambiente de studio do Metropolitan Consolação" loading="lazy">
+        <div class="legenda">Ambiente de studio</div>
+      </div>
+      <div class="foto-card">
+        <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-laundry-station-2c9f302e4fe313f4950beb6b3e5b5430671c1d42-1.jpg" alt="Lavanderia compartilhada do Metropolitan Consolação" loading="lazy">
+        <div class="legenda">Lavanderia compartilhada</div>
+      </div>
+      <div class="foto-card">
+        <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-sky-pool-6d5e96eebd7623b1f1db5b8f8108fcfde8ff4d75-2.jpg" alt="Sky Pool do Metropolitan Consolação" loading="lazy">
+        <div class="legenda">Sky Pool</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ==========================================================
-LOCALIZAÇÃO
-========================================================== -->
+<section class="secao" id="tipologias">
+  <div class="titulo-secao">
+    <span class="etiqueta">Opções do empreendimento</span>
+    <h2>Encontre a tipologia ideal</h2>
+    <p>Consulte as plantas oficiais e confirme as metragens, configurações e unidades disponíveis.</p>
+  </div>
 
-<section class="container">
+  <div class="cards">
+    <article class="card">
+      <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-studio-3143-aea7b0e495a07b150ebfa17046b6d26f54c7ffb2.webp" alt="Ambiente de studio do Metropolitan Consolação" loading="lazy">
+      <div class="card-conteudo">
+        <h3>Studios</h3>
+        <p>Opções compactas para quem busca praticidade. Consulte plantas, metragens e disponibilidade.</p>
+      </div>
+    </article>
 
-<h2>Localização</h2>
+    <article class="card">
+      <img src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-fachada-699x1006-b31850df2afaff31f321696176cc327cfb42a57f.webp" alt="Fachada do Metropolitan Consolação" loading="lazy">
+      <div class="card-conteudo">
+        <h3>Apartamentos e salas comerciais</h3>
+        <p>Consulte as opções disponíveis, suas características e as condições comerciais atuais.</p>
+      </div>
+    </article>
+  </div>
 
-<p>
-
-O Metropolitan Consolação está situado em uma das regiões mais valorizadas de São Paulo, próximo da Avenida Paulista, Rua da Consolação, Universidade Mackenzie, Shopping Frei Caneca e diversas estações de metrô.
-
-</p>
-
-<iframe
-src="https://www.google.com/maps?q=Rua+da+Consolação,+São+Paulo&output=embed"
-width="100%"
-height="450"
-style="border:0;border-radius:12px;margin-top:20px;"
-loading="lazy">
-</iframe>
-
+  <div style="text-align:center;margin-top:28px">
+    <a class="botao" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Pode%20me%20enviar%20as%20plantas%20e%20valores%20do%20Metropolitan%20Consolação%3F" target="_blank" rel="noopener">Solicitar plantas e valores</a>
+  </div>
 </section>
 
-<!-- ==========================================================
-ATENDIMENTO
-========================================================== -->
+<section class="secao-branca">
+  <div class="secao">
+    <div class="titulo-secao">
+      <span class="etiqueta">Lazer e praticidade</span>
+      <h2>Diferenciais para o dia a dia</h2>
+      <p>Confira alguns dos espaços e características apresentados para o empreendimento.</p>
+    </div>
 
-<section class="container" style="text-align:center;">
-
-<h2>Gostou deste empreendimento?</h2>
-
-<p style="font-size:18px;margin:20px auto;max-width:700px;">
-
-Solicite agora mesmo valores atualizados, plantas disponíveis, fluxo de pagamento, condições especiais e agende uma visita.
-
-</p>
-
-<a href="https://wa.me/5511966379769?text=Olá! Tenho interesse no Metropolitan Consolação."
-class="btn-whatsapp"
-style="display:inline-block;padding:18px 35px;font-size:20px;text-decoration:none;">
-
-💬 Falar com Sandro no WhatsApp
-
-</a>
-
+    <div class="diferenciais">
+      <div class="diferencial">
+        <div class="icone">🏊</div>
+        <h3>Sky Pool</h3>
+        <p>Piscina elevada, conforme as imagens do empreendimento.</p>
+      </div>
+      <div class="diferencial">
+        <div class="icone">💪</div>
+        <h3>Fitness</h3>
+        <p>Espaço para a rotina de exercícios.</p>
+      </div>
+      <div class="diferencial">
+        <div class="icone">🧺</div>
+        <h3>Laundry</h3>
+        <p>Lavanderia compartilhada.</p>
+      </div>
+      <div class="diferencial">
+        <div class="icone">🐾</div>
+        <h3>Pet Place</h3>
+        <p>Espaço dedicado aos animais de estimação.</p>
+      </div>
+      <div class="diferencial">
+        <div class="icone">🚇</div>
+        <h3>Mobilidade</h3>
+        <p>Região atendida por estações de metrô e linhas de ônibus.</p>
+      </div>
+      <div class="diferencial">
+        <div class="icone">🏙️</div>
+        <h3>Vida urbana</h3>
+        <p>Comércio, serviços, educação e cultura na região central.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ==========================================================
-FAQ
-========================================================== -->
+<section class="secao">
+  <div class="titulo-secao">
+    <span class="etiqueta">Ficha técnica</span>
+    <h2>Informações do Metropolitan Consolação</h2>
+  </div>
 
-<section class="container">
-
-<h2>Perguntas Frequentes</h2>
-
-<div class="faq">
-
-<h3>Onde fica o Metropolitan Consolação?</h3>
-
-<p>
-
-Na região da Consolação, próximo à Avenida Paulista e ao Mackenzie.
-
-</p>
-
-<h3>Existe opção de Studio?</h3>
-
-<p>
-
-Sim. O empreendimento possui studios modernos para morar ou investir.
-
-</p>
-
-<h3>Possui lazer?</h3>
-
-<p>
-
-Sim. Piscina, academia, lavanderia, pet place e diversos ambientes de convivência.
-
-</p>
-
-<h3>Posso financiar?</h3>
-
-<p>
-
-Sim. Consulte condições de financiamento e fluxo diretamente pelo WhatsApp.
-
-</p>
-
-</div>
-
+  <table class="tabela">
+    <tr>
+      <td>Empreendimento</td>
+      <td>Metropolitan Consolação</td>
+    </tr>
+    <tr>
+      <td>Construtora</td>
+      <td>Tibério</td>
+    </tr>
+    <tr>
+      <td>Região</td>
+      <td>Consolação, São Paulo – SP</td>
+    </tr>
+    <tr>
+      <td>Tipologias</td>
+      <td>Studios, apartamentos e salas comerciais</td>
+    </tr>
+    <tr>
+      <td>Metragens</td>
+      <td>Consulte as plantas e unidades disponíveis</td>
+    </tr>
+    <tr>
+      <td>Valores e condições</td>
+      <td>Consulte a tabela comercial atualizada</td>
+    </tr>
+    <tr>
+      <td>Disponibilidade</td>
+      <td>Sujeita à confirmação no atendimento</td>
+    </tr>
+  </table>
 </section>
-  
-<section class="container" style="text-align:center;">
 
-<h2>Outros empreendimentos em São Paulo</h2>
+<section class="secao-branca" id="localizacao">
+  <div class="secao">
+    <div class="titulo-secao">
+      <span class="etiqueta">Localização</span>
+      <h2>Consolação, no coração de São Paulo</h2>
+      <p>A região tem acesso à Avenida Paulista, instituições de ensino, hospitais, comércio e transporte público. Consulte o endereço exato do empreendimento e o melhor trajeto antes de programar sua visita.</p>
+    </div>
 
-<p>
-Conheça também o
-<a href="constantino-campo-belo.html">
-Constantino Campo Belo
-</a>,
-apartamentos de 3 dormitórios no Campo Belo, Zona Sul de São Paulo.
-</p>
-
+    <iframe
+      class="mapa"
+      src="https://www.google.com/maps?q=Rua+da+Consolação,+São+Paulo&output=embed"
+      title="Mapa da região da Rua da Consolação em São Paulo"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </section>
-  
-<footer>
 
-<div class="container" style="text-align:center;">
+<section class="secao">
+  <div class="titulo-secao">
+    <span class="etiqueta">Perguntas frequentes</span>
+    <h2>Tire suas dúvidas</h2>
+  </div>
 
-<h2>SANDRO IMÓVEIS INTELIGENTES</h2>
+  <div class="faq">
+    <details>
+      <summary>Onde fica o Metropolitan Consolação?</summary>
+      <p>O empreendimento está na região da Consolação, em São Paulo. Entre em contato para confirmar o endereço exato e consultar a localização.</p>
+    </details>
 
-<p>
+    <details>
+      <summary>Quais tipos de unidade existem?</summary>
+      <p>As informações disponíveis indicam studios, apartamentos residenciais e salas comerciais. Consulte a disponibilidade atual de cada tipologia.</p>
+    </details>
 
-Especialista em lançamentos imobiliários da cidade de São Paulo.
+    <details>
+      <summary>Quais são os valores dos imóveis?</summary>
+      <p>Os valores podem variar conforme a unidade e as condições comerciais. Solicite a tabela atualizada pelo WhatsApp.</p>
+    </details>
 
-</p>
+    <details>
+      <summary>Como posso receber as plantas?</summary>
+      <p>Use o botão de WhatsApp desta página para solicitar as plantas e confirmar as opções disponíveis.</p>
+    </details>
 
-<p style="margin-top:15px;">
+    <details>
+      <summary>É possível consultar condições de financiamento?</summary>
+      <p>Entre em contato para verificar as condições aplicáveis à unidade de seu interesse.</p>
+    </details>
+  </div>
+</section>
 
-📲 WhatsApp: (11) 97899-3289
+<section class="cta-final" id="contato">
+  <span class="etiqueta">Atendimento personalizado</span>
+  <h2>Quer conhecer o Metropolitan Consolação?</h2>
+  <p>Fale comigo para consultar plantas, valores atualizados, disponibilidade e condições comerciais.</p>
+  <a class="botao botao-dourado" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Tenho%20interesse%20no%20Metropolitan%20Consolação.%20Quero%20consultar%20plantas%2C%20valores%20e%20disponibilidade." target="_blank" rel="noopener">Falar com Sandro pelo WhatsApp</a>
+</section>
 
-</p>
+<section class="secao">
+  <div class="titulo-secao">
+    <span class="etiqueta">Conheça também</span>
+    <h2>Outros empreendimentos</h2>
+    <p>Explore outras opções residenciais no site Sandro Imóveis Inteligentes.</p>
+    <a class="botao" href="../index.html">Ver empreendimentos</a>
+  </div>
+</section>
 
-<p style="margin-top:10px;">
+</main>
 
-© 2026 Todos os direitos reservados.
-
-</p>
-
-</div>
-
+<footer class="rodape">
+  <div class="rodape-interno">
+    <div>
+      <strong>SANDRO IMÓVEIS INTELIGENTES</strong>
+      <p>Atendimento para empreendimentos residenciais em São Paulo.</p>
+      <p>CRECI 86489</p>
+    </div>
+    <div>
+      <p>WhatsApp: (11) 96637-9769</p>
+      <p><a href="../index.html">Voltar para a página inicial</a></p>
+    </div>
+    <p>© 2026 Sandro Imóveis Inteligentes. Todos os direitos reservados.</p>
+  </div>
 </footer>
+
+<a class="whatsapp-flutuante"
+   href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Quero%20informações%20sobre%20o%20Metropolitan%20Consolação."
+   target="_blank"
+   rel="noopener"
+   aria-label="Falar com Sandro pelo WhatsApp">WhatsApp</a>
 
 <script src="../app.js"></script>
 
 </body>
-
 </html>
