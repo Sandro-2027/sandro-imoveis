@@ -180,7 +180,43 @@
     .slide { display: none; }
 
     .slide.ativo { display: block; }
+.planta-slide {
+  display: none;
+}
 
+.planta-slide.ativo {
+  display: block;
+}
+
+.planta-slide img {
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  background: #071f4b;
+}
+
+.planta-ponto {
+  width: 11px;
+  height: 11px;
+  border: 0;
+  border-radius: 50%;
+  background: #aab5c5;
+  cursor: pointer;
+  padding: 0;
+}
+
+.planta-ponto.ativo {
+  background: #ffffff;
+  outline: 2px solid #071f4b;
+}
+
+@media (max-width: 720px) {
+  .planta-slide img {
+    height: 300px;
+  }
+}
+    
     .slide img {
       display: block;
       width: 100%;
@@ -447,7 +483,45 @@
              loading="lazy">
       </div>
     </section>
+<section class="galeria">
+  <h2>Plantas do Trend Santa Cruz Tibério</h2>
+  <p class="galeria-intro">
+    Conheça as opções de plantas disponíveis no Trend Santa Cruz.
+  </p>
 
+  <div class="carrossel" aria-label="Plantas do Trend Santa Cruz">
+
+    <div class="planta-slide ativo">
+      <img src="trend-studio.webp" alt="Planta Studio do Trend Santa Cruz" loading="lazy">
+      <div class="legenda">Studio</div>
+    </div>
+
+    <div class="planta-slide">
+      <img src="trend-studio-reversivel.webp" alt="Planta Studio Reversível do Trend Santa Cruz" loading="lazy">
+      <div class="legenda">Studio Reversível</div>
+    </div>
+
+    <div class="planta-slide">
+      <img src="trend-1-dormitorio.webp" alt="Planta de 1 dormitório do Trend Santa Cruz" loading="lazy">
+      <div class="legenda">1 Dormitório</div>
+    </div>
+
+    <div class="planta-slide">
+      <img src="trend-2-dormitorios.webp" alt="Planta de 2 dormitórios do Trend Santa Cruz" loading="lazy">
+      <div class="legenda">2 Dormitórios</div>
+    </div>
+
+    <button class="seta anterior" type="button" aria-label="Planta anterior" onclick="mudarPlantaSlide(-1)">‹</button>
+    <button class="seta proxima" type="button" aria-label="Próxima planta" onclick="mudarPlantaSlide(1)">›</button>
+  </div>
+
+  <div class="indicadores" aria-label="Selecionar planta">
+    <button class="planta-ponto ativo" aria-label="Studio" onclick="irParaPlantaSlide(0)"></button>
+    <button class="planta-ponto" aria-label="Studio Reversível" onclick="irParaPlantaSlide(1)"></button>
+    <button class="planta-ponto" aria-label="1 Dormitório" onclick="irParaPlantaSlide(2)"></button>
+    <button class="planta-ponto" aria-label="2 Dormitórios" onclick="irParaPlantaSlide(3)"></button>
+  </div>
+</section>
     <section class="secao">
       <h2>Localização: Rua Tirso Martins, 80</h2>
       <p class="intro">
@@ -513,6 +587,41 @@
     function irParaSlide(indice) {
       mostrarSlide(indice);
     }
+        function irParaSlide(indice) {
+      mostrarSlide(indice);
+    }
+
+    let plantaSlideAtual = 0;
+
+    function mostrarPlantaSlide(indice) {
+      const slides = document.querySelectorAll(".planta-slide");
+      const pontos = document.querySelectorAll(".planta-ponto");
+
+      if (indice >= slides.length) {
+        plantaSlideAtual = 0;
+      } else if (indice < 0) {
+        plantaSlideAtual = slides.length - 1;
+      } else {
+        plantaSlideAtual = indice;
+      }
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("ativo", i === plantaSlideAtual);
+      });
+
+      pontos.forEach((ponto, i) => {
+        ponto.classList.toggle("ativo", i === plantaSlideAtual);
+      });
+    }
+
+    function mudarPlantaSlide(direcao) {
+      mostrarPlantaSlide(plantaSlideAtual + direcao);
+    }
+
+    function irParaPlantaSlide(indice) {
+      mostrarPlantaSlide(indice);
+    }
+  </script>
   </script>
 
 </body>
