@@ -691,8 +691,13 @@
 
     function irParaPlantaSlide(indice) {
       mostrarPlantaSlide(indice);
-    }
-    function abrirZoomPlanta(imagem) {
+    }let indiceZoomPlanta = 0;
+
+function abrirZoomPlanta(imagem) {
+  const imagens = document.querySelectorAll(".planta-slide img");
+
+  indiceZoomPlanta = Array.from(imagens).indexOf(imagem);
+
   const zoom = document.getElementById("zoomPlanta");
   const imagemZoom = document.getElementById("imagemZoomPlanta");
 
@@ -700,6 +705,17 @@
   imagemZoom.alt = imagem.alt;
   zoom.classList.add("ativo");
   document.body.style.overflow = "hidden";
+}
+
+function mudarZoomPlanta(direcao) {
+  const imagens = document.querySelectorAll(".planta-slide img");
+
+  indiceZoomPlanta = (indiceZoomPlanta + direcao + imagens.length) % imagens.length;
+
+  const imagemZoom = document.getElementById("imagemZoomPlanta");
+
+  imagemZoom.src = imagens[indiceZoomPlanta].src;
+  imagemZoom.alt = imagens[indiceZoomPlanta].alt;
 }
 
 function fecharZoomPlanta() {
@@ -711,7 +727,7 @@ function fecharZoomPlanta() {
   document.body.style.overflow = "";
 }
   </script>
-  </script>
+ 
 <div class="zoom-planta" id="zoomPlanta" onclick="fecharZoomPlanta()">
   <button class="fechar-zoom-planta" type="button" onclick="event.stopPropagation(); fecharZoomPlanta()">×</button>
 
