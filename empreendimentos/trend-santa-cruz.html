@@ -359,6 +359,39 @@
         font-size: 23px;
       }
     }
+    .zoom-planta {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.zoom-planta.ativo {
+  display: flex;
+}
+
+.zoom-planta img {
+  max-width: 95%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.fechar-zoom-planta {
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  color: white;
+  font-size: 38px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
   </style>
 </head>
 
@@ -621,8 +654,29 @@
     function irParaPlantaSlide(indice) {
       mostrarPlantaSlide(indice);
     }
-  </script>
-  </script>
+    function abrirZoomPlanta(imagem) {
+  const zoom = document.getElementById("zoomPlanta");
+  const imagemZoom = document.getElementById("imagemZoomPlanta");
 
+  imagemZoom.src = imagem.src;
+  imagemZoom.alt = imagem.alt;
+  zoom.classList.add("ativo");
+  document.body.style.overflow = "hidden";
+}
+
+function fecharZoomPlanta() {
+  const zoom = document.getElementById("zoomPlanta");
+  const imagemZoom = document.getElementById("imagemZoomPlanta");
+
+  zoom.classList.remove("ativo");
+  imagemZoom.src = "";
+  document.body.style.overflow = "";
+}
+  </script>
+  </script>
+<div class="zoom-planta" id="zoomPlanta" onclick="fecharZoomPlanta()">
+  <button class="fechar-zoom-planta" type="button" onclick="event.stopPropagation(); fecharZoomPlanta()">×</button>
+  <img id="imagemZoomPlanta" src="" alt="Planta ampliada" onclick="event.stopPropagation()">
+</div>
 </body>
 </html>
