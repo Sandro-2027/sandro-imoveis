@@ -1028,17 +1028,21 @@ Clique no botão do WhatsApp e fale comigo.
 
 <script src="app.js"></script>
 
+
 <script>
 document.addEventListener('click', function(event) {
-  const link = event.target.closest('a[href*="wa.me"]');
+  const link = event.target instanceof Element
+    ? event.target.closest('a[href*="wa.me"]')
+    : null;
 
   if (!link) return;
 
   if (typeof gtag === 'function') {
     gtag('event', 'whatsapp_click', {
       link_url: link.href,
-      link_text: link.innerText.trim(),
-      page_location: window.location.href
+      link_text: (link.innerText || '').trim(),
+      page_location: window.location.href,
+      transport_type: 'beacon'
     });
   }
 });
