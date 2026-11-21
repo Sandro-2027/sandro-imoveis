@@ -1,211 +1,311 @@
-/* ==========================================================
-SANDRO IMÓVEIS INTELIGENTES
-app.js
-==========================================================*/
 
-// ==========================================================
-// MENU FIXO
-// ==========================================================
+document.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener("scroll", function () {
+    /* =====================================
+       CABEÇALHO AO ROLAR A PÁGINA
+    ===================================== */
 
     const header = document.querySelector("header");
 
-    if (!header) return;
-
-    if (window.scrollY > 50) {
-
-        header.classList.add("header-scroll");
-
-    } else {
-
-        header.classList.remove("header-scroll");
-
+    function atualizarCabecalho() {
+        if (header) {
+            header.classList.toggle("scrolled", window.scrollY > 30);
+        }
     }
 
-});
+    window.addEventListener("scroll", atualizarCabecalho);
+    atualizarCabecalho();
 
-// ==========================================================
-// FAQ
-// ==========================================================
 
-const perguntas = document.querySelectorAll(".faq-pergunta");
+    /* =====================================
+       FILTROS DE EMPREENDIMENTOS
+    ===================================== */
 
-perguntas.forEach(function (pergunta) {
+    const filtroBairro = document.getElementById("filtroBairro");
+    const filtroTipo = document.getElementById("filtroTipo");
+    const filtroPreco = document.getElementById("filtroPreco");
+    const filtroVaga = document.getElementById("filtroVaga");
 
-    pergunta.addEventListener("click", function () {
+    const cards = Array.from(
+        document.querySelectorAll("#empreendimentos .card")
+    );
 
-        const item = this.parentElement;
+    const contador = document.getElementById("contadorResultados");
 
-        const resposta = item.querySelector(".faq-resposta");
+    function normalizar(texto) {
+        return String(texto || "")
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
+    }
 
-        document.querySelectorAll(".faq-item").forEach(function (faq) {
+    function aplicarFiltros() {
 
-            if (faq !== item) {
+        if (!cards.length) return;
 
-                faq.classList.remove("ativo");
+        const bairroSelecionado = filtroBairro
+            ? normalizar(filtroBairro.value)
+            : "";
 
-                faq.querySelector(".faq-resposta").style.maxHeight = null;
+        const tipoSelecionado = filtroTipo
+            ? normalizar(filtroTipo.value)
+            : "";
 
-            }
+        const precoSelecionado = filtroPreco
+            ? normalizar(filtroPreco.value)
+            : "";
 
+        const vagaSelecionada = filtroVaga
+            ? normalizar(filtroVaga.value)
+            : "";
+
+        let encontrados = 0;
+
+        cards.forEach(function (card) {
+
+            const bairros = normalizar(card.dataset.bairro).split("|");
+            const tipos = normalizar(card.dataset.tipo).split("|");
+
+            const preco = normalizar(card.dataset.preco);
+            const vaga = normalizar(card.dataset.vaga);
+
+            const correspondeBairro =
+                !bairroSelecionado ||
+                bairros.includes(bairroSelecionado);
+
+            const correspondeTipo =
+                !tipoSelecionado ||
+                tipos.includes(tipoSelecionado);
+
+            const correspondePreco =
+                !precoSelecionado ||
+                preco === precoSelecionado;
+
+            const correspondeVaga =
+                !vagaSelecionada ||
+                vaga === vagaSelecionada;
+
+            const mostrar =
+                correspondeBairro &&
+                correspondeTipo &&
+                correspondePreco &&
+                correspondeVaga;
+
+            card.hidden = !mostrar;
+
+            if (mostrar) encontrados++;
         });
 
-        item.classList.toggle("ativo");
-
-        if (item.classList.contains("ativo")) {
-
-            resposta.style.maxHeight = resposta.scrollHeight + "px";
-
-        } else {
-
-            resposta.style.maxHeight = null;
-
+        if (contador) {
+            contador.textContent =
+                encontrados === 1
+                    ? "1 empreendimento encontrado"
+                    : encontrados + " empreendimentos encontrados";
         }
-
-    });
-
-});
-
-// ==========================================================
-// ANIMAÇÃO AO ROLAR
-// ==========================================================
-
-const elementos = document.querySelectorAll(
-
-".card,.vantagem,.faq-item,.titulo-section,.texto-seo"
-
-);
-
-const observador = new IntersectionObserver(function (entries) {
-
-    entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("mostrar");
-
-        }
-
-    });
-
-}, {
-
-    threshold:0.15
-
-});
-
-elementos.forEach(function(item){
-
-    observador.observe(item);
-
-});
-
-// ==========================================================
-// BOTÃO VOLTAR AO TOPO
-// ==========================================================
-
-const voltarTopo = document.createElement("div");
-
-voltarTopo.innerHTML="▲";
-
-voltarTopo.className="btn-topo";
-
-document.body.appendChild(voltarTopo);
-
-window.addEventListener("scroll",function(){
-
-    if(window.scrollY>700){
-
-        voltarTopo.classList.add("mostrar");
-
-    }else{
-
-        voltarTopo.classList.remove("mostrar");
-
     }
 
-});
+    [filtroBairro, filtroTipo, filtroPreco, filtroVaga].forEach(
+        function (filtro) {
+            if (filtro) {
+                filtro.addEventListener("change", aplicarFiltros);
+            }
+        }
+    );
 
-voltarTopo.addEventListener("click",function(){
+    aplicarFiltros();
 
-    window.scrollTo({
 
-        top:0,
+    /* =====================================
+       TRATAMENTO DE IMAGENS QUE NÃO ABREM
+    ===================================== */
 
-        behavior:"smooth"
+    document.querySelectorAll("img").forEach(function (imagem) {
+
+        imagem.addEventListener("error", function () {
+
+            imagem.style.display = "none";
+
+            const area = imagem.closest(
+                ".card-image-wrapper, .destaque-imagem"
+            );
+
+            if (area) {
+                area.classList.add("imagem-indisponivel");
+
+                if (!area.querySelector(".aviso-imagem")) {
+                    const aviso = document.createElement("div");
+
+                    aviso.className = "aviso-imagem";
+                    aviso.textContent = "Imagem em atualização";
+
+                    area.appendChild(aviso);
+                }
+            }
+        });
 
     });
 
-});
 
-// ==========================================================
-// LINKS SUAVES
-// ==========================================================
+    /* =====================================
+       FAQ - PERGUNTAS E RESPOSTAS
+    ===================================== */
 
-document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    document.querySelectorAll(".faq-pergunta").forEach(
+        function (pergunta) {
 
-    link.addEventListener("click",function(e){
+            pergunta.addEventListener("click", function () {
 
-        const destino=document.querySelector(
+                const item = pergunta.closest(".faq-item");
 
-            this.getAttribute("href")
+                if (!item) return;
 
-        );
-
-        if(destino){
-
-            e.preventDefault();
-
-            destino.scrollIntoView({
-
-                behavior:"smooth"
+                item.classList.toggle("ativo");
 
             });
 
         }
+    );
 
-    });
 
-});
+    /* =====================================
+       ANIMAÇÕES AO ROLAR
+    ===================================== */
 
-// ==========================================================
-// CARDS CLICÁVEIS
-// ==========================================================
+    const elementosAnimados = document.querySelectorAll(
+        ".card, .vantagem, .faq-item, .titulo-section, .texto-seo"
+    );
 
-document.querySelectorAll(".card").forEach(function(card){
+    if ("IntersectionObserver" in window) {
 
-    const link=card.getAttribute("data-link");
+        const observador = new IntersectionObserver(
+            function (entradas, observer) {
 
-    if(link){
+                entradas.forEach(function (entrada) {
 
-        card.style.cursor="pointer";
+                    if (entrada.isIntersecting) {
 
-        card.addEventListener("click",function(){
+                        entrada.target.classList.add("mostrar");
 
-            window.location.href=link;
+                        observer.unobserve(entrada.target);
+                    }
 
+                });
+
+            },
+            {
+                threshold: 0.08
+            }
+        );
+
+        elementosAnimados.forEach(function (elemento) {
+            elemento.classList.add("animar");
+            observador.observe(elemento);
         });
 
     }
 
-});
-/* ==========================================
-POPUP DO WHATSAPP
-========================================== */
 
-window.addEventListener("load", function () {
+    /* =====================================
+       ROLAGEM SUAVE DOS LINKS INTERNOS
+    ===================================== */
+
+    document.querySelectorAll('a[href^="#"]').forEach(
+        function (link) {
+
+            link.addEventListener("click", function (evento) {
+
+                const destino = link.getAttribute("href");
+
+                if (!destino || destino === "#") return;
+
+                const elemento = document.querySelector(destino);
+
+                if (elemento) {
+                    evento.preventDefault();
+
+                    elemento.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+
+            });
+
+        }
+    );
+
+
+    /* =====================================
+       BOTÃO VOLTAR AO TOPO
+    ===================================== */
+
+    let botaoTopo = document.getElementById("voltar-topo");
+
+    if (!botaoTopo) {
+
+        botaoTopo = document.createElement("button");
+
+        botaoTopo.id = "voltar-topo";
+        botaoTopo.type = "button";
+        botaoTopo.textContent = "↑";
+        botaoTopo.setAttribute("aria-label", "Voltar ao topo");
+
+        botaoTopo.style.display = "none";
+
+        document.body.appendChild(botaoTopo);
+
+    }
+
+    window.addEventListener("scroll", function () {
+
+        botaoTopo.style.display =
+            window.scrollY > 450 ? "flex" : "none";
+
+    });
+
+    botaoTopo.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* =====================================
+       POPUP DO WHATSAPP
+    ===================================== */
 
     const popup = document.getElementById("whatsapp-popup");
 
-    if (!popup) return;
+    if (popup) {
 
-    setTimeout(function () {
-        popup.classList.add("show");
-    }, 5000);
+        popup.style.display = "none";
 
-    setTimeout(function () {
-        popup.classList.remove("show");
-    }, 13000);
+        window.setTimeout(function () {
+
+            popup.style.display = "block";
+
+        }, 5000);
+
+        window.setTimeout(function () {
+
+            popup.style.display = "none";
+
+        }, 13000);
+
+    }
+
+
+    /* =====================================
+       RASTREAMENTO DE CLIQUES NO WHATSAPP
+       O evento whatsapp_click também é
+       registrado no index.html.
+    ===================================== */
+
+    // Não adicionar outro rastreamento aqui,
+    // para evitar duplicidade no Google Analytics.
 
 });
