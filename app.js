@@ -26,10 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const filtroPreco = document.getElementById("filtroPreco");
     const filtroVaga = document.getElementById("filtroVaga");
 
-    const cards = Array.from(
-        document.querySelectorAll("#empreendimentos .card, .destaque-principal, #artesano")
-    );
+    const destaqueTrend = document.querySelector(".destaque-principal");
 
+if (destaqueTrend) {
+    destaqueTrend.dataset.bairro = "santa-cruz";
+    destaqueTrend.dataset.tipo = "studio|1-dormitorio|2-dormitorios|apartamento";
+    destaqueTrend.dataset.preco = "consultar";
+    destaqueTrend.dataset.vaga = "consultar";
+}
+
+const cards = Array.from(
+    document.querySelectorAll(
+        "#empreendimentos .card, .destaque-principal"
+    )
+);
     const contador = document.getElementById("contadorResultados");
 
     function normalizar(texto) {
