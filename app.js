@@ -35,9 +35,20 @@ if (destaqueTrend) {
     destaqueTrend.dataset.vaga = "consultar";
 }
 
+const destaqueTrend = document.querySelector(".destaque-principal");
+
+if (destaqueTrend) {
+    destaqueTrend.dataset.bairro = "santa-cruz";
+    destaqueTrend.dataset.tipo = "studio|1-dormitorio|2-dormitorios|apartamento";
+    destaqueTrend.dataset.preco = "consultar";
+    destaqueTrend.dataset.vaga = "consultar";
+}
+
 const cards = Array.from(
     document.querySelectorAll(
         "#empreendimentos .card, .destaque-principal"
+    )
+);
     )
 );
     const contador = document.getElementById("contadorResultados");
