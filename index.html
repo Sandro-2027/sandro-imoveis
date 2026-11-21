@@ -1,1128 +1,537 @@
+
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sandro Imóveis Inteligentes | Lançamentos Imobiliários em São Paulo</title>
+<title>Sandro Imóveis Inteligentes | Apartamentos, Studios e Lançamentos em São Paulo</title>
 
-<meta name="description" content="Apartamentos, studios e lançamentos imobiliários em São Paulo. Conheça empreendimentos da Tibério em regiões como Saúde, Pompéia, Campo Belo, Brás e Zona Leste. Atendimento personalizado">
+<meta name="description" content="Encontre apartamentos, studios e lançamentos imobiliários em São Paulo. Conheça Trend Santa Cruz, Dom Brás, Essence Saúde, Sublime Pompéia e outros empreendimentos. Atendimento personalizado com Sandro Santos.">
 
-<meta name="keywords" content="apartamentos São Paulo, studios São Paulo, Tibério, imóveis, lançamentos">
+<meta name="keywords" content="apartamentos São Paulo, lançamentos imobiliários, studios São Paulo, Trend Santa Cruz, Dom Brás, Essence Saúde, Tibério, imóveis Alphaville">
 
 <meta name="author" content="Sandro Imóveis Inteligentes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sandrosantosimoveis.com.br/">
 
-<meta property="og:title" content="Sandro Imóveis Inteligentes">
-
-<meta property="og:description" content="Conheça os melhores lançamentos imobiliários de São Paulo.">
-
+<meta property="og:title" content="Sandro Imóveis Inteligentes | Lançamentos Imobiliários">
+<meta property="og:description" content="Conheça apartamentos, studios e empreendimentos selecionados em São Paulo e Alphaville.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://sandrosantosimoveis.com.br/">
 
 <link rel="stylesheet" href="style.css">
 
-
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics: manter este código -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P91W5TYF16"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-P91W5TYF16');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-P91W5TYF16');
 </script>
-
 </head>
 
 <body>
 
 <header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">SANDRO IMÓVEIS INTELIGENTES</a>
 
-<div class="nav-container">
-
-<a href="index.html" class="logo">
-
-SANDRO IMÓVEIS INTELIGENTES
-
-</a>
-
-<nav class="nav-links">
-
-<a href="#">Início</a>
-
-<a href="#empreendimentos">Empreendimentos</a>
-
-<a href="empreendimentos/conquista-aricanduva.html">
-Conquista Aricanduva
-</a>
-
-<a href="#vantagens">Por que comprar comigo?</a>
-
-<a href="#contato">Contato</a>
-
-<a href="https://wa.me/5511947842342" target="_blank">
-
-WhatsApp
-
-</a>
-
-</nav>
-
-</div>
-
+        <nav class="nav-links">
+            <a href="#">Início</a>
+            <a href="#empreendimentos">Empreendimentos</a>
+            <a href="#artesano">Alphaville</a>
+            <a href="#vantagens">Por que comprar comigo?</a>
+            <a href="#contato">Contato</a>
+            <a href="https://wa.me/5511947842342" target="_blank" rel="noopener">WhatsApp</a>
+        </nav>
+    </div>
 </header>
 
+<!-- DESTAQUE PRINCIPAL -->
 <section class="hero">
+    <div class="container">
+        <p class="hero-etiqueta">SANDRO IMÓVEIS INTELIGENTES</p>
 
-<div class="container">
+        <h1>Apartamentos e lançamentos imobiliários em São Paulo</h1>
 
-<h1>
+        <p>
+            Encontre seu próximo imóvel entre empreendimentos selecionados,
+            com atendimento personalizado e acompanhamento em todas as etapas
+            da compra.
+        </p>
 
-Apartamentos e Lançamentos Imobiliários em São Paulo
-
-</h1>
-
-<p>
-
-Studios e apartamentos selecionados nos principais lançamentos da cidade.
-Atendimento especializado, financiamento facilitado e acompanhamento em todas as etapas da compra.
-
-</p>
-
-<a
-
-href="https://wa.me/5511947842342?text=Olá,%20gostaria%20de%20receber%20informações%20sobre%20os%20empreendimentos."
-
-class="btn-whatsapp">
-
-Falar pelo WhatsApp
-
-</a>
-
-</div>
-
+        <a href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Gostaria%20de%20conhecer%20os%20empreendimentos."
+           class="btn-whatsapp" target="_blank" rel="noopener">
+            Falar com Sandro
+        </a>
+    </div>
 </section>
 
+<!-- FILTROS -->
 <section class="container">
+    <div class="filtros">
+        <h2>Encontre o imóvel ideal</h2>
 
-<div class="filtros">
+        <div class="filtros-grid">
+            <select id="filtroBairro" aria-label="Escolha o bairro">
+                <option value="">Todos os bairros</option>
+                <option value="saude">Saúde</option>
+                <option value="consolacao">Consolação</option>
+                <option value="pompeia">Pompéia</option>
+                <option value="campo-belo">Campo Belo</option>
+                <option value="bras">Brás</option>
+                <option value="conceicao">Conceição</option>
+                <option value="santa-cruz">Santa Cruz</option>
+                <option value="alphaville">Alphaville</option>
+                <option value="aricanduva">Aricanduva</option>
+                <option value="vila-madalena">Vila Madalena</option>
+            </select>
 
-<h2>
+            <select id="filtroTipo" aria-label="Tipo do imóvel">
+                <option value="">Todos os tipos</option>
+                <option value="studio">Studio</option>
+                <option value="1-dormitorio">1 dormitório</option>
+                <option value="2-dormitorios">2 dormitórios</option>
+                <option value="3-dormitorios">3 dormitórios</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="terreno">Terreno em condomínio fechado</option>
+            </select>
 
-Encontre o imóvel ideal
+            <select id="filtroPreco" aria-label="Faixa de preço">
+                <option value="">Todas as faixas de preço</option>
+                <option value="ate-300">Até R$ 300 mil</option>
+                <option value="300-500">R$ 300 mil a R$ 500 mil</option>
+                <option value="acima-500">Acima de R$ 500 mil</option>
+                <option value="consultar">Consultar valores</option>
+            </select>
 
-</h2>
+            <select id="filtroVaga" aria-label="Vaga de garagem">
+                <option value="">Vagas: indiferente</option>
+                <option value="com-vaga">Com vaga</option>
+                <option value="sem-vaga">Sem vaga</option>
+            </select>
+        </div>
 
-<div class="filtros-grid">
-
-<select>
-
-<option>
-
-Escolha o bairro
-
-</option>
-
-<option>Saúde</option>
-
-<option>Consolação</option>
-
-<option>Pompéia</option>
-
-<option>Campo Belo</option>
-
-<option>Brás</option>
-
-<option>Conceição</option>
-
-</select>
-
-<select>
-
-<option>
-
-Tipo do imóvel
-
-</option>
-
-<option>Studio</option>
-
-<option>2 Dormitórios</option>
-
-<option>3 Dormitórios</option>
-
-</select>
-
-<select>
-
-<option>
-
-Faixa de preço
-
-</option>
-
-<option>Até R$ 300 mil</option>
-
-<option>R$ 300 a R$ 500 mil</option>
-
-<option>Acima de R$ 500 mil</option>
-
-</select>
-
-<select>
-
-<option>
-
-Vaga de garagem
-
-</option>
-
-<option>Com vaga</option>
-
-<option>Sem vaga</option>
-
-</select>
-
-</div>
-
-<div id="contadorResultados">
-
-10 empreendimentos disponíveis
-
-</div>
-
-</div>
-
+        <p id="contadorResultados" aria-live="polite">
+            Empreendimentos disponíveis
+        </p>
+    </div>
 </section>
 
-<!-- =====================================================
-DESTAQUE CONQUISTA ARICANDUVA
-===================================================== -->
+<!-- DESTAQUE TREND SANTA CRUZ -->
+<section class="destaque-principal container">
+    <div class="destaque-conteudo">
+        <p class="destaque-etiqueta">DESTAQUE</p>
+        <h2>Trend Santa Cruz</h2>
 
-<section class="container" style="text-align:center; padding:40px 20px;">
+        <p>
+            Um novo empreendimento Tibério em uma localização estratégica,
+            próximo ao Shopping e à Estação Santa Cruz.
+            Studios e apartamentos com opções de plantas para diferentes
+            estilos de vida.
+        </p>
 
-    <h2 style="color:#0b4ea2; margin-bottom:20px;">
-        Conquista Aricanduva — Minha Casa, Minha Vida
-    </h2>
+        <p><strong>Rua Tirso Martins, 80</strong></p>
+        <p>Plantas de 24 a 40 m² • Studios • 1 e 2 dormitórios • Garden</p>
 
-    <p style="max-width:850px; margin:0 auto 20px; font-size:18px; line-height:1.6;">
-        Está procurando uma oportunidade para sair do aluguel e conquistar
-        seu próprio apartamento na Zona Leste de São Paulo?
-        Conheça o Conquista Aricanduva e descubra as possibilidades
-        de compra pelo Minha Casa, Minha Vida.
-    </p>
+        <a href="empreendimentos/trend-santa-cruz.html" class="btn-whatsapp">
+            Conheça o Trend Santa Cruz
+        </a>
+    </div>
 
-    <a href="empreendimentos/conquista-aricanduva.html"
-       class="btn-whatsapp">
-        Conheça o Conquista Aricanduva
-    </a>
-
+    <div class="destaque-imagem">
+        <img src="empreendimentos/trend-santa-cruz-fachada.png"
+             alt="Fachada do empreendimento Trend Santa Cruz"
+             loading="eager">
+    </div>
 </section>
-    
+
+<!-- EMPREENDIMENTOS -->
 <section id="empreendimentos" class="container">
-
-<h2 style="text-align:center;margin-bottom:40px;color:#0b4ea2;">
-
-Empreendimentos em Destaque
-
-</h2>
-
-<div class="grid-imoveis">
-<!-- =====================================================
-CONQUISTA ARICANDUVA
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://raw.githubusercontent.com/Sandro-2027/sandro-imoveis/refs/heads/main/empreendimentos/FACHADA.jpg"
-        alt="Conquista Aricanduva">
-
-        <div class="badge-contrato">
-            Breve Lançamento
-        </div>
-
-        <div class="badge-tipo">
-            Minha Casa, Minha Vida
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Aricanduva • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Conquista Aricanduva
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Endereço</span>
-                <strong>Rua Rego Barros, 788</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Perfil</span>
-                <strong>Imóvel próprio</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Sair do aluguel. Você pode.
-        </div>
-
-        <a href="empreendimentos/conquista-aricanduva.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-    
-<!-- =====================================================
-ESSENCE SAÚDE - STUDIO
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2026/02/essence-piscina-a91fa6de467cdc2a6afbd94e6ff8793a9bace796-2.jpg"
-        alt="Essence Saúde Studio">
-
-        <div class="badge-contrato">
-            Lançamento
-        </div>
-
-        <div class="badge-tipo">
-            Studio
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Saúde • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Essence Saúde
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>24 a 41 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Tipo</span>
-                <strong>Studio</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            A partir de R$ 290.000
-        </div>
-
-        <a href="empreendimentos/essence-saude.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-
-<!-- =====================================================
-ESSENCE SAÚDE - 2 DORMS
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2026/02/2-dorms--5314--final-2367-e-12-1b5930a4425c2e70122dfe4f7b29381b2dfb0e9f.webp"
-        alt="Essence Saúde 2 Dormitórios">
-
-        <div class="badge-contrato">
-            Lançamento
-        </div>
-
-        <div class="badge-tipo">
-            2 Dorms
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Saúde • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Essence Saúde
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>53 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Suíte</span>
-                <strong>1</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/essence-saude-2-dorms.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-
-<!-- =====================================================
-METROPOLITAN CONSOLAÇÃO
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2023/01/metropolitan-consolacao-691a95a1f49db4d08f1443092f832235aa715898.jpg"
-        alt="Metropolitan Consolação">
-
-        <div class="badge-contrato">
-            Em Obras
-        </div>
-
-        <div class="badge-tipo">
-            Studios
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Consolação • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Metropolitan Consolação
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>24 a 40 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Metrô</span>
-                <strong>Próximo</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/metropolitan-consolacao.html" class="btn-whatsapp">
-            Conheça o Metropolitan Consolação Tibério
-        </a>
-
-    </div>
-
-</div>
-<!-- =====================================================
-SUBLIME POMPÉIA - STUDIOS
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2023/01/sublime-pompeia-coworking-8635b5638a1a0b1ccf28792a3bbb2e57f14b2971-1.jpg"
-        alt="Sublime Pompéia Studios">
-
-        <div class="badge-contrato">
-            Em Obras
-        </div>
-
-        <div class="badge-tipo">
-            Studio
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Pompéia • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Sublime Pompéia
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>24 a 31 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Tipo</span>
-                <strong>Studio</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/sublime-pompeia-studios.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-
-<!-- =====================================================
-SUBLIME POMPÉIA - 2 DORMITÓRIOS
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2023/01/sublime-pompeia-churrasqueira-externa-2510155df32a7a927f5e8ce462f2eea77dc5d8fa-1.jpg"
-        alt="Sublime Pompéia 2 Dormitórios">
-
-        <div class="badge-contrato">
-            Em Obras
-        </div>
-
-        <div class="badge-tipo">
-            2 Dorms
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Pompéia • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Sublime Pompéia
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>47 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Suíte</span>
-                <strong>1</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/sublime-pompeia-2-dorms.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-
-<!-- =====================================================
-SUBLIME POMPÉIA - 3 DORMITÓRIOS
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2023/01/sublime-pompeia-play-sports-861ab2598ac70f2191c0a9e982660de39ddf7101-1.jpg"
-        alt="Sublime Pompéia 3 Dormitórios">
-
-        <div class="badge-contrato">
-            Em Obras
-        </div>
-
-        <div class="badge-tipo">
-            3 Dorms
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Pompéia • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Sublime Pompéia
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>75 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Suítes</span>
-                <strong>2</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/sublime-pompeia.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-<!-- =====================================================
-SUPERA CONCEIÇÃO
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2022/11/supera-conceicao-supera-lobby-90ee2df395aecda9a0518826f88fd5e5d3d44a21.jpg"
-        alt="Supera Conceição">
-
-        <div class="badge-contrato">
-            Em Obras
-        </div>
-
-        <div class="badge-tipo">
-            Apartamentos
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Conceição • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Supera Conceição
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>38 a 75 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Tipo</span>
-                <strong>Studios, 2 e 3 dorms</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/supera-conceicao.html" class="btn-whatsapp">
-            Ver detalhes
-        </a>
-
-    </div>
-
-</div>
-
-<!-- =====================================================
-DOM BRÁS
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2022/11/dom-bras-piscina-com-solarium-a3eab12f3967e0558c27331a335dcdca5526af69-1.jpg"
-        alt="Dom Brás">
-
-        <div class="badge-contrato">
-            Pronto para morar
-        </div>
-
-        <div class="badge-tipo">
-            Apartamentos
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Brás • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Dom Brás
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>24 a 37 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Tipo</span>
-                <strong>Studios, 1 e 2 dorms</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="dom-bras/" class="btn-whatsapp">
-        Ver detalhes
-        </a>
-    </div>
-
-</div>
-
-<!-- =====================================================
-CONSTANTINO CAMPO BELO
-===================================================== -->
-
-<div class="card">
-
-    <div class="card-image-wrapper">
-
-        <img class="card-image active"
-        src="https://www.tiberio.com.br/wp-content/uploads/2022/11/constantino-piscina-34867e1f60c8ace2915528c51790c428f5fba37f.jpg"
-        alt="Constantino Campo Belo">
-
-        <div class="badge-contrato">
-            Pronto Para Morar
-        </div>
-
-        <div class="badge-tipo">
-            Alto Padrão
-        </div>
-
-    </div>
-
-    <div class="card-body">
-
-        <div class="card-cidade">
-            Campo Belo • São Paulo
-        </div>
-
-        <h3 class="card-titulo">
-            Constantino Campo Belo
-        </h3>
-
-        <div class="card-info">
-
-            <div class="card-info-item">
-                <span>Área</span>
-                <strong>24, 55 e 70 m²</strong>
-            </div>
-
-            <div class="card-info-item">
-                <span>Tipo</span>
-                <strong>Studios, 2 e 3 dorms</strong>
-            </div>
-
-        </div>
-
-        <div class="card-preco">
-            Consulte valores
-        </div>
-
-        <a href="empreendimentos/constantino-campo-belo.html" class="btn-whatsapp">
-            Ver Constantino Campo Belo
-        </a>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-DESTAQUE ARTESANO CANTALUPE
-===================================================== -->
-
-<section class="container" style="text-align:center; padding:40px 20px;">
-
-<h2 style="color:#0b4ea2; margin-bottom:15px;">
-    Artesano Cantalupe em Alphaville, Barueri
-</h2>
-
-<p style="max-width:850px; margin:0 auto 25px; font-size:18px; line-height:1.6;">
-    Conheça o Artesano Cantalupe, empreendimento de terrenos de alto padrão
-    em Alphaville, Barueri. São 322 terrenos com metragens de 450 a 830 m²,
-    em um condomínio clube com infraestrutura de lazer e convivência.
-    Conheça o projeto e solicite informações.
-</p>
+    <h2 class="titulo-section">Nossos empreendimentos</h2>
+
+    <p class="texto-section">
+        Conheça opções de apartamentos, studios e imóveis selecionados
+        em diferentes regiões.
+    </p>
 
     <div class="grid-imoveis">
 
-        <div class="card">
-
+        <!-- CONQUISTA ARICANDUVA -->
+        <article class="card" data-bairro="aricanduva" data-tipo="apartamento" data-preco="consultar" data-vaga="consultar">
             <div class="card-image-wrapper">
-                <img
-                    class="card-image active"
-                    src="empreendimentos/artesano-concierge.png"
-                    alt="Artesano Cantalupe, terrenos de alto padrão em Alphaville"
-                    style="width:100%;height:auto;"
-                >
-
-                <div class="badge-tipo">
-                    Alto Padrão
-                </div>
+                <img class="card-image active"
+                     src="empreendimentos/FACHADA.jpg"
+                     alt="Conquista Aricanduva"
+                     loading="lazy">
+                <span class="badge-contrato">Lançamento</span>
+                <span class="badge-tipo">Minha Casa, Minha Vida</span>
             </div>
-
             <div class="card-body">
-
-                <div class="card-cidade">
-                    Alphaville • Barueri
-                </div>
-
-                <h3 class="card-titulo">
-                    Artesano Cantalupe
-                </h3>
-
+                <p class="card-cidade">Aricanduva • São Paulo</p>
+                <h3 class="card-titulo">Conquista Aricanduva</h3>
                 <div class="card-info">
-                    <div class="card-info-item">
-                        <span>Quantidade</span>
-                        <strong>322 terrenos</strong>
-                    </div>
-
-                    <div class="card-info-item">
-                        <span>Metragem</span>
-                        <strong>450 a 830 m²</strong>
-                    </div>
+                    <div class="card-info-item"><span>Endereço</span><strong>Rua Rego Barros, 788</strong></div>
+                    <div class="card-info-item"><span>Perfil</span><strong>Imóvel próprio</strong></div>
                 </div>
-
-                <div class="card-preco">
-                    Condomínio clube
-                </div>
-
-                <a href="empreendimentos/artesano-cantalupe.html"
-                   class="btn-whatsapp">
-                    Conheça o Artesano Cantalupe
-                </a>
-
+                <div class="card-preco">Consulte condições</div>
+                <a href="empreendimentos/conquista-aricanduva.html" class="btn-whatsapp">Ver detalhes</a>
             </div>
+        </article>
 
-        </div>
+        <!-- ESSENCE SAÚDE STUDIO -->
+        <article class="card" data-bairro="saude" data-tipo="studio" data-preco="ate-300" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="essence-piscina.jpg"
+                     alt="Área de lazer do Essence Saúde"
+                     loading="lazy">
+                <span class="badge-contrato">Lançamento</span>
+                <span class="badge-tipo">Studio</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Saúde • São Paulo</p>
+                <h3 class="card-titulo">Essence Saúde</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>24 a 41 m²</strong></div>
+                    <div class="card-info-item"><span>Tipo</span><strong>Studio</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/essence-saude.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- ESSENCE SAÚDE 2 DORMITÓRIOS -->
+        <article class="card" data-bairro="saude" data-tipo="2-dormitorios" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="essence-planta-2-dorms.webp"
+                     alt="Planta de dois dormitórios do Essence Saúde"
+                     loading="lazy">
+                <span class="badge-contrato">Lançamento</span>
+                <span class="badge-tipo">2 dormitórios</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Saúde • São Paulo</p>
+                <h3 class="card-titulo">Essence Saúde — 2 Dormitórios</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>53 m²</strong></div>
+                    <div class="card-info-item"><span>Suíte</span><strong>1</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/essence-saude-2-dorms.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- METROPOLITAN -->
+        <article class="card" data-bairro="consolacao" data-tipo="studio" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="metropolitan-fachada.webp"
+                     alt="Fachada do Metropolitan Consolação"
+                     loading="lazy">
+                <span class="badge-contrato">Em obras</span>
+                <span class="badge-tipo">Studios</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Consolação • São Paulo</p>
+                <h3 class="card-titulo">Metropolitan Consolação</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>24 a 40 m²</strong></div>
+                    <div class="card-info-item"><span>Localização</span><strong>Próximo ao metrô</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/metropolitan-consolacao.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- SUBLIME STUDIOS -->
+        <article class="card" data-bairro="pompeia" data-tipo="studio" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="empreendimentos/sublime-pompeia-studio-2793.webp"
+                     alt="Studio do Sublime Pompéia"
+                     loading="lazy">
+                <span class="badge-contrato">Em obras</span>
+                <span class="badge-tipo">Studio</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Pompéia • São Paulo</p>
+                <h3 class="card-titulo">Sublime Pompéia — Studios</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>24 a 31 m²</strong></div>
+                    <div class="card-info-item"><span>Tipo</span><strong>Studio</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/sublime-pompeia-studios.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- SUBLIME 2 DORMITÓRIOS -->
+        <article class="card" data-bairro="pompeia" data-tipo="2-dormitorios" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="empreendimentos/sublime-pompeia-churrasqueira.jpg"
+                     alt="Área de lazer do Sublime Pompéia"
+                     loading="lazy">
+                <span class="badge-contrato">Em obras</span>
+                <span class="badge-tipo">2 dormitórios</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Pompéia • São Paulo</p>
+                <h3 class="card-titulo">Sublime Pompéia — 2 Dormitórios</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>47 m²</strong></div>
+                    <div class="card-info-item"><span>Suíte</span><strong>1</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/sublime-pompeia-2-dorms.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- SUBLIME 3 DORMITÓRIOS -->
+        <article class="card" data-bairro="pompeia" data-tipo="3-dormitorios" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="empreendimentos/sublime-pompeia-3dorms.webp"
+                     alt="Sublime Pompéia três dormitórios"
+                     loading="lazy">
+                <span class="badge-contrato">Em obras</span>
+                <span class="badge-tipo">3 dormitórios</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Pompéia • São Paulo</p>
+                <h3 class="card-titulo">Sublime Pompéia — 3 Dormitórios</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>75 m²</strong></div>
+                    <div class="card-info-item"><span>Suítes</span><strong>2</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/sublime-pompeia.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- SUPERA CONCEIÇÃO -->
+        <article class="card" data-bairro="conceicao" data-tipo="apartamento" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="empreendimentos/FITNESS_EXTERNO.jpg"
+                     alt="Área externa de empreendimento"
+                     loading="lazy">
+                <span class="badge-contrato">Empreendimento</span>
+                <span class="badge-tipo">Apartamentos</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Conceição • São Paulo</p>
+                <h3 class="card-titulo">Supera Conceição</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>38 a 75 m²</strong></div>
+                    <div class="card-info-item"><span>Tipos</span><strong>Studios e apartamentos</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/supera-conceicao.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- DOM BRÁS -->
+        <article class="card" data-bairro="bras" data-tipo="apartamento" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="empreendimentos/CHURRASQUEIRA_I_E_II.jpg"
+                     alt="Área de lazer"
+                     loading="lazy">
+                <span class="badge-contrato">Pronto para morar</span>
+                <span class="badge-tipo">Apartamentos</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Brás • São Paulo</p>
+                <h3 class="card-titulo">Dom Brás</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>24 a 37 m²</strong></div>
+                    <div class="card-info-item"><span>Localização</span><strong>Próximo ao metrô</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="dom-bras/" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- CONSTANTINO CAMPO BELO -->
+        <article class="card" data-bairro="campo-belo" data-tipo="apartamento" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper">
+                <img class="card-image active"
+                     src="constantino-piscina.jpg"
+                     alt="Piscina do Constantino Campo Belo"
+                     loading="lazy">
+                <span class="badge-contrato">Pronto para morar</span>
+                <span class="badge-tipo">Alto padrão</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Campo Belo • São Paulo</p>
+                <h3 class="card-titulo">Constantino Campo Belo</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Área</span><strong>24, 55 e 70 m²</strong></div>
+                    <div class="card-info-item"><span>Tipos</span><strong>Studios e apartamentos</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="empreendimentos/constantino-campo-belo.html" class="btn-whatsapp">Ver detalhes</a>
+            </div>
+        </article>
+
+        <!-- VM125 VILA MADALENA -->
+        <article class="card" data-bairro="vila-madalena" data-tipo="apartamento" data-preco="consultar" data-vaga="consultar">
+            <div class="card-image-wrapper vm125-placeholder">
+                <div class="vm125-placeholder-text">
+                    <span>VM125</span>
+                    <strong>Vila Madalena</strong>
+                    <small>São Paulo</small>
+                </div>
+                <span class="badge-contrato">Empreendimento</span>
+            </div>
+            <div class="card-body">
+                <p class="card-cidade">Vila Madalena • São Paulo</p>
+                <h3 class="card-titulo">VM125 Vila Madalena</h3>
+                <div class="card-info">
+                    <div class="card-info-item"><span>Projeto</span><strong>VM125</strong></div>
+                    <div class="card-info-item"><span>Região</span><strong>Zona Oeste</strong></div>
+                </div>
+                <div class="card-preco">Consulte valores</div>
+                <a href="vm125-vila-madalena.html" class="btn-whatsapp">Conheça o VM125</a>
+            </div>
+        </article>
 
     </div>
-
 </section>
 
-
-<!-- =====================================================
-APARTAMENTOS NO CAMPO BELO
-===================================================== -->
-
-<section class="container" style="text-align:center;">
-
-<h2>Apartamentos no Campo Belo</h2>
-
-<p style="max-width:800px;margin:20px auto;">
-
-Está procurando apartamentos no Campo Belo? Compare plantas,
-metragens, localização e opções de imóveis na região.
-
-</p>
-
-<a href="empreendimentos/apartamentos-campo-belo.html"
-class="btn-whatsapp">
-
-Conheça os Apartamentos no Campo Belo
-
-</a>
-
+<!-- ARTESANO CANTALUPE -->
+<section id="artesano" class="artesano-section">
+    <div class="container artesano-conteudo">
+        <p class="destaque-etiqueta">ALTO PADRÃO • ALPHAVILLE</p>
+        <h2>Artesano Cantalupe</h2>
+        <p>
+            Um projeto de terrenos de alto padrão em Alphaville, Barueri,
+            com proposta de condomínio clube e infraestrutura de lazer
+            e convivência.
+        </p>
+        <div class="artesano-dados">
+            <div><strong>322</strong><span>terrenos</span></div>
+            <div><strong>450 a 830 m²</strong><span>metragens informadas</span></div>
+            <div><strong>Alphaville</strong><span>Barueri</span></div>
+        </div>
+        <a href="empreendimentos/artesano-cantalupe.html" class="btn-whatsapp">
+            Conheça o Artesano Cantalupe
+        </a>
+    </div>
 </section>
 
-<!-- =====================================================
-POR QUE COMPRAR COMIGO?
-===================================================== -->
-    
-<!-- =====================================================
-POR QUE COMPRAR COMIGO?
-===================================================== -->
+<!-- CAMPO BELO -->
+<section class="container secao-texto">
+    <h2>Apartamentos no Campo Belo</h2>
+    <p>
+        Está procurando apartamentos no Campo Belo? Conheça opções de imóveis
+        na região e compare localização, plantas e características dos projetos.
+    </p>
+    <a href="empreendimentos/apartamentos-campo-belo.html" class="btn-whatsapp">
+        Conheça os apartamentos no Campo Belo
+    </a>
+</section>
 
+<!-- VANTAGENS -->
 <section id="vantagens" class="container">
+    <h2 class="titulo-section">Por que comprar com Sandro Imóveis Inteligentes?</h2>
 
-<h2 style="text-align:center;margin-bottom:40px;color:#0b4ea2;">
+    <div class="vantagens-grid">
+        <div class="vantagem">
+            <h3>Atendimento personalizado</h3>
+            <p>Acompanhamento desde a escolha do imóvel até as etapas da compra.</p>
+        </div>
 
-Por que comprar com Sandro Imóveis Inteligentes?
+        <div class="vantagem">
+            <h3>Simulação de financiamento</h3>
+            <p>Orientação sobre financiamento bancário e utilização do FGTS.</p>
+        </div>
 
-</h2>
+        <div class="vantagem">
+            <h3>Conhecimento dos empreendimentos</h3>
+            <p>Informações sobre projetos, localização, plantas e oportunidades.</p>
+        </div>
 
-<div class="vantagens-grid">
-
-<div class="vantagem">
-
-<h3>🏡 Atendimento Personalizado</h3>
-
-<p>
-Acompanhamento completo desde a escolha do imóvel até a assinatura do contrato.
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>💰 Simulação de Financiamento</h3>
-
-<p>
-Auxílio na análise de crédito, financiamento bancário e utilização do FGTS.
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>📍 Especialista em Lançamentos</h3>
-
-<p>
-Conhecimento dos principais empreendimentos da Tibério e das melhores oportunidades.
-</p>
-
-</div>
-
-<div class="vantagem">
-
-<h3>🤝 Segurança na Compra</h3>
-
-<p>
-Atendimento transparente e suporte durante todo o processo de aquisição.
-</p>
-
-</div>
-
-</div>
-
+        <div class="vantagem">
+            <h3>Segurança na compra</h3>
+            <p>Atendimento transparente e suporte durante o processo de aquisição.</p>
+        </div>
+    </div>
 </section>
-<!-- =====================================================
-CHAMADA FINAL
-===================================================== -->
 
+<!-- CONTATO -->
 <section id="contato" class="container">
-
-<div style="background:#0b4ea2;
-color:white;
-padding:60px 30px;
-border-radius:15px;
-text-align:center;
-margin:60px 0;">
-
-<h2 style="font-size:38px;margin-bottom:20px;">
-
-Pronto para encontrar seu novo imóvel?
-
-</h2>
-
-<p style="font-size:20px;max-width:800px;margin:0 auto 35px;">
-
-Receba atendimento personalizado, tabela de preços atualizada,
-simulação de financiamento e orientação completa para escolher
-o imóvel ideal.
-
-</p>
-
-<a
-
-href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Gostaria%20de%20receber%20informações%20sobre%20os%20empreendimentos."
-
-class="btn-whatsapp"
-
-style="font-size:22px;padding:18px 40px;">
-
-💬 Conversar pelo WhatsApp
-
-</a>
-
-</div>
-
+    <div class="contato-final">
+        <h2>Vamos encontrar seu próximo imóvel?</h2>
+        <p>
+            Receba informações sobre os empreendimentos, condições comerciais
+            e opções disponíveis.
+        </p>
+        <a href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Gostaria%20de%20receber%20informações%20sobre%20os%20empreendimentos."
+           class="btn-whatsapp" target="_blank" rel="noopener">
+            Conversar pelo WhatsApp
+        </a>
+    </div>
 </section>
 
-<!-- =====================================================
-RODAPÉ
-===================================================== -->
-
+<!-- RODAPÉ -->
 <footer>
-
-<div class="container">
-
-<h2 style="margin-bottom:20px;">
-
-SANDRO IMÓVEIS INTELIGENTES
-
-</h2>
-
-<p>
-
-Especialista em lançamentos imobiliários na cidade de São Paulo. - Creci 86489
-
-</p>
-
-<br>
-
-<p>
-
-📱 WhatsApp:
-<strong>(11) 94784-2342</strong>
-
-</p>
-
-<p>
-
-📧 atendimento@
-
-</p>
-
-<br>
-
-<p>
-
-Studios • Apartamentos • Alto Padrão • Minha Casa Minha Vida
-
-</p>
-
-<br>
-
-<hr style="margin:25px 0;border-color:rgba(255,255,255,.2);">
-
-<p>
-
-© 2026 Sandro Imóveis Inteligentes.
-Todos os direitos reservados.
-
-</p>
-
-</div>
-
+    <div class="container">
+        <h2>SANDRO IMÓVEIS INTELIGENTES</h2>
+        <p>Gerente de Parcerias da Tibério</p>
+        <p>Atendimento para empreendimentos residenciais em São Paulo.</p>
+        <p>CRECI 86489</p>
+        <p>WhatsApp: <strong>(11) 94784-2342</strong></p>
+        <p>Studios • Apartamentos • Alto Padrão • Terrenos em condomínio</p>
+        <hr>
+        <p>© 2026 Sandro Imóveis Inteligentes. Todos os direitos reservados.</p>
+    </div>
 </footer>
 
-<a href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Gostaria%20de%20receber%20informações%20sobre%20os%20empreendimentos."
-class="whatsapp-float"
-target="_blank"
-aria-label="Conversar pelo WhatsApp">
-
-<svg xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 32 32"
-width="34"
-height="34"
-aria-hidden="true">
-
-<path fill="#ffffff" d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.15-.19.28-.73.94-.9 1.13-.16.19-.33.22-.62.07-.29-.14-1.23-.45-2.34-1.44-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.44.13-.59.13-.13.29-.33.43-.5.14-.16.19-.28.29-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.43 0 1.43 1.04 2.81 1.18 3 .14.19 2.04 3.11 4.94 4.37.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.08 1.7-.69 1.94-1.37.24-.67.24-1.24.17-1.36-.08-.12-.27-.19-.56-.33z"/>
-
-<path fill="#ffffff" d="M16.01 3C8.82 3 3 8.82 3 16c0 2.54.73 4.99 2.12 7.1L3 29l6.1-2.08A12.9 12.9 0 0 0 16.01 29C23.18 29 29 23.18 29 16S23.18 3 16.01 3zm0 23.65c-2.12 0-4.2-.57-6.02-1.66l-.43-.25-3.62 1.23 1.19-3.53-.28-.45A10.61 10.61 0 1 1 16.01 26.65z"/>
-
-</svg>
-
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5511947842342?text=Olá%20Sandro!%20Gostaria%20de%20receber%20informações."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Conversar pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true">
+        <path fill="#ffffff" d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.15-.19.28-.73.94-.9 1.13-.16.19-.33.22-.62.07-.29-.14-1.23-.45-2.34-1.44-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.44.13-.59.13-.13.29-.33.43-.5.14-.16.19-.28.29-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.43 0 1.43 1.04 2.81 1.18 3 .14.19 2.04 3.11 4.94 4.37.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.08 1.7-.69 1.94-1.37.24-.67.24-1.24.17-1.36-.08-.12-.27-.19-.56-.33z"/>
+        <path fill="#ffffff" d="M16.01 3C8.82 3 3 8.82 3 16c0 2.54.73 4.99 2.12 7.1L3 29l6.1-2.08A12.9 12.9 0 0 0 16.01 29C23.18 29 29 23.18 29 16S23.18 3 16.01 3zm0 23.65c-2.12 0-4.2-.57-6.02-1.66l-.43-.25-3.62 1.23 1.19-3.53-.28-.45A10.61 10.61 0 1 1 16.01 26.65z"/>
+    </svg>
 </a>
 
 <div id="whatsapp-popup">
-
-👋 <strong>Olá!</strong><br><br>
-
-Posso ajudar você a encontrar o imóvel ideal?<br><br>
-
-Clique no botão do WhatsApp e fale comigo.
-
+    <strong>Olá!</strong><br><br>
+    Posso ajudar você a encontrar o imóvel ideal?<br><br>
+    Clique no botão do WhatsApp e fale comigo.
 </div>
 
 <script src="app.js"></script>
 
-
+<!-- Rastreamento de cliques no WhatsApp: manter -->
 <script>
 document.addEventListener('click', function(event) {
-  const link = event.target instanceof Element
-    ? event.target.closest('a[href*="wa.me"]')
-    : null;
+    const link = event.target instanceof Element
+        ? event.target.closest('a[href*="wa.me"]')
+        : null;
 
-  if (!link) return;
+    if (!link) return;
 
-  if (typeof gtag === 'function') {
-    gtag('event', 'whatsapp_click', {
-      link_url: link.href,
-      link_text: (link.innerText || '').trim(),
-      page_location: window.location.href,
-      transport_type: 'beacon'
-    });
-  }
+    if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+            link_url: link.href,
+            link_text: (link.innerText || '').trim(),
+            page_location: window.location.href,
+            transport_type: 'beacon'
+        });
+    }
 });
 </script>
 
 </body>
-
 </html>
