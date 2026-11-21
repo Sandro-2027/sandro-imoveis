@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filtroVaga = document.getElementById("filtroVaga");
 
     const cards = Array.from(
-        document.querySelectorAll("#empreendimentos .card")
+        document.querySelectorAll("#empreendimentos .card, .destaque-principal, #artesano")
     );
 
     const contador = document.getElementById("contadorResultados");
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function aplicarFiltros() {
 
         const itens = [
-            ...document.querySelectorAll("#empreendimentos .card")
+            ...document.querySelectorAll("#empreendimentos .card, .destaque-principal, #artesano")
         ];
 
         if (trend) itens.push(trend);
