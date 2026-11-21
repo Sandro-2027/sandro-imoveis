@@ -309,3 +309,91 @@ document.addEventListener("DOMContentLoaded", function () {
     // para evitar duplicidade no Google Analytics.
 
 });
+
+
+/* ==========================================
+   FILTRO DE EMPREENDIMENTOS
+========================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bairro = document.getElementById("filtroBairro");
+    const tipo = document.getElementById("filtroTipo");
+    const preco = document.getElementById("filtroPreco");
+    const vaga = document.getElementById("filtroVaga");
+    const contador = document.getElementById("contadorResultados");
+
+    if (!bairro || !tipo || !preco || !vaga) return;
+
+    const trend = document.querySelector(".destaque-principal");
+    const artesano = document.getElementById("artesano");
+
+    if (trend) {
+        trend.dataset.bairro = "santa-cruz";
+        trend.dataset.tipo = "studio 1-dormitorio 2-dormitorios apartamento";
+        trend.dataset.preco = "consultar";
+        trend.dataset.vaga = "consultar";
+    }
+
+    if (artesano) {
+        artesano.dataset.bairro = "alphaville";
+        artesano.dataset.tipo = "terreno";
+        artesano.dataset.preco = "consultar";
+        artesano.dataset.vaga = "consultar";
+    }
+
+    function aplicarFiltros() {
+
+        const itens = [
+            ...document.querySelectorAll("#empreendimentos .card")
+        ];
+
+        if (trend) itens.push(trend);
+        if (artesano) itens.push(artesano);
+
+        let quantidade = 0;
+
+        itens.forEach(function (item) {
+
+            const bairros = (item.dataset.bairro || "").split(" ");
+            const tipos = (item.dataset.tipo || "").split(" ");
+
+            const correspondeBairro =
+                !bairro.value || bairros.includes(bairro.value);
+
+            const correspondeTipo =
+                !tipo.value || tipos.includes(tipo.value);
+
+            const correspondePreco =
+                !preco.value || item.dataset.preco === preco.value;
+
+            const correspondeVaga =
+                !vaga.value || item.dataset.vaga === vaga.value;
+
+            const mostrar =
+                correspondeBairro &&
+                correspondeTipo &&
+                correspondePreco &&
+                correspondeVaga;
+
+            item.style.display = mostrar ? "" : "none";
+
+            if (mostrar) quantidade++;
+        });
+
+        if (contador) {
+            contador.textContent =
+                quantidade + (quantidade === 1
+                ? " empreendimento encontrado"
+                : " empreendimentos encontrados");
+        }
+    }
+
+    [bairro, tipo, preco, vaga].forEach(function (filtro) {
+        filtro.addEventListener("change", aplicarFiltros);
+    });
+
+    aplicarFiltros();
+
+});
+
