@@ -41,6 +41,9 @@
       },
       "breadcrumb": {
         "@id": "https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html#breadcrumb"
+      },
+      "video": {
+        "@id": "https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html#video-reel"
       }
     },
     {
@@ -61,6 +64,19 @@
         "addressRegion": "SP",
         "postalCode": "04054-000",
         "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html#video-reel",
+      "name": "Essence Saúde Tibério: studios e apartamentos perto do Metrô Saúde",
+      "description": "Vídeo de apresentação do Essence Saúde Tibério, com studios e apartamentos de 1 e 2 dormitórios, opções com suíte e vaga, próximo à Estação Saúde do Metrô, em São Paulo.",
+      "embedUrl": "https://www.instagram.com/reel/DgA7ernh6-0/embed",
+      "url": "https://www.instagram.com/reel/DgA7ernh6-0/",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sandro Imóveis Inteligentes"
       }
     },
     {
@@ -505,6 +521,73 @@ h2 {
   margin-bottom: 0;
 }
 
+/* SEÇÃO DO REEL DO INSTAGRAM */
+.video-reel {
+  background: #fff;
+  padding: 72px 22px;
+}
+
+.video-reel-interno {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.video-reel .secao-titulo {
+  margin-bottom: 28px;
+}
+
+.video-reel-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.video-reel-texto h3 {
+  color: var(--verde);
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0 0 15px;
+}
+
+.video-reel-texto p {
+  color: var(--cinza);
+  margin: 0 0 16px;
+}
+
+.video-reel-moldura {
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f1f1f1;
+  box-shadow: 0 8px 28px rgba(20,40,30,.12);
+}
+
+.video-reel-moldura iframe {
+  display: block;
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+.video-reel-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--verde);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.video-reel-observacao {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--cinza);
+}
+
 .cta-final {
   background: linear-gradient(130deg, #173f35, #245849);
   color: white;
@@ -621,6 +704,23 @@ h2 {
 
   .mapa { height: 300px; }
 
+  .video-reel {
+    padding: 50px 18px;
+  }
+
+  .video-reel-conteudo {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .video-reel-moldura {
+    max-width: 390px;
+  }
+
+  .video-reel-moldura iframe {
+    height: 620px;
+  }
+
   .whatsapp-flutuante {
     right: 12px;
     bottom: 12px;
@@ -632,6 +732,7 @@ h2 {
 @media (max-width: 420px) {
   .diferenciais { grid-template-columns: 1fr; }
   .marca { font-size: 14px; }
+  .video-reel-moldura iframe { height: 570px; }
 }
 </style>
 </head>
@@ -644,6 +745,7 @@ h2 {
 
     <nav class="menu" aria-label="Menu principal">
       <a href="../index.html">Início</a>
+      <a href="#video">Vídeo</a>
       <a href="#galeria">Fotos</a>
       <a href="#plantas">Plantas</a>
       <a href="#localizacao">Localização</a>
@@ -714,6 +816,53 @@ h2 {
 
     <div class="intro-foto">
       <img src="../essence-studio.webp" alt="Studio decorado do empreendimento Essence Saúde Tibério em São Paulo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- REEL DO INSTAGRAM -->
+<section class="video-reel" id="video">
+  <div class="video-reel-interno">
+
+    <div class="secao-titulo">
+      <span class="etiqueta">Vídeo do empreendimento</span>
+      <h2>Veja o Essence Saúde Tibério em vídeo</h2>
+      <p>Conheça o empreendimento, os studios e apartamentos de 1 e 2 dormitórios próximos ao Metrô Saúde.</p>
+    </div>
+
+    <div class="video-reel-conteudo">
+
+      <div class="video-reel-texto">
+        <h3>Essence Saúde: studios e apartamentos perto do Metrô Saúde</h3>
+
+        <p>Assista ao vídeo de apresentação do Essence Saúde, empreendimento da Tibério localizado na Rua Afonso Mariano Fagundes, no bairro Saúde, em São Paulo.</p>
+
+        <p>O projeto oferece studios e apartamentos de 1 e 2 dormitórios, com opções com suíte e vaga, a aproximadamente 500 metros da Estação Saúde do Metrô.</p>
+
+        <p>Quer conhecer as plantas, consultar valores ou agendar uma visita?</p>
+
+        <a class="botao" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Assisti%20ao%20vídeo%20do%20Essence%20Saúde%20e%20quero%20mais%20informações." target="_blank" rel="noopener">Agendar minha visita</a>
+
+        <p>
+          <a class="video-reel-link" href="https://www.instagram.com/reel/DgA7ernh6-0/" target="_blank" rel="noopener">
+            Assistir ao Reel diretamente no Instagram
+          </a>
+        </p>
+
+        <p class="video-reel-observacao">Vídeo publicado no Instagram de Sandro Imóveis Inteligentes.</p>
+      </div>
+
+      <div class="video-reel-moldura">
+        <iframe
+          src="https://www.instagram.com/reel/DgA7ernh6-0/embed"
+          title="Reel do Instagram sobre o Essence Saúde Tibério"
+          loading="lazy"
+          allowtransparency="true"
+          allow="encrypted-media; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
     </div>
   </div>
 </section>
