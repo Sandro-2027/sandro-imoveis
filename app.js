@@ -25,34 +25,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const filtroTipo = document.getElementById("filtroTipo");
     const filtroPreco = document.getElementById("filtroPreco");
     const filtroVaga = document.getElementById("filtroVaga");
-
-    const destaqueTrend = document.querySelector(".destaque-principal");
-
-if (destaqueTrend) {
-    destaqueTrend.dataset.bairro = "santa-cruz";
-    destaqueTrend.dataset.tipo = "studio|1-dormitorio|2-dormitorios|apartamento";
-    destaqueTrend.dataset.preco = "consultar";
-    destaqueTrend.dataset.vaga = "consultar";
-}
-
-const destaqueTrend = document.querySelector(".destaque-principal");
-
-if (destaqueTrend) {
-    destaqueTrend.dataset.bairro = "santa-cruz";
-    destaqueTrend.dataset.tipo = "studio|1-dormitorio|2-dormitorios|apartamento";
-    destaqueTrend.dataset.preco = "consultar";
-    destaqueTrend.dataset.vaga = "consultar";
-}
-
-const cards = Array.from(
-    document.querySelectorAll(
-        "#empreendimentos .card, .destaque-principal"
-    )
-);
-    )
-);
     const contador = document.getElementById("contadorResultados");
 
+    // Identifica o destaque Trend Santa Cruz
+    const trend = document.querySelector(".destaque-principal");
+
+    if (trend) {
+        trend.dataset.bairro = "santa-cruz";
+        trend.dataset.tipo =
+            "studio|1-dormitorio|2-dormitorios|apartamento";
+        trend.dataset.preco = "consultar";
+        trend.dataset.vaga = "consultar";
+    }
+
+    // Identifica o destaque Artesano Cantalupe
+    const artesano = document.getElementById("artesano");
+
+    if (artesano) {
+        artesano.dataset.bairro = "alphaville";
+        artesano.dataset.tipo = "terreno";
+        artesano.dataset.preco = "consultar";
+        artesano.dataset.vaga = "consultar";
+    }
+
+    // Reúne cartões e destaques na mesma lista
+    const cards = Array.from(
+        document.querySelectorAll(
+            "#empreendimentos .card, .destaque-principal, #artesano"
+        )
+    );
+
+    // Normaliza textos para evitar diferenças de acentuação
     function normalizar(texto) {
         return String(texto || "")
             .toLowerCase()
@@ -62,8 +65,6 @@ const cards = Array.from(
     }
 
     function aplicarFiltros() {
-
-        if (!cards.length) return;
 
         const bairroSelecionado = filtroBairro
             ? normalizar(filtroBairro.value)
@@ -85,8 +86,17 @@ const cards = Array.from(
 
         cards.forEach(function (card) {
 
-            const bairros = normalizar(card.dataset.bairro).split("|");
-            const tipos = normalizar(card.dataset.tipo).split("|");
+            const bairros = normalizar(card.dataset.bairro)
+                .split("|")
+                .map(function (item) {
+                    return item.trim();
+                });
+
+            const tipos = normalizar(card.dataset.tipo)
+                .split("|")
+                .map(function (item) {
+                    return item.trim();
+                });
 
             const preco = normalizar(card.dataset.preco);
             const vaga = normalizar(card.dataset.vaga);
@@ -114,8 +124,11 @@ const cards = Array.from(
                 correspondeVaga;
 
             card.hidden = !mostrar;
+            card.style.display = mostrar ? "" : "none";
 
-            if (mostrar) encontrados++;
+            if (mostrar) {
+                encontrados++;
+            }
         });
 
         if (contador) {
@@ -126,14 +139,21 @@ const cards = Array.from(
         }
     }
 
-    [filtroBairro, filtroTipo, filtroPreco, filtroVaga].forEach(
-        function (filtro) {
-            if (filtro) {
-                filtro.addEventListener("change", aplicarFiltros);
-            }
-        }
-    );
+    // Ativa os filtros
+    [
+        filtroBairro,
+        filtroTipo,
+        filtroPreco,
+        filtroVaga
+    ].forEach(function (filtro) {
 
+        if (filtro) {
+            filtro.addEventListener("change", aplicarFiltros);
+        }
+
+    });
+
+    // Mostra todos os empreendimentos inicialmente
     aplicarFiltros();
 
 
@@ -152,9 +172,11 @@ const cards = Array.from(
             );
 
             if (area) {
+
                 area.classList.add("imagem-indisponivel");
 
                 if (!area.querySelector(".aviso-imagem")) {
+
                     const aviso = document.createElement("div");
 
                     aviso.className = "aviso-imagem";
@@ -163,6 +185,7 @@ const cards = Array.from(
                     area.appendChild(aviso);
                 }
             }
+
         });
 
     });
@@ -190,7 +213,7 @@ const cards = Array.from(
 
 
     /* =====================================
-       ANIMAÇÕES AO ROLAR
+       ANIMAÇÕES AO ROLAR A PÁGINA
     ===================================== */
 
     const elementosAnimados = document.querySelectorAll(
@@ -220,8 +243,10 @@ const cards = Array.from(
         );
 
         elementosAnimados.forEach(function (elemento) {
+
             elemento.classList.add("animar");
             observador.observe(elemento);
+
         });
 
     }
@@ -243,12 +268,14 @@ const cards = Array.from(
                 const elemento = document.querySelector(destino);
 
                 if (elemento) {
+
                     evento.preventDefault();
 
                     elemento.scrollIntoView({
                         behavior: "smooth",
                         block: "start"
                     });
+
                 }
 
             });
@@ -271,7 +298,6 @@ const cards = Array.from(
         botaoTopo.type = "button";
         botaoTopo.textContent = "↑";
         botaoTopo.setAttribute("aria-label", "Voltar ao topo");
-
         botaoTopo.style.display = "none";
 
         document.body.appendChild(botaoTopo);
@@ -321,100 +347,10 @@ const cards = Array.from(
 
 
     /* =====================================
-       RASTREAMENTO DE CLIQUES NO WHATSAPP
-       O evento whatsapp_click também é
-       registrado no index.html.
+       RASTREAMENTO DO WHATSAPP
+
+       O evento whatsapp_click já é registrado
+       no index.html. Não duplicar aqui.
     ===================================== */
 
-    // Não adicionar outro rastreamento aqui,
-    // para evitar duplicidade no Google Analytics.
-
 });
-
-
-/* ==========================================
-   FILTRO DE EMPREENDIMENTOS
-========================================== */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const bairro = document.getElementById("filtroBairro");
-    const tipo = document.getElementById("filtroTipo");
-    const preco = document.getElementById("filtroPreco");
-    const vaga = document.getElementById("filtroVaga");
-    const contador = document.getElementById("contadorResultados");
-
-    if (!bairro || !tipo || !preco || !vaga) return;
-
-    const trend = document.querySelector(".destaque-principal");
-    const artesano = document.getElementById("artesano");
-
-    if (trend) {
-        trend.dataset.bairro = "santa-cruz";
-        trend.dataset.tipo = "studio 1-dormitorio 2-dormitorios apartamento";
-        trend.dataset.preco = "consultar";
-        trend.dataset.vaga = "consultar";
-    }
-
-    if (artesano) {
-        artesano.dataset.bairro = "alphaville";
-        artesano.dataset.tipo = "terreno";
-        artesano.dataset.preco = "consultar";
-        artesano.dataset.vaga = "consultar";
-    }
-
-    function aplicarFiltros() {
-
-        const itens = [
-            ...document.querySelectorAll("#empreendimentos .card, .destaque-principal, #artesano")
-        ];
-
-        if (trend) itens.push(trend);
-        if (artesano) itens.push(artesano);
-
-        let quantidade = 0;
-
-        itens.forEach(function (item) {
-
-            const bairros = (item.dataset.bairro || "").split(" ");
-            const tipos = (item.dataset.tipo || "").split(" ");
-
-            const correspondeBairro =
-                !bairro.value || bairros.includes(bairro.value);
-
-            const correspondeTipo =
-                !tipo.value || tipos.includes(tipo.value);
-
-            const correspondePreco =
-                !preco.value || item.dataset.preco === preco.value;
-
-            const correspondeVaga =
-                !vaga.value || item.dataset.vaga === vaga.value;
-
-            const mostrar =
-                correspondeBairro &&
-                correspondeTipo &&
-                correspondePreco &&
-                correspondeVaga;
-
-            item.style.display = mostrar ? "" : "none";
-
-            if (mostrar) quantidade++;
-        });
-
-        if (contador) {
-            contador.textContent =
-                quantidade + (quantidade === 1
-                ? " empreendimento encontrado"
-                : " empreendimentos encontrados");
-        }
-    }
-
-    [bairro, tipo, preco, vaga].forEach(function (filtro) {
-        filtro.addEventListener("change", aplicarFiltros);
-    });
-
-    aplicarFiltros();
-
-});
-
