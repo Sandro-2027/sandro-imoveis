@@ -1,1125 +1,1010 @@
-/* =====================================================
-   RESET
-===================================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+/* =========================================
+   SANDRO IMÓVEIS INTELIGENTES
+   Identidade visual premium
+========================================= */
 
-html{
-    scroll-behavior:smooth;
+:root {
+    --grafite: #20282b;
+    --grafite-claro: #303a3e;
+    --dourado: #b18a55;
+    --dourado-claro: #d2b17d;
+    --creme: #f7f5f0;
+    --branco: #ffffff;
+    --texto: #343b3d;
+    --cinza: #737b7d;
+    --borda: #e7e3dc;
+    --verde: #198754;
+    --sombra: 0 12px 35px rgba(28, 35, 37, 0.09);
 }
-
-body{
 
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
-    color:#333;
-    line-height:1.6;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-a{
 
-    text-decoration:none;
-    color:inherit;
-
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
-
-img{
 
-    max-width:100%;
-    display:block;
-
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--creme);
+    line-height: 1.6;
 }
-
-button{
-
-    cursor:pointer;
-    border:none;
 
+img {
+    display: block;
+    max-width: 100%;
 }
 
-.container{
-
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-
+a {
+    color: inherit;
+    text-decoration: none;
 }
-
-/* =====================================================
-HEADER
-===================================================== */
-
-header{
-
-    background:#ffffff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
 
+button,
+select {
+    font: inherit;
 }
 
-.nav-container{
-
-    max-width:1200px;
-    margin:auto;
-    padding:18px 20px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
 }
 
-.logo{
+/* =========================================
+   CABEÇALHO
+========================================= */
 
-    font-size:24px;
-    font-weight:bold;
-    color:#0b4ea2;
-
+header,
+.topo {
+    width: 100%;
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
 }
-
-.nav-links{
 
-    display:flex;
-    gap:30px;
-
+header.scrolled,
+.topo.scrolled {
+    box-shadow: 0 5px 22px rgba(0,0,0,0.08);
 }
-
-.nav-links a{
 
-    font-weight:600;
-    transition:.3s;
-
+.nav-container,
+.topo-interno {
+    width: min(1240px, 94%);
+    min-height: 82px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
-
-.nav-links a:hover{
 
-    color:#0b4ea2;
-
+.logo {
+    color: var(--grafite);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
 }
-
-/* =====================================================
-HERO
-===================================================== */
-
-.hero{
-
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600');
-
-    background-size:cover;
-    background-position:center;
 
-    color:#fff;
-
-    padding:120px 20px;
-
-    text-align:center;
-
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
 }
-
-.hero h1{
-
-    font-size:54px;
-    margin-bottom:20px;
 
+.nav-links a {
+    color: var(--grafite);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
-.hero p{
-
-    font-size:22px;
-    max-width:850px;
-    margin:auto;
-
+.nav-links a:hover {
+    color: var(--dourado);
 }
-
-/* =====================================================
-BOTÃO WHATSAPP
-===================================================== */
-
-.btn-whatsapp{
-
-    display:inline-block;
 
-    margin-top:30px;
-
-    background:#25D366;
-
-    color:#fff;
-
-    padding:15px 35px;
-
-    border-radius:8px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
+.nav-links a:last-child {
+    background: var(--grafite);
+    color: var(--branco);
+    padding: 11px 17px;
+    border-radius: 3px;
 }
-
-.btn-whatsapp:hover{
-
-    background:#18b957;
 
+.nav-links a:last-child:hover {
+    background: var(--dourado);
 }
 
-/* =====================================================
-FILTROS
-===================================================== */
+/* Compatibilidade com cabeçalhos de páginas internas */
 
-.filtros{
-
-    background:#ffffff;
-
-    padding:30px;
-
-    margin:40px auto;
-
-    border-radius:12px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-
+.topo-interno {
+    max-width: 1180px;
 }
-
-.filtros h2{
-
-    text-align:center;
-
-    margin-bottom:25px;
-
-    color:#0b4ea2;
 
+.topo a {
+    color: var(--grafite);
 }
 
-.filtros-grid{
+/* =========================================
+   BOTÕES
+========================================= */
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:20px;
-
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 24px;
+    background: var(--dourado);
+    color: var(--branco);
+    border: 1px solid var(--dourado);
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    transition: all 0.25s ease;
 }
-
-.filtros select{
-
-    width:100%;
-
-    padding:14px;
-
-    border:1px solid #ccc;
-
-    border-radius:8px;
-
-    font-size:16px;
-
-    background:white;
 
+.btn-whatsapp:hover {
+    background: var(--grafite);
+    border-color: var(--grafite);
+    transform: translateY(-2px);
 }
 
-#contadorResultados{
-
-    margin-top:20px;
-
-    text-align:center;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    color:#0b4ea2;
-
+.btn-principal,
+.btn-detalhes {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--grafite);
+    color: var(--branco);
+    border-radius: 3px;
+    font-weight: 700;
+    transition: 0.25s;
 }
-
-/* =====================================================
-GRID DOS IMÓVEIS
-===================================================== */
-
-.grid-imoveis{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-    gap:30px;
-
-    margin:50px auto;
-
+.btn-principal:hover,
+.btn-detalhes:hover {
+    background: var(--dourado);
 }
-
-/* =====================================================
-CARD
-===================================================== */
-
-.card{
-
-    background:white;
-
-    border-radius:14px;
-
-    overflow:hidden;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.10);
-
-    transition:.30s;
 
-    display:flex;
+/* =========================================
+   HERO PRINCIPAL
+========================================= */
 
-    flex-direction:column;
-
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(20,27,29,0.91), rgba(20,27,29,0.64)),
+        url("empreendimentos/artesano-concierge.png") center 45% / cover no-repeat;
+    color: var(--branco);
 }
-
-.card:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-
+.hero .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 85px;
+    padding-bottom: 85px;
 }
-
-/* =====================================================
-IMAGEM
-===================================================== */
 
-.card-image-wrapper{
-
-    position:relative;
-
-    height:250px;
-
-    overflow:hidden;
-
+.hero-etiqueta,
+.destaque-etiqueta {
+    color: var(--dourado-claro);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
-
-.card-image{
 
-    width:100%;
-
-    height:250px;
-
-    object-fit:cover;
-
-    display:none;
-
+.hero h1 {
+    max-width: 780px;
+    color: var(--branco);
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 23px;
 }
 
-.card-image.active{
-
-    display:block;
-
+.hero p:not(.hero-etiqueta) {
+    max-width: 650px;
+    color: #ecebe7;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
-
-/* =====================================================
-BADGES
-===================================================== */
-
-.badge-contrato{
-
-    position:absolute;
 
-    top:15px;
+/* =========================================
+   FILTROS
+========================================= */
 
-    left:15px;
-
-    background:#0b4ea2;
-
-    color:white;
-
-    padding:8px 14px;
-
-    border-radius:25px;
-
-    font-size:13px;
-
-    font-weight:bold;
-
+.filtros {
+    position: relative;
+    z-index: 2;
+    background: var(--branco);
+    padding: 32px;
+    margin-top: -38px;
+    border: 1px solid var(--borda);
+    border-radius: 5px;
+    box-shadow: var(--sombra);
 }
-
-.badge-tipo{
-
-    position:absolute;
-
-    top:15px;
 
-    right:15px;
-
-    background:#25D366;
-
-    color:white;
-
-    padding:8px 14px;
-
-    border-radius:25px;
-
-    font-size:13px;
-
-    font-weight:bold;
-
+.filtros h2 {
+    color: var(--grafite);
+    font-size: 22px;
+    margin-bottom: 20px;
 }
-
-/* =====================================================
-SETAS DO CARROSSEL
-===================================================== */
-
-.carousel-btn{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:42px;
-
-    height:42px;
-
-    border-radius:50%;
-
-    background:rgba(0,0,0,.45);
-
-    color:white;
-
-    font-size:22px;
-
-    z-index:5;
 
-    transition:.3s;
-
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
 }
-
-.carousel-btn:hover{
 
-    background:#0b4ea2;
-
+.filtros select {
+    width: 100%;
+    min-height: 49px;
+    padding: 10px 13px;
+    color: var(--texto);
+    background: #fbfaf8;
+    border: 1px solid var(--borda);
+    border-radius: 3px;
+    outline: none;
 }
-
-.carousel-prev{
-
-    left:10px;
 
+.filtros select:focus {
+    border-color: var(--dourado);
 }
 
-.carousel-next{
-
-    right:10px;
-
+#contadorResultados {
+    margin-top: 14px;
+    color: var(--cinza);
+    font-size: 13px;
 }
-
-/* =====================================================
-CORPO DO CARD
-===================================================== */
-
-.card-body{
-
-    padding:22px;
 
-    flex:1;
+/* =========================================
+   DESTAQUE TREND SANTA CRUZ
+========================================= */
 
+.destaque-principal {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 45px;
+    padding-top: 95px;
+    padding-bottom: 75px;
 }
 
-.card-cidade{
-
-    color:#777;
-
-    font-size:15px;
-
-    margin-bottom:8px;
-
+.destaque-conteudo h2 {
+    color: var(--grafite);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.15;
+    margin-bottom: 20px;
 }
-
-.card-titulo{
 
-    font-size:22px;
-
-    color:#0b4ea2;
-
-    margin-bottom:15px;
-
+.destaque-conteudo p {
+    color: var(--cinza);
+    margin-bottom: 13px;
 }
-
-.card-preco{
-
-    font-size:28px;
 
-    color:#25D366;
-
-    font-weight:bold;
-
-    margin-bottom:20px;
-
+.destaque-conteudo p strong {
+    color: var(--grafite);
 }
-
-/* =====================================================
-BOTÃO DO CARD
-===================================================== */
 
-.card-body .btn-whatsapp{
-
-    width:100%;
-
-    text-align:center;
-
-    margin-top:10px;
-
+.destaque-conteudo .btn-whatsapp {
+    margin-top: 15px;
 }
-
-/* =====================================================
-INFORMAÇÕES DO IMÓVEL
-===================================================== */
 
-.card-info{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    margin:20px 0;
-
-    padding:15px 0;
-
-    border-top:1px solid #eee;
-    border-bottom:1px solid #eee;
-
+.destaque-imagem {
+    height: 420px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: var(--sombra);
+    background: #e6e1d8;
 }
 
-.card-info-item{
-
-    text-align:center;
-    flex:1;
-
+.destaque-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card-info-item span{
+/* =========================================
+   TÍTULOS DE SEÇÃO
+========================================= */
 
-    display:block;
-    font-size:14px;
-    color:#777;
-
+.titulo-section {
+    color: var(--grafite);
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 14px;
 }
-
-.card-info-item strong{
-
-    display:block;
-    margin-top:6px;
-    font-size:18px;
-    color:#0b4ea2;
 
+.texto-section {
+    color: var(--cinza);
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 42px;
 }
 
-/* =====================================================
-RODAPÉ
-===================================================== */
+/* =========================================
+   GRADE DE EMPREENDIMENTOS
+========================================= */
 
-footer{
-
-    background:#0b4ea2;
-
-    color:white;
-
-    margin-top:70px;
-
-    padding:45px 20px;
-
-    text-align:center;
-
+#empreendimentos {
+    padding-top: 50px;
+    padding-bottom: 85px;
 }
-
-.footer-anuncio{
-
-    background:white;
-
-    color:#666;
 
-    border-radius:8px;
-
-    padding:25px;
-
-    margin-bottom:30px;
-
-    font-size:15px;
-
+.grid-imoveis,
+.grid-cards,
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 27px;
 }
-
-.brand{
 
-    font-size:18px;
-
-    font-weight:bold;
-
+.card {
+    min-width: 0;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(30, 35, 35, 0.045);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* =====================================================
-ZOOM DAS IMAGENS
-===================================================== */
-
-.zoom-overlay{
-
-    position:fixed;
 
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,.95);
-
-    display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:9999;
-
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra);
 }
-
-.zoom-overlay.open{
-
-    display:flex;
 
+.card-image-wrapper {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    background: #e9e6df;
 }
 
-.zoom-img{
-
-    max-width:92%;
-
-    max-height:90%;
-
-    border-radius:10px;
-
+.card-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
-
-.zoom-close{
-
-    position:absolute;
-
-    top:20px;
-
-    right:30px;
-
-    background:none;
-
-    color:white;
 
-    font-size:42px;
-
+.card-image.active {
+    display: block;
 }
-
-.zoom-nav-btn{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:55px;
-    height:55px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.18);
-
-    color:white;
-
-    font-size:32px;
 
+.card:hover .card-image {
+    transform: scale(1.045);
 }
 
-.zoom-prev{
-
-    left:30px;
-
+.badge-contrato,
+.badge-tipo {
+    position: absolute;
+    left: 14px;
+    z-index: 2;
+    padding: 6px 11px;
+    color: var(--branco);
+    background: var(--grafite);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    border-radius: 2px;
 }
 
-.zoom-next{
-
-    right:30px;
-
+.badge-contrato {
+    top: 14px;
 }
-
-.zoom-nav-btn:hover{
 
-    background:#0b4ea2;
-
+.badge-tipo {
+    bottom: 14px;
+    background: var(--dourado);
 }
-
-/* =====================================================
-TABELAS
-===================================================== */
-
-.tabela-ficha{
-
-    width:100%;
-
-    border-collapse:collapse;
 
-    margin-top:30px;
-
+.card-body {
+    padding: 23px;
 }
-
-.tabela-ficha td{
-
-    border:1px solid #ddd;
-
-    padding:15px;
 
+.card-cidade {
+    color: var(--dourado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
 
-.tabela-ficha tr:nth-child(even){
-
-    background:#f7f7f7;
-
+.card-titulo {
+    color: var(--grafite);
+    font-size: 20px;
+    line-height: 1.3;
+    min-height: 52px;
+    margin-bottom: 18px;
 }
-
-/* =====================================================
-VANTAGENS
-===================================================== */
-
-.vantagens-grid{
-
-    display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-    gap:25px;
-
-    margin-top:35px;
-
+.card-info {
+    padding-top: 13px;
+    border-top: 1px solid var(--borda);
 }
-
-.vantagem{
-
-    background:white;
 
-    border-radius:12px;
-
-    padding:25px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-
+.card-info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
 }
-
-.vantagem h3{
-
-    color:#0b4ea2;
 
-    margin-bottom:15px;
-
+.card-info-item span {
+    color: var(--cinza);
 }
-
-/* =====================================================
-FAQ
-===================================================== */
-
-.faq{
-
-    margin-top:30px;
 
+.card-info-item strong {
+    color: var(--grafite);
+    text-align: right;
 }
 
-.faq h3{
-
-    color:#0b4ea2;
-
-    margin-top:30px;
-
-    margin-bottom:10px;
-
+.card-preco {
+    color: var(--grafite);
+    font-size: 15px;
+    font-weight: 800;
+    margin: 17px 0;
 }
-
-.faq p{
 
-    color:#555;
-
+.card .btn-whatsapp {
+    width: 100%;
 }
-
-/* =====================================================
-RESPONSIVO
-===================================================== */
-
-@media(max-width:900px){
-
-.nav-container{
-
-    flex-direction:column;
 
-    gap:20px;
+/* VM125: espaço visual provisório sem imagem */
 
+.vm125-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #303a3e, #6d675c);
 }
 
-.nav-links{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:15px;
-
+.vm125-placeholder-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco);
+    text-align: center;
 }
-
-.hero{
 
-    padding:80px 20px;
-
+.vm125-placeholder-text span {
+    color: var(--dourado-claro);
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 4px;
 }
-
-.hero h1{
 
-    font-size:36px;
-
+.vm125-placeholder-text strong {
+    font-size: 20px;
 }
-
-.hero p{
 
-    font-size:18px;
-
+.vm125-placeholder-text small {
+    margin-top: 7px;
+    color: #e8e2d7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-
-.card-image-wrapper{
 
-    height:220px;
+/* =========================================
+   ARTESANO CANTALUPE
+========================================= */
 
+.artesano-section {
+    position: relative;
+    padding: 95px 0;
+    color: var(--branco);
+    background:
+        linear-gradient(90deg, rgba(25,31,33,0.94), rgba(25,31,33,0.76)),
+        url("empreendimentos/artesano-concierge.png") center / cover no-repeat;
 }
 
-.card-image{
-
-    height:220px;
-
+.artesano-conteudo {
+    max-width: 850px;
+    text-align: center;
 }
-
-.zoom-prev{
 
-    left:10px;
-
+.artesano-section h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 20px;
 }
-
-.zoom-next{
 
-    right:10px;
-
+.artesano-section p {
+    color: #e4e1dc;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
-
-.zoom-nav-btn{
-
-    width:45px;
 
-    height:45px;
-
-    font-size:24px;
-
+.artesano-dados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 38px 0;
 }
 
+.artesano-dados div {
+    padding: 20px 10px;
+    border: 1px solid rgba(210,177,125,0.45);
+    background: rgba(255,255,255,0.04);
 }
 
-/* =====================================================
-PÁGINAS DOS EMPREENDIMENTOS
-===================================================== */
-
-.info-imovel{
-
-    max-width:1100px;
-    margin:60px auto;
-    padding:0 20px;
+.artesano-dados strong {
+    display: block;
+    color: var(--dourado-claro);
+    font-size: 23px;
+    margin-bottom: 5px;
+}
 
+.artesano-dados span {
+    color: #e4e1dc;
+    font-size: 12px;
 }
 
-.info-imovel h2{
+/* =========================================
+   SEÇÃO DE TEXTO E SEO
+========================================= */
 
-    font-size:34px;
-    color:#0b4ea2;
-    margin-bottom:25px;
+.secao-texto,
+.texto-seo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 
+.secao-texto h2,
+.texto-seo h2 {
+    color: var(--grafite);
+    font-size: 30px;
+    margin-bottom: 18px;
 }
 
-.info-imovel p{
+.secao-texto p,
+.texto-seo p {
+    color: var(--cinza);
+    max-width: 850px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
 
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:20px;
-    color:#555;
+/* =========================================
+   VANTAGENS
+========================================= */
 
+#vantagens {
+    padding-top: 55px;
+    padding-bottom: 85px;
 }
 
-/* =====================================================
-GALERIA
-===================================================== */
-
-.galeria{
+.vantagens-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 38px;
+}
 
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:20px;
-    margin-top:30px;
+.vantagem {
+    padding: 27px 22px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-top: 3px solid var(--dourado);
+    box-shadow: 0 5px 20px rgba(30,35,35,0.035);
+}
 
+.vantagem h3 {
+    color: var(--grafite);
+    font-size: 17px;
+    margin-bottom: 12px;
 }
 
-.galeria img{
+.vantagem p {
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.7;
+}
 
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:10px;
-    transition:.3s;
+/* =========================================
+   CONTATO FINAL
+========================================= */
 
+#contato {
+    padding-top: 20px;
+    padding-bottom: 80px;
 }
-
-.galeria img:hover{
 
-    transform:scale(1.02);
+.contato-final {
+    padding: 60px 30px;
+    color: var(--branco);
+    background: var(--grafite);
+    text-align: center;
+    border-radius: 4px;
+}
 
+.contato-final h2 {
+    font-size: clamp(26px, 3vw, 36px);
+    margin-bottom: 15px;
 }
 
-.galeria-lateral{
+.contato-final p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #e0e0dc;
+}
 
-    display:grid;
-    gap:20px;
+/* =========================================
+   RODAPÉ
+========================================= */
 
+footer {
+    padding: 55px 0 25px;
+    color: #e9e8e4;
+    background: #171e20;
+    text-align: center;
 }
-
-/* =====================================================
-CARDS DAS PÁGINAS INTERNAS
-===================================================== */
 
-.grid-cards{
+footer h2 {
+    color: var(--branco);
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    margin-top:30px;
+footer p {
+    color: #c6c8c5;
+    font-size: 13px;
+    margin: 7px 0;
+}
 
+footer hr {
+    max-width: 700px;
+    margin: 25px auto;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
 
-.grid-cards .card{
+/* =========================================
+   WHATSAPP FLUTUANTE
+========================================= */
 
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 6px 20px rgba(0,0,0,.10);
+.whatsapp-float {
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    z-index: 1500;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #20b95b;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.22);
+    transition: transform 0.25s ease;
+}
 
+.whatsapp-float:hover {
+    transform: scale(1.08);
 }
 
-.grid-cards .card img{
+#whatsapp-popup {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 95px;
+    z-index: 1499;
+    width: 270px;
+    padding: 20px;
+    color: var(--grafite);
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 5px;
+    box-shadow: var(--sombra);
+    font-size: 13px;
+}
 
-    width:100%;
-    height:240px;
-    object-fit:cover;
+/* =========================================
+   FAQ - PÁGINAS INTERNAS
+========================================= */
 
+.faq-item {
+    margin-bottom: 12px;
+    padding: 18px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
 }
-
-.grid-cards .card-body{
 
-    padding:20px;
+.faq-pergunta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--grafite);
+    font-weight: 700;
+    cursor: pointer;
+}
 
+.faq-resposta {
+    display: none;
+    padding-top: 14px;
+    color: var(--cinza);
+    line-height: 1.7;
 }
 
-.grid-cards h3{
+.faq-item.ativo .faq-resposta {
+    display: block;
+}
 
-    color:#0b4ea2;
-    margin-bottom:15px;
+/* =========================================
+   IMAGENS E GALERIAS - PÁGINAS INTERNAS
+========================================= */
 
+.galeria,
+.plantas,
+.carrossel {
+    position: relative;
+    width: 100%;
 }
 
-/* =====================================================
-IFRAME GOOGLE MAPS
-===================================================== */
+.galeria img,
+.plantas img,
+.carrossel img {
+    max-width: 100%;
+    height: auto;
+}
 
-iframe{
+.zoom-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.92);
+}
 
-    width:100%;
-    border:0;
-    border-radius:12px;
-    margin-top:25px;
+.zoom-overlay.ativo {
+    display: flex;
+}
 
+.zoom-overlay img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
 }
 
-/* =====================================================
-ANIMAÇÕES
-===================================================== */
+/* =========================================
+   ANIMAÇÕES
+========================================= */
 
 .card,
 .vantagem,
-.btn-whatsapp{
-
-    transition:all .3s ease;
-
+.faq-item,
+.titulo-section,
+.texto-seo {
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.card:hover{
-
-    transform:translateY(-5px);
-
+.animar {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.vantagem:hover{
-
-    transform:translateY(-5px);
-
+.animar.mostrar {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.btn-whatsapp:hover{
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+========================================= */
 
-    transform:scale(1.03);
-
+#voltar-topo {
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    z-index: 1200;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    background: var(--grafite);
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-/* =====================================================
-RESPONSIVO EXTRA
-===================================================== */
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
 
-@media(max-width:768px){
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 12px;
+    }
 
-.hero-empreendimento{
+    .nav-links a {
+        font-size: 12px;
+    }
 
-    height:280px !important;
-    padding:20px;
+    .grid-imoveis,
+    .grid-cards,
+    .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
+    .vantagens-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .filtros-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-.hero-empreendimento h1{
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
 
-    font-size:34px !important;
+@media (max-width: 700px) {
+    .nav-container,
+    .topo-interno {
+        min-height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 13px;
+    }
 
+    .logo {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-links a:last-child {
+        padding: 7px 11px;
+    }
+
+    .hero {
+        min-height: 490px;
+        background-position: center;
+    }
+
+    .hero .container {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p:not(.hero-etiqueta) {
+        font-size: 15px;
+    }
+
+    .filtros {
+        margin-top: -20px;
+        padding: 23px 18px;
+    }
+
+    .filtros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destaque-principal {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 65px;
+        padding-bottom: 55px;
+    }
+
+    .destaque-imagem {
+        height: 280px;
+    }
+
+    .grid-imoveis,
+    .grid-cards,
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card-image-wrapper {
+        height: 235px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-titulo {
+        min-height: auto;
+    }
+
+    .artesano-section {
+        padding: 70px 0;
+    }
+
+    .artesano-dados {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .vantagens-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-final {
+        padding: 42px 20px;
+    }
+
+    footer {
+        padding: 40px 15px 22px;
+    }
+
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        width: 55px;
+        height: 55px;
+    }
+
+    #whatsapp-popup {
+        right: 15px;
+        bottom: 80px;
+        width: min(270px, calc(100% - 30px));
+    }
 }
 
-.hero-empreendimento p{
+/* =========================================
+   TELAS MUITO PEQUENAS
+========================================= */
 
-    font-size:18px !important;
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 30px;
+    }
 
-}
+    .nav-links {
+        gap: 8px 11px;
+    }
 
-.info-imovel h2{
+    .nav-links a {
+        font-size: 10px;
+    }
 
-    font-size:28px;
-
-}
-
-.galeria{
-
-    grid-template-columns:1fr;
-
-}
-
-.grid-cards{
-
-    grid-template-columns:1fr;
-
-}
-
-.vantagens-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.card-info{
-
-    flex-direction:column;
-    gap:15px;
-
-}
-
-}
-/* ==========================================
-BOTÃO FLUTUANTE DO WHATSAPP
-========================================== */
-
-.whatsapp-float{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-width:65px;
-
-height:65px;
-
-background:#25D366;
-
-color:#ffffff;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:34px;
-
-text-decoration:none;
-
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-
-transition:all .3s ease;
-
-z-index:9999;
-
-}
-
-.whatsapp-float:hover{
-
-transform:scale(1.1);
-
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-
-}
-/* ==========================================
-POPUP DO WHATSAPP
-========================================== */
-
-#whatsapp-popup{
-
-position:fixed;
-
-bottom:105px;
-
-right:25px;
-
-width:260px;
-
-background:#ffffff;
-
-color:#333333;
-
-padding:16px;
-
-border-radius:14px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.20);
-
-font-size:15px;
-
-line-height:1.5;
-
-opacity:0;
-
-visibility:hidden;
-
-transform:translateY(20px);
-
-transition:all .4s ease;
-
-z-index:9998;
-
-}
-
-#whatsapp-popup.show{
-
-opacity:1;
-
-visibility:visible;
-
-transform:translateY(0);
-
+    .card-info-item {
+        font-size: 11px;
+    }
 }
