@@ -7,19 +7,24 @@
 
 <title>Sublime Pompéia 2 Dormitórios | Apartamentos Tibério</title>
 
-<meta name="description" content="Conheça o Sublime Pompéia da Tibério: apartamentos de 2 dormitórios com suíte, varanda com churrasqueira e lazer completo na Zona Oeste de São Paulo.">
+<meta name="description" content="Conheça os apartamentos de 2 dormitórios do Sublime Pompéia, empreendimento da Tibério na Zona Oeste de São Paulo, com opção de suíte, varanda com churrasqueira e lazer.">
 
 <meta name="keywords" content="Sublime Pompéia, Sublime Pompéia Tibério, Sublime Pompéia 2 dormitórios, apartamento 2 dormitórios Pompeia, apartamento com suíte Pompeia, apartamento com churrasqueira Pompeia">
+
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://sandrosantosimoveis.com.br/empreendimentos/sublime-pompeia-2-dorms.html">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sublime Pompéia 2 Dormitórios | Tibério">
-<meta property="og:description" content="Apartamentos de 2 dormitórios com suíte, varanda com churrasqueira e lazer completo na Pompeia, em São Paulo.">
+<meta property="og:title" content="Sublime Pompéia 2 Dormitórios | Apartamentos Tibério">
+<meta property="og:description" content="Apartamentos de 2 dormitórios com suíte, varanda com churrasqueira e lazer na Pompeia, em São Paulo.">
 <meta property="og:url" content="https://sandrosantosimoveis.com.br/empreendimentos/sublime-pompeia-2-dorms.html">
 <meta property="og:image" content="https://www.tiberio.com.br/wp-content/uploads/2023/01/sublime-pompeia-piscina-b6061e23c2a3cf6a86d57aedf036a43379ebb37c-3.webp">
 
-<meta name="robots" content="index, follow">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sublime Pompéia 2 Dormitórios | Tibério">
+<meta name="twitter:description" content="Apartamentos de 2 dormitórios com suíte e varanda com churrasqueira na Pompeia.">
+<meta name="twitter:image" content="https://www.tiberio.com.br/wp-content/uploads/2023/01/sublime-pompeia-piscina-b6061e23c2a3cf6a86d57aedf036a43379ebb37c-3.webp">
 
 <link rel="stylesheet" href="../style.css">
 
@@ -28,7 +33,7 @@ body {
   background: #f5f7fa;
 }
 
-/* BANNER PRINCIPAL COM IMAGEM DESFOCADA */
+/* BANNER COM FOTO DESFOCADA */
 
 .hero-empreendimento {
   position: relative;
@@ -39,7 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 55px 20px;
+  padding: 60px 20px;
   color: white;
   background: #14251f;
 }
@@ -48,73 +53,73 @@ body {
   content: "";
   position: absolute;
   inset: -12px;
-  z-index: -2;
-  background-image: url('https://www.tiberio.com.br/wp-content/uploads/2023/01/sublime-pompeia-piscina-b6061e23c2a3cf6a86d57aedf036a43379ebb37c-3.webp');
+  z-index: 0;
+  background-image: url("sublime-piscina.webp");
   background-size: cover;
   background-position: center;
-  filter: blur(5px);
-  transform: scale(1.04);
+  filter: blur(7px);
+  transform: scale(1.05);
 }
 
 .hero-empreendimento::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   background: linear-gradient(
     90deg,
-    rgba(8,22,17,.82),
-    rgba(8,22,17,.58),
-    rgba(8,22,17,.82)
+    rgba(10, 25, 20, 0.88),
+    rgba(10, 25, 20, 0.55)
   );
 }
 
 .hero-conteudo {
-  width: 100%;
-  max-width: 950px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .hero-status {
   display: inline-block;
-  padding: 10px 20px;
   margin-bottom: 22px;
+  padding: 10px 18px;
   border: 1px solid rgba(255,255,255,.65);
   border-radius: 30px;
-  background: rgba(0,0,0,.25);
+  background: rgba(0,0,0,.28);
   color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .hero-empreendimento h1 {
   font-size: 46px;
   line-height: 1.2;
-  margin-bottom: 20px;
-  color: white;
+  margin: 0 auto 22px;
+  color: #fff;
+  max-width: 950px;
 }
 
 .hero-empreendimento p {
   font-size: 20px;
   max-width: 850px;
   margin: auto;
-  line-height: 1.6;
-  color: white;
+  line-height: 1.7;
+  color: #fff;
 }
 
 .hero-botao {
   display: inline-block;
   margin-top: 28px;
   padding: 16px 28px;
+  border-radius: 8px;
   background: #168b48;
   color: white;
-  border-radius: 8px;
-  font-size: 17px;
   font-weight: bold;
   text-decoration: none;
-  transition: background .3s ease;
+  transition: background .2s ease;
 }
 
 .hero-botao:hover {
@@ -137,8 +142,6 @@ body {
   line-height: 1.8;
   font-size: 17px;
 }
-
-/* GALERIA */
 
 .galeria {
   display: grid;
@@ -171,8 +174,6 @@ body {
   min-height: 195px;
 }
 
-/* DESTAQUES */
-
 .destaques {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -202,7 +203,6 @@ body {
   color: white;
   border-radius: 8px;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .links-empreendimentos a {
@@ -214,16 +214,21 @@ body {
 
 @media(max-width:900px) {
   .hero-empreendimento {
-    min-height: 420px;
+    min-height: 380px;
     padding: 45px 20px;
   }
 
   .hero-empreendimento h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .hero-empreendimento p {
-    font-size: 18px;
+    font-size: 17px;
+  }
+
+  .hero-status {
+    font-size: 11px;
+    letter-spacing: 1.5px;
   }
 
   .galeria {
@@ -247,27 +252,17 @@ body {
   }
 }
 
-@media(max-width:520px) {
+@media(max-width:480px) {
   .hero-empreendimento {
-    min-height: 430px;
+    min-height: 360px;
   }
 
   .hero-empreendimento h1 {
-    font-size: 29px;
+    font-size: 27px;
   }
 
   .hero-empreendimento p {
     font-size: 16px;
-  }
-
-  .hero-status {
-    font-size: 12px;
-    padding: 9px 15px;
-  }
-
-  .hero-botao {
-    font-size: 15px;
-    padding: 14px 20px;
   }
 
   .galeria-lateral {
@@ -298,7 +293,6 @@ body {
 <!-- BANNER PRINCIPAL -->
 
 <section class="hero-empreendimento">
-
   <div class="hero-conteudo">
 
     <div class="hero-status">
@@ -311,20 +305,20 @@ body {
 
     <p>
       Conheça os apartamentos de 2 dormitórios do Sublime Pompéia,
-      com opção de suíte, varanda com churrasqueira e espaços de
-      lazer e convivência para aproveitar bons momentos.
+      empreendimento da Tibério na Zona Oeste de São Paulo,
+      com opção de suíte, varanda com churrasqueira e estrutura
+      de lazer e convivência.
     </p>
 
     <a
-      href="https://wa.me/5511966379769?text=Olá! Tenho interesse no Sublime Pompéia de 2 dormitórios. Gostaria de receber informações sobre plantas, valores e disponibilidade."
       class="hero-botao"
+      href="https://wa.me/5511966379769?text=Olá! Tenho interesse no Sublime Pompéia de 2 dormitórios. Gostaria de receber informações sobre plantas, valores e disponibilidade."
       target="_blank"
       rel="noopener noreferrer">
       Solicitar informações pelo WhatsApp
     </a>
 
   </div>
-
 </section>
 
 <section class="container">
@@ -347,7 +341,6 @@ body {
   </p>
 
   <div class="destaques">
-
     <div class="destaque">
       <h3>2 dormitórios</h3>
       <p>Plantas com dois dormitórios.</p>
@@ -362,7 +355,6 @@ body {
       <h3>Varanda com churrasqueira</h3>
       <p>Um espaço para aproveitar e receber convidados.</p>
     </div>
-
   </div>
 </section>
 
@@ -374,7 +366,6 @@ body {
   </p>
 
   <div class="galeria">
-
     <div class="galeria-principal">
       <img
         src="sublime-piscina.webp"
@@ -383,7 +374,6 @@ body {
     </div>
 
     <div class="galeria-lateral">
-
       <img
         src="sublime-suite.webp"
         alt="Apartamento de 2 dormitórios com suíte no Sublime Pompéia"
@@ -398,7 +388,6 @@ body {
         src="sublime-lazer-externo.jpg"
         alt="Área externa de lazer do Sublime Pompéia"
         loading="eager">
-
     </div>
   </div>
 </section>
@@ -514,7 +503,6 @@ body {
 
 <footer>
   <div class="container" style="text-align:center;">
-
     <h2>SANDRO IMÓVEIS INTELIGENTES</h2>
 
     <p>
@@ -532,7 +520,6 @@ body {
     <p style="margin-top:10px;">
       © 2026 Sandro Imóveis Inteligentes.
     </p>
-
   </div>
 </footer>
 
