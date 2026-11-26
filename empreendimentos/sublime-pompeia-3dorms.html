@@ -7,11 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sublime Pompéia Tibério | Apartamentos de 3 Dormitórios</title>
+<title>Sublime Pompéia 3 Dormitórios | Apartamentos Tibério</title>
 
-<meta name="description" content="Conheça o Sublime Pompéia da Tibério: apartamentos de 3 dormitórios, 75 e 77 m², suíte, varanda gourmet com churrasqueira e 2 vagas determinadas. Consulte plantas e valores.">
+<meta name="description" content="Sublime Pompéia 3 dormitórios: apartamentos de 75 e 77 m², suíte, varanda gourmet com churrasqueira e 2 vagas determinadas. Conheça as plantas e consulte valores.">
 
-<meta name="keywords" content="Sublime Pompéia, Sublime Pompeia Tibério, apartamento na Pompéia, apartamento 3 dormitórios Pompéia, apartamento com varanda gourmet, apartamento 2 vagas Pompéia">
+<meta name="keywords" content="Sublime Pompéia 3 dormitórios, Sublime Pompeia Tibério, apartamento 3 dormitórios Pompéia, apartamento com suíte Pompéia, apartamento com varanda gourmet, apartamento 2 vagas Pompéia">
 
 <meta name="robots" content="index, follow">
 
@@ -20,13 +20,13 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Sandro Imóveis Inteligentes">
-<meta property="og:title" content="Sublime Pompéia Tibério | Apartamentos de 3 Dormitórios">
+<meta property="og:title" content="Sublime Pompéia 3 Dormitórios | Apartamentos Tibério">
 <meta property="og:description" content="Apartamentos de 3 dormitórios, suíte, varanda gourmet com churrasqueira e 2 vagas determinadas na Pompéia. Conheça o Sublime Pompéia da Tibério.">
 <meta property="og:url" content="https://sandrosantosimoveis.com.br/empreendimentos/sublime-pompeia-3dorms.html">
 <meta property="og:image" content="https://sandrosantosimoveis.com.br/empreendimentos/sublime-pompeia-fitness.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sublime Pompéia Tibério | Apartamentos de 3 Dormitórios">
+<meta name="twitter:title" content="Sublime Pompéia 3 Dormitórios | Apartamentos Tibério">
 <meta name="twitter:description" content="Apartamentos de 3 dormitórios com suíte, varanda gourmet e 2 vagas na Pompéia.">
 <meta name="twitter:image" content="https://sandrosantosimoveis.com.br/empreendimentos/sublime-pompeia-fitness.jpg">
 
@@ -65,24 +65,70 @@ body {
     background: #f5f7fa;
 }
 
+/* HERO COM IMAGEM DE FUNDO DESFOCADA */
+
 .hero-empreendimento {
-    min-height: 420px;
+    min-height: 440px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 35px 20px;
+    padding: 45px 20px;
     color: white;
-    background-image:
-        linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),
-        url('sublime-pompeia-fitness.jpg');
+    overflow: hidden;
+    isolation: isolate;
+    background: #202020;
+}
+
+.hero-empreendimento::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    z-index: -2;
+    background-image: url('sublime-pompeia-fitness.jpg');
     background-size: cover;
     background-position: center;
+    filter: blur(5px);
+    transform: scale(1.06);
+}
+
+.hero-empreendimento::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        rgba(0,0,0,.62),
+        rgba(0,0,0,.72)
+    );
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero-etiqueta {
+    display: inline-block;
+    padding: 9px 18px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    background: rgba(0,0,0,.25);
 }
 
 .hero-empreendimento h1 {
     font-size: 46px;
-    margin-bottom: 18px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
 .hero-empreendimento p {
@@ -90,6 +136,7 @@ body {
     max-width: 900px;
     margin: auto;
     line-height: 1.6;
+    color: #fff;
 }
 
 .container {
@@ -164,7 +211,7 @@ body {
 @media(max-width:900px) {
 
     .hero-empreendimento {
-        min-height: 320px;
+        min-height: 350px;
     }
 
     .hero-empreendimento h1 {
@@ -192,8 +239,22 @@ body {
         padding: 40px 16px;
     }
 
+    .hero-empreendimento {
+        min-height: 340px;
+        padding: 35px 18px;
+    }
+
     .hero-empreendimento h1 {
         font-size: 29px;
+    }
+
+    .hero-empreendimento p {
+        font-size: 17px;
+    }
+
+    .hero-etiqueta {
+        font-size: 11px;
+        letter-spacing: 1.5px;
     }
 
     .tabela-ficha td {
@@ -237,12 +298,16 @@ WhatsApp
 
 <section class="hero-empreendimento">
 
-<div>
+<div class="hero-conteudo">
 
-<h1>Sublime Pompéia: apartamentos de 3 dormitórios</h1>
+<span class="hero-etiqueta">
+TIBÉRIO • EM COMERCIALIZAÇÃO
+</span>
+
+<h1>Sublime Pompéia 3 Dormitórios: apartamentos com suíte na Pompeia</h1>
 
 <p>
-Conheça os apartamentos da Tibério na Pompéia, com suíte, varanda gourmet com churrasqueira e 2 vagas determinadas.
+Conheça os apartamentos de 3 dormitórios do Sublime Pompéia, com plantas de 75 e 77 m², suíte, varanda gourmet com churrasqueira e 2 vagas determinadas.
 </p>
 
 </div>
@@ -263,7 +328,7 @@ Conheça alguns dos ambientes e espaços de lazer do empreendimento.
 
 <img
 src="sublime-pompeia-fitness.jpg"
-alt="Espaço fitness do empreendimento Sublime Pompéia"
+alt="Academia e espaço fitness do Sublime Pompéia da Tibério"
 fetchpriority="high">
 
 </div>
@@ -272,7 +337,7 @@ fetchpriority="high">
 
 <img
 src="sublime-pompeia-pet-spa.jpg"
-alt="Pet Spa do Sublime Pompéia"
+alt="Pet Spa do empreendimento Sublime Pompéia"
 loading="lazy">
 
 <img
@@ -282,7 +347,7 @@ loading="lazy">
 
 <img
 src="sublime-gourmet.jpg"
-alt="Espaço gourmet do Sublime Pompéia"
+alt="Espaço gourmet do condomínio Sublime Pompéia"
 loading="lazy">
 
 </div>
@@ -295,22 +360,22 @@ loading="lazy">
 
 <div class="info-imovel">
 
-<h2>Conheça o Sublime Pompéia da Tibério</h2>
+<h2>Apartamentos de 3 Dormitórios no Sublime Pompéia</h2>
 
 <p>
-O Sublime Pompéia é uma opção para quem procura apartamento de 3 dormitórios na Zona Oeste de São Paulo, em uma região com infraestrutura de comércio, serviços, lazer e mobilidade.
+O <strong>Sublime Pompéia da Tibério</strong> é uma opção para quem procura apartamento de 3 dormitórios na Zona Oeste de São Paulo, em uma região com infraestrutura de comércio, serviços, lazer e mobilidade.
 </p>
 
 <p>
-As plantas de 75 e 77 m² oferecem três dormitórios, uma suíte e ambientes planejados para proporcionar conforto e praticidade no dia a dia.
+As plantas de <strong>75 e 77 m²</strong> oferecem três dormitórios, uma suíte e ambientes planejados para proporcionar conforto e praticidade no dia a dia.
 </p>
 
 <p>
-Um dos destaques dos apartamentos é a varanda gourmet com churrasqueira, que amplia as possibilidades de convivência e integração dos ambientes.
+Um dos destaques dos apartamentos é a <strong>varanda gourmet com churrasqueira</strong>, que amplia as possibilidades de convivência e integração dos ambientes.
 </p>
 
 <p>
-As unidades desta tipologia contam com duas vagas determinadas de garagem, conforme as características informadas do empreendimento.
+As unidades desta tipologia contam com <strong>duas vagas determinadas de garagem</strong>, conforme as características informadas do empreendimento.
 </p>
 
 <p>
@@ -323,7 +388,7 @@ O condomínio oferece espaços de lazer e convivência, incluindo academia, Pet 
 
 <section class="container">
 
-<h2>Ficha Técnica do Sublime Pompéia</h2>
+<h2>Ficha Técnica do Sublime Pompéia 3 Dormitórios</h2>
 
 <table class="tabela-ficha">
 
@@ -383,10 +448,10 @@ O condomínio oferece espaços de lazer e convivência, incluindo academia, Pet 
 
 <section class="container">
 
-<h2>Planta do Apartamento de 3 Dormitórios</h2>
+<h2>Plantas dos Apartamentos de 3 Dormitórios</h2>
 
 <p>
-Confira a planta do apartamento e conheça a distribuição dos ambientes.
+Confira a planta do apartamento de 3 dormitórios do Sublime Pompéia e conheça a distribuição dos ambientes.
 </p>
 
 <div class="grid-cards">
@@ -395,7 +460,7 @@ Confira a planta do apartamento e conheça a distribuição dos ambientes.
 
 <img
 src="sublime-pompeia-3dorms.webp"
-alt="Planta do apartamento de 3 dormitórios do Sublime Pompéia"
+alt="Planta do apartamento de 3 dormitórios do Sublime Pompéia com suíte"
 loading="lazy">
 
 <div class="card-body">
@@ -414,7 +479,7 @@ Apartamentos com três dormitórios, suíte e ambientes planejados para o confor
 
 <img
 src="sublime-pompeia-gourmet.jpg"
-alt="Varanda e espaço gourmet do Sublime Pompéia"
+alt="Varanda gourmet com churrasqueira do Sublime Pompéia"
 loading="lazy">
 
 <div class="card-body">
@@ -505,7 +570,7 @@ Comodidade para os moradores desta tipologia.
 
 <section class="container">
 
-<h2>Localização do Sublime Pompéia</h2>
+<h2>Localização do Sublime Pompéia em São Paulo</h2>
 
 <p>
 O Sublime Pompéia está situado na região da Pompéia, na Zona Oeste de São Paulo. O bairro conta com opções de comércio, serviços, gastronomia, lazer e acesso a importantes pontos da região, como Allianz Parque, Shopping Bourbon, SESC Pompeia e Hospital São Camilo.
@@ -528,11 +593,11 @@ title="Mapa da região da Pompéia em São Paulo">
 
 <section class="container" style="text-align:center;">
 
-<h2>Solicite Informações do Sublime Pompéia</h2>
+<h2>Consulte Valores e Disponibilidade do Sublime Pompéia</h2>
 
 <p style="font-size:18px;max-width:760px;margin:20px auto;">
 
-Receba informações sobre plantas de 75 e 77 m², valores, disponibilidade das unidades, condições de pagamento e agendamento de visita.
+Receba informações sobre os apartamentos de 3 dormitórios, plantas de 75 e 77 m², valores, disponibilidade das unidades, condições de pagamento e agendamento de visita.
 
 </p>
 
@@ -551,7 +616,7 @@ rel="noopener">
 
 <section class="container">
 
-<h2>Perguntas Frequentes sobre o Sublime Pompéia</h2>
+<h2>Perguntas Frequentes sobre o Sublime Pompéia 3 Dormitórios</h2>
 
 <div class="faq">
 
@@ -561,7 +626,7 @@ rel="noopener">
 Esta página apresenta a tipologia de apartamentos de 3 dormitórios do Sublime Pompéia.
 </p>
 
-<h3>Quais são as metragens dos apartamentos?</h3>
+<h3>Quais são as metragens dos apartamentos de 3 dormitórios?</h3>
 
 <p>
 As plantas desta tipologia possuem 75 e 77 m².
