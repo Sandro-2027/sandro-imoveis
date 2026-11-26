@@ -4,25 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Essence Saúde Tibério: Apartamentos e Studios perto do Metrô</title>
+<title>Essence Saúde Tibério: Studios e Apartamentos perto do Metrô</title>
 
-<meta name="description" content="Essence Saúde Tibério na Zona Sul de São Paulo: studios de 27,13 a 33,42 m² e apartamentos de 1 e 2 dormitórios de 33,21 a 57,78 m², a cerca de 500 m do Metrô Saúde. Consulte plantas e disponibilidade.">
+<meta name="description" content="Conheça o Essence Saúde da Tibério, na Zona Sul de São Paulo: studios de 27,13 a 33,42 m² e apartamentos de 1 e 2 dormitórios, a 500 m do Metrô Saúde. Consulte plantas e valores.">
 
 <meta name="keywords" content="Essence Saúde, Essence Saúde Tibério, apartamentos Essence Saúde, studios na Saúde, apartamento perto do Metrô Saúde, apartamentos Tibério, empreendimento na Saúde São Paulo">
 
 <meta name="author" content="Sandro Imóveis Inteligentes">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large">
 
 <link rel="canonical" href="https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html">
 
-<meta property="og:title" content="Essence Saúde Tibério: Apartamentos e Studios perto do Metrô">
-<meta property="og:description" content="Conheça o Essence Saúde Tibério, na Zona Sul de São Paulo. Studios de 27,13 a 33,42 m² e apartamentos de 1 e 2 dormitórios, a cerca de 500 metros do Metrô Saúde.">
+<meta property="og:title" content="Essence Saúde Tibério: Studios e Apartamentos perto do Metrô">
+<meta property="og:description" content="Studios e apartamentos de 1 e 2 dormitórios no Essence Saúde Tibério, a aproximadamente 500 metros do Metrô Saúde, na Zona Sul de São Paulo.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html">
 <meta property="og:image" content="https://sandrosantosimoveis.com.br/essence-portaria.jpg">
+<meta property="og:image:alt" content="Empreendimento Essence Saúde da Tibério em São Paulo">
 <meta property="og:locale" content="pt_BR">
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Essence Saúde Tibério: Studios e Apartamentos">
+<meta name="twitter:description" content="Studios e apartamentos de 1 e 2 dormitórios perto do Metrô Saúde.">
+<meta name="twitter:image" content="https://sandrosantosimoveis.com.br/essence-portaria.jpg">
+
 <meta name="theme-color" content="#173f35">
+
+<link rel="preload" as="image" href="../essence-portaria.jpg">
 
 <script type="application/ld+json">
 {
@@ -32,7 +40,7 @@
       "@type": "WebPage",
       "@id": "https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html#webpage",
       "url": "https://sandrosantosimoveis.com.br/empreendimentos/essence-saude.html",
-      "name": "Essence Saúde Tibério: Apartamentos e Studios perto do Metrô",
+      "name": "Essence Saúde Tibério: Studios e Apartamentos perto do Metrô",
       "description": "Essence Saúde Tibério na Zona Sul de São Paulo, com studios de 27,13 a 33,42 m² e apartamentos de 1 e 2 dormitórios de 33,21 a 57,78 m², a cerca de 500 metros da Estação Saúde do Metrô.",
       "inLanguage": "pt-BR",
       "about": {
@@ -644,66 +652,83 @@ h2 {
   font-weight: 800;
   box-shadow: 0 5px 18px rgba(0,0,0,.2);
 }
-@media (max-width: 760px) {
+@media (max-width: 850px) {
   .topo-interno {
-    align-items: flex-start;
     flex-direction: column;
-    gap: 12px;
+    align-items: flex-start;
   }
 
   .menu {
-    width: 100%;
-    gap: 13px 17px;
+    gap: 13px;
   }
 
-  .menu a { font-size: 13px; }
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 
+  .intro-foto img {
+    height: 350px;
+  }
+
+  .diferenciais {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-reel-conteudo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
   .hero {
-    min-height: 510px;
-    background-position: center;
+    min-height: 520px;
   }
 
-  .hero-conteudo { padding: 60px 22px; }
-  .hero p { font-size: 16px; }
+  .hero-conteudo {
+    padding: 65px 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
 
   .faixa-info-interna {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
-  .info-item {
-    border-bottom: 1px solid rgba(255,255,255,.15);
-    padding-bottom: 13px;
+  .secao {
+    padding: 52px 18px;
   }
 
-  .info-item:last-child { border-bottom: none; }
-
-  .secao { padding: 50px 18px; }
-
-  .intro-grid,
+  .galeria,
   .plantas-grid,
-  .galeria {
+  .tipologias {
     grid-template-columns: 1fr;
   }
 
-  .intro-foto img { height: 290px; }
-  .foto-card img { height: 250px; }
-  .tipologias { grid-template-columns: 1fr; }
-
   .diferenciais {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: 1fr;
   }
 
-  .diferencial { padding: 19px 15px; }
-  .planta-card img { height: 290px; }
+  .foto-card img {
+    height: 250px;
+  }
+
+  .planta-card img {
+    height: 300px;
+  }
 
   .ficha td {
     padding: 12px 10px;
     font-size: 14px;
   }
 
-  .mapa { height: 300px; }
+  .mapa {
+    height: 300px;
+  }
 
   .video-reel {
     padding: 50px 18px;
@@ -948,201 +973,195 @@ h2 {
     <a class="botao" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Pode%20me%20enviar%20as%20plantas%20do%20Essence%20Saúde%3F" target="_blank" rel="noopener">Receber plantas pelo WhatsApp</a>
   </div>
 </section>
-<section class="secao-clara">
+<section class="secao-clara" id="lazer">
   <div class="secao">
     <div class="secao-titulo">
       <span class="etiqueta">Lazer e conveniência</span>
-      <h2>Mais de 30 espaços para aproveitar no Essence Saúde</h2>
-      <p>O projeto reúne ambientes de convivência, lazer, bem-estar, serviços e espaços no rooftop.</p>
+      <h2>Lazer e espaços de convivência do Essence Saúde</h2>
+      <p>O empreendimento conta com ambientes planejados para lazer, bem-estar, praticidade e convivência no dia a dia.</p>
     </div>
 
     <div class="diferenciais">
       <div class="diferencial">
-        <div class="icone">🏊</div>
-        <h3>Sky Pool</h3>
-        <p>Piscina no rooftop e espaços para relaxar e aproveitar a vista.</p>
+        <span class="diferencial-icone">🏊</span>
+        <h3>Piscina</h3>
+        <p>Espaço para relaxar e aproveitar os momentos livres.</p>
       </div>
 
       <div class="diferencial">
-        <div class="icone">💪</div>
-        <h3>Fitness</h3>
-        <p>Academia, alongamento e ambientes destinados à prática de exercícios.</p>
+        <span class="diferencial-icone">🏋️</span>
+        <h3>Academia</h3>
+        <p>Ambiente dedicado à atividade física e ao bem-estar.</p>
       </div>
 
       <div class="diferencial">
-        <div class="icone">💻</div>
-        <h3>Coworking</h3>
-        <p>Lounge de coworking e meeting room para atividades profissionais.</p>
+        <span class="diferencial-icone">🧺</span>
+        <h3>Lavanderia</h3>
+        <p>Praticidade para facilitar a rotina dos moradores.</p>
       </div>
 
       <div class="diferencial">
-        <div class="icone">🧺</div>
-        <h3>Laundry</h3>
-        <p>Lavanderia compartilhada para facilitar a rotina.</p>
+        <span class="diferencial-icone">💻</span>
+        <h3>Espaços de convivência</h3>
+        <p>Ambientes para trabalhar, estudar e socializar.</p>
       </div>
 
       <div class="diferencial">
-        <div class="icone">🍽️</div>
-        <h3>Gourmet e Celebrate</h3>
-        <p>Espaços para encontros, refeições e confraternizações.</p>
+        <span class="diferencial-icone">🌿</span>
+        <h3>Áreas de descanso</h3>
+        <p>Espaços para aproveitar momentos de tranquilidade.</p>
       </div>
 
       <div class="diferencial">
-        <div class="icone">🐾</div>
-        <h3>Pet Place e Pet Spa</h3>
-        <p>Ambientes pensados para os moradores e seus animais de estimação.</p>
-      </div>
-
-      <div class="diferencial">
-        <div class="icone">🛝</div>
-        <h3>Play Kids e Playground</h3>
-        <p>Espaços para brincar e aproveitar os momentos em família.</p>
-      </div>
-
-      <div class="diferencial">
-        <div class="icone">🔥</div>
-        <h3>Sky Grill</h3>
-        <p>Espaços de convivência e churrasqueira no rooftop.</p>
-      </div>
-
-      <div class="diferencial">
-        <div class="icone">📦</div>
-        <h3>Delivery e Mini Market</h3>
-        <p>Estrutura de serviços e conveniência para o cotidiano.</p>
+        <span class="diferencial-icone">🚲</span>
+        <h3>Conveniência</h3>
+        <p>Estrutura pensada para trazer mais comodidade ao cotidiano.</p>
       </div>
     </div>
+
+    <p class="observacao">Consulte a disponibilidade, as características e as condições de utilização de cada ambiente com a equipe de atendimento.</p>
   </div>
 </section>
 
-<section class="secao">
+<section class="secao" id="ficha-tecnica">
   <div class="secao-titulo">
-    <span class="etiqueta">Ficha técnica</span>
-    <h2>Informações do Essence Saúde Tibério</h2>
+    <span class="etiqueta">Informações do projeto</span>
+    <h2>Ficha técnica do Essence Saúde Tibério</h2>
+    <p>Confira as principais informações sobre o empreendimento residencial no bairro Saúde.</p>
   </div>
 
-  <table class="ficha">
-    <tr>
-      <td>Empreendimento</td>
-      <td>Essence Saúde</td>
-    </tr>
-    <tr>
-      <td>Construtora</td>
-      <td>Tibério</td>
-    </tr>
-    <tr>
-      <td>Endereço</td>
-      <td>Rua Afonso Mariano Fagundes, 156 — Saúde, São Paulo/SP</td>
-    </tr>
-    <tr>
-      <td>Estação de Metrô</td>
-      <td>Aproximadamente 500 metros da Estação Saúde — Linha 1-Azul</td>
-    </tr>
-    <tr>
-      <td>Studios</td>
-      <td>27,13 a 33,42 m²</td>
-    </tr>
-    <tr>
-      <td>1 dormitório</td>
-      <td>33,21 a 35,23 m²</td>
-    </tr>
-    <tr>
-      <td>2 dormitórios</td>
-      <td>41,36 a 57,78 m²</td>
-    </tr>
-    <tr>
-      <td>Diferenciais</td>
-      <td>Opções com suíte e vaga</td>
-    </tr>
-    <tr>
-      <td>Lazer</td>
-      <td>Mais de 30 áreas de lazer e conveniência</td>
-    </tr>
-    <tr>
-      <td>Valores</td>
-      <td>Consulte a tabela comercial atualizada</td>
-    </tr>
-    <tr>
-      <td>Disponibilidade</td>
-      <td>Sujeita à confirmação no atendimento</td>
-    </tr>
-  </table>
+  <div class="ficha">
+    <table>
+      <tbody>
+        <tr>
+          <th>Empreendimento</th>
+          <td>Essence Saúde</td>
+        </tr>
+        <tr>
+          <th>Construtora</th>
+          <td>Tibério</td>
+        </tr>
+        <tr>
+          <th>Endereço</th>
+          <td>Rua Afonso Mariano Fagundes, 156 — Saúde, São Paulo/SP</td>
+        </tr>
+        <tr>
+          <th>Tipologias</th>
+          <td>Studios e apartamentos de 1 e 2 dormitórios</td>
+        </tr>
+        <tr>
+          <th>Metragem dos studios</th>
+          <td>27,13 a 33,42 m²</td>
+        </tr>
+        <tr>
+          <th>Metragem de 1 dormitório</th>
+          <td>33,21 a 35,23 m²</td>
+        </tr>
+        <tr>
+          <th>Metragem de 2 dormitórios</th>
+          <td>41,36 a 57,78 m²</td>
+        </tr>
+        <tr>
+          <th>Mobilidade</th>
+          <td>Aproximadamente 500 metros da Estação Saúde do Metrô</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="observacao">Metragens, características, disponibilidade e condições comerciais devem ser confirmadas no atendimento. Consulte as informações atualizadas antes de tomar sua decisão.</p>
 </section>
 
 <section class="secao-clara" id="localizacao">
   <div class="secao">
     <div class="secao-titulo">
-      <span class="etiqueta">Localização na Saúde</span>
-      <h2>Essence Saúde: próximo ao Metrô Saúde em São Paulo</h2>
-      <p>O empreendimento está na Rua Afonso Mariano Fagundes, 156, no bairro Saúde, a aproximadamente 500 metros da Estação Saúde da Linha 1-Azul.</p>
-      <p>A região também oferece acesso a importantes vias da Zona Sul, como as avenidas Jabaquara, Indianópolis e dos Bandeirantes.</p>
+      <span class="etiqueta">Localização</span>
+      <h2>Essence Saúde: more perto do Metrô Saúde</h2>
+      <p>Localizado na Rua Afonso Mariano Fagundes, 156, no bairro Saúde, Zona Sul de São Paulo, o empreendimento fica próximo à Estação Saúde da Linha 1-Azul do Metrô.</p>
     </div>
 
-    <iframe
-      class="mapa"
-      src="https://www.google.com/maps?q=Afonso+Mariano+Fagundes+156+Saude+Sao+Paulo&output=embed"
-      title="Mapa do endereço do Essence Saúde Tibério, na Saúde, São Paulo"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps?q=Rua+Afonso+Mariano+Fagundes,+156,+Saúde,+São+Paulo&output=embed"
+        title="Mapa de localização do Essence Saúde Tibério"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-    <p style="text-align:center;margin-top:20px">
-      <a class="botao" href="https://www.google.com/maps/search/?api=1&query=Afonso+Mariano+Fagundes+156+Saude+Sao+Paulo" target="_blank" rel="noopener">Ver endereço no Google Maps</a>
-    </p>
+    <p class="observacao">Consulte o trajeto e a distância exata até o metrô diretamente no mapa.</p>
+
+    <div style="text-align:center;margin-top:25px">
+      <a class="botao" href="https://www.google.com/maps/search/?api=1&query=Rua+Afonso+Mariano+Fagundes+156+Saude+Sao+Paulo" target="_blank" rel="noopener">Abrir localização no Google Maps</a>
+    </div>
   </div>
 </section>
 
-<section class="secao">
+<section class="secao" id="faq">
   <div class="secao-titulo">
     <span class="etiqueta">Dúvidas frequentes</span>
-    <h2>Dúvidas sobre o Essence Saúde Tibério</h2>
+    <h2>Perguntas frequentes sobre o Essence Saúde</h2>
+    <p>Veja respostas para algumas das principais dúvidas sobre o empreendimento.</p>
   </div>
 
-  <div class="faq">
-    <details>
+  <div class="faq-lista">
+
+    <details class="faq-item">
       <summary>Onde fica o Essence Saúde?</summary>
-      <p>O empreendimento está na Rua Afonso Mariano Fagundes, 156, no bairro Saúde, Zona Sul de São Paulo.</p>
+      <p>O Essence Saúde fica na Rua Afonso Mariano Fagundes, 156, no bairro Saúde, Zona Sul de São Paulo.</p>
     </details>
 
-    <details>
-      <summary>A que distância fica o Metrô Saúde?</summary>
-      <p>O Essence Saúde está a aproximadamente 500 metros da Estação Saúde, da Linha 1-Azul do Metrô.</p>
+    <details class="faq-item">
+      <summary>O Essence Saúde fica perto do metrô?</summary>
+      <p>Sim. O empreendimento está localizado a aproximadamente 500 metros da Estação Saúde, da Linha 1-Azul do Metrô.</p>
     </details>
 
-    <details>
-      <summary>Quais são as metragens dos apartamentos?</summary>
-      <p>O empreendimento possui studios de 27,13 a 33,42 m², apartamentos de 1 dormitório de 33,21 a 35,23 m² e apartamentos de 2 dormitórios de 41,36 a 57,78 m².</p>
+    <details class="faq-item">
+      <summary>Quais são as opções de apartamentos?</summary>
+      <p>O projeto oferece studios e apartamentos de 1 e 2 dormitórios, com diferentes metragens e configurações.</p>
     </details>
 
-    <details>
-      <summary>Existem apartamentos com suíte e vaga?</summary>
-      <p>O empreendimento possui opções com suíte e vaga. Consulte as plantas e confirme a disponibilidade de cada configuração.</p>
+    <details class="faq-item">
+      <summary>Qual é a metragem dos studios?</summary>
+      <p>As opções de studios possuem metragens de 27,13 a 33,42 m².</p>
     </details>
 
-    <details>
-      <summary>Quais são as áreas de lazer?</summary>
-      <p>O projeto reúne mais de 30 espaços de lazer e conveniência, incluindo piscina no rooftop, academia, coworking, lavanderia, espaços gourmet, ambientes pet e playground.</p>
+    <details class="faq-item">
+      <summary>Qual é a metragem dos apartamentos de 2 dormitórios?</summary>
+      <p>As opções de 2 dormitórios possuem metragens de 41,36 a 57,78 m².</p>
     </details>
 
-    <details>
-      <summary>Como consultar preços e condições do Essence Saúde?</summary>
-      <p>Entre em contato pelo WhatsApp para receber a tabela comercial atualizada, consultar as unidades disponíveis e conhecer as condições de pagamento.</p>
+    <details class="faq-item">
+      <summary>Quem é a construtora do Essence Saúde?</summary>
+      <p>O Essence Saúde é um empreendimento da Tibério.</p>
     </details>
 
-    <details>
-      <summary>Como receber as plantas do Essence Saúde?</summary>
-      <p>Você pode solicitar as plantas dos studios e apartamentos diretamente pelo WhatsApp e receber informações sobre as opções disponíveis.</p>
+    <details class="faq-item">
+      <summary>Como consultar preços e disponibilidade?</summary>
+      <p>Entre em contato pelo WhatsApp para receber informações atualizadas sobre valores, plantas, condições comerciais e unidades disponíveis.</p>
     </details>
+
   </div>
 </section>
 
-<section class="cta-final" id="contato">
-  <span class="etiqueta">Atendimento personalizado</span>
+<section class="contato-final" id="contato">
+  <div class="contato-final-interno">
+    <span class="etiqueta">Atendimento especializado</span>
 
-  <h2>Conheça o Essence Saúde Tibério</h2>
+    <h2>Quer conhecer o Essence Saúde Tibério?</h2>
 
-  <p>Solicite as plantas dos studios e apartamentos, consulte valores, condições de pagamento e disponibilidade. Atendimento direto com Sandro Imóveis Inteligentes.</p>
+    <p>Receba informações sobre plantas, valores, disponibilidade e condições comerciais dos studios e apartamentos de 1 e 2 dormitórios.</p>
 
-  <a class="botao botao-destaque" href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Quero%20consultar%20plantas%2C%20valores%20e%20disponibilidade%20do%20Essence%20Saúde." target="_blank" rel="noopener">Falar com Sandro pelo WhatsApp</a>
+    <a class="botao botao-destaque"
+       href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Quero%20conhecer%20o%20Essence%20Saúde%20da%20Tibério."
+       target="_blank"
+       rel="noopener">
+       Falar com Sandro pelo WhatsApp
+    </a>
+
+    <p class="contato-assinatura">Sandro Santos · Gerente de Parcerias da Tibério</p>
+  </div>
 </section>
 
 </main>
@@ -1150,27 +1169,26 @@ h2 {
 <footer class="rodape">
   <div class="rodape-interno">
     <div>
-      <strong>Sandro Imóveis Inteligentes</strong>
+      <strong>SANDRO IMÓVEIS INTELIGENTES</strong>
       <p>Gerente de Parcerias da Tibério</p>
-      <p>Atendimento para empreendimentos residenciais em São Paulo.</p>
       <p>CRECI 86489</p>
     </div>
 
     <div>
+      <p>Atendimento para empreendimentos residenciais em São Paulo.</p>
       <p>WhatsApp: (11) 96637-9769</p>
-      <p><a href="../index.html">Voltar para a página inicial</a></p>
-      <p><a href="metropolitan-consolacao.html">Conheça também o Metropolitan Consolação</a></p>
-      <p><a href="trend-santa-cruz.html">Conheça o Trend Santa Cruz</a></p>
-      <p><a href="sublime-pompeia.html">Conheça o Sublime Pompéia</a></p>
+      <a href="https://wa.me/5511966379769" target="_blank" rel="noopener">Entre em contato</a>
     </div>
+  </div>
 
-    <p>© 2026 Sandro Imóveis Inteligentes. Todos os direitos reservados.</p>
+  <div class="rodape-final">
+    © 2026 Sandro Imóveis Inteligentes. Todos os direitos reservados.
   </div>
 </footer>
 
 <a
   class="whatsapp-flutuante"
-  href="https://wa.me/5511966379769?text=Olá%2C%20Sandro!%20Quero%20informações%20sobre%20o%20Essence%20Saúde."
+  href="https://wa.me/5511966379769?text=Olá%2C%20quero%20informações%20sobre%20o%20Essence%20Saúde."
   target="_blank"
   rel="noopener"
   aria-label="Falar com Sandro pelo WhatsApp">
